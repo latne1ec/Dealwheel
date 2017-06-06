@@ -1,0 +1,14 @@
+
+//        let rotations: Float = 7
+//        let duration: TimeInterval = 6
+//        let rotateAnimation = CABasicAnimation(keyPath: "transform.rotation")
+//        rotateAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+//        rotateAnimation.fromValue = 0.0
+//        rotateAnimation.toValue = CGFloat(.pi * rotations)
+//        rotateAnimation.duration = duration
+//
+//        spinwheelImage.layer.add(rotateAnimation, forKey: nil)
+//        let dasAngle = atan2f(Float(spinwheelImage.transform.b), Float(spinwheelImage.transform.a));
+//        //spinwheelImage.transform = CGAffineTransform(rotationAngle: 10 + (.pi));
+//        spinwheelImage.transform = CGAffineTransform(rotationAngle: CGFloat(dasAngle));
+

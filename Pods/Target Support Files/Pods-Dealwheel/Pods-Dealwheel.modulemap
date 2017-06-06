@@ -1,0 +1,6 @@
+framework module Pods_Dealwheel {
+  umbrella header "Pods-Dealwheel-umbrella.h"
+
+  export *
+  module * { export * }
+}

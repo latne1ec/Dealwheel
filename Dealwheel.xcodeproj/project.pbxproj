@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		20DFB9521EE72097009462CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DFB9511EE72097009462CA /* AppDelegate.swift */; };
+		20DFB9571EE72097009462CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20DFB9551EE72097009462CA /* Main.storyboard */; };
+		20DFB9591EE72097009462CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20DFB9581EE72097009462CA /* Assets.xcassets */; };
+		20DFB95C1EE72097009462CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20DFB95A1EE72097009462CA /* LaunchScreen.storyboard */; };
+		20DFB9661EE72132009462CA /* SpinwheelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DFB9651EE72132009462CA /* SpinwheelViewController.swift */; };
+		20DFB9681EE72155009462CA /* DealwheelMisc in Resources */ = {isa = PBXBuildFile; fileRef = 20DFB9671EE72155009462CA /* DealwheelMisc */; };
+		20DFB96A1EE72166009462CA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DFB9691EE72166009462CA /* User.swift */; };
+		20DFB96E1EE721D1009462CA /* templogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 20DFB96B1EE721D0009462CA /* templogo.png */; };
+		20DFB96F1EE721D1009462CA /* bkg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20DFB96C1EE721D0009462CA /* bkg.jpg */; };
+		20DFB9701EE721D1009462CA /* tempwheel.png in Resources */ = {isa = PBXBuildFile; fileRef = 20DFB96D1EE721D0009462CA /* tempwheel.png */; };
+		20DFB9721EE72245009462CA /* fblogin.png in Resources */ = {isa = PBXBuildFile; fileRef = 20DFB9711EE72245009462CA /* fblogin.png */; };
+		20DFB9761EE7433F009462CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DFB9751EE7433F009462CA /* LoginViewController.swift */; };
+		F4602C16C2DF9E9BB9D80296 /* Pods_Dealwheel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7A2FB03049FD56B44D388C /* Pods_Dealwheel.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		20DFB94E1EE72097009462CA /* Dealwheel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dealwheel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		20DFB9511EE72097009462CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		20DFB9561EE72097009462CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		20DFB9581EE72097009462CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		20DFB95B1EE72097009462CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		20DFB95D1EE72097009462CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20DFB9651EE72132009462CA /* SpinwheelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinwheelViewController.swift; sourceTree = "<group>"; };
+		20DFB9671EE72155009462CA /* DealwheelMisc */ = {isa = PBXFileReference; lastKnownFileType = text; path = DealwheelMisc; sourceTree = "<group>"; };
+		20DFB9691EE72166009462CA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		20DFB96B1EE721D0009462CA /* templogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = templogo.png; sourceTree = "<group>"; };
+		20DFB96C1EE721D0009462CA /* bkg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bkg.jpg; sourceTree = "<group>"; };
+		20DFB96D1EE721D0009462CA /* tempwheel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tempwheel.png; sourceTree = "<group>"; };
+		20DFB9711EE72245009462CA /* fblogin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fblogin.png; sourceTree = "<group>"; };
+		20DFB9751EE7433F009462CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5B7A2FB03049FD56B44D388C /* Pods_Dealwheel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dealwheel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8035FC775068B25F04C875E /* Pods-Dealwheel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dealwheel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dealwheel/Pods-Dealwheel.debug.xcconfig"; sourceTree = "<group>"; };
+		FA917210A3F72F23804A55DF /* Pods-Dealwheel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dealwheel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dealwheel/Pods-Dealwheel.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		20DFB94B1EE72097009462CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4602C16C2DF9E9BB9D80296 /* Pods_Dealwheel.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		025C7A291D6400C418ED3603 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C8035FC775068B25F04C875E /* Pods-Dealwheel.debug.xcconfig */,
+				FA917210A3F72F23804A55DF /* Pods-Dealwheel.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		10DE76E02C088956E78A624F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B7A2FB03049FD56B44D388C /* Pods_Dealwheel.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		20DFB9451EE72097009462CA = {
+			isa = PBXGroup;
+			children = (
+				20DFB9501EE72097009462CA /* Dealwheel */,
+				20DFB94F1EE72097009462CA /* Products */,
+				025C7A291D6400C418ED3603 /* Pods */,
+				10DE76E02C088956E78A624F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		20DFB94F1EE72097009462CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				20DFB94E1EE72097009462CA /* Dealwheel.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20DFB9501EE72097009462CA /* Dealwheel */ = {
+			isa = PBXGroup;
+			children = (
+				20DFB9511EE72097009462CA /* AppDelegate.swift */,
+				20DFB9691EE72166009462CA /* User.swift */,
+				20DFB9751EE7433F009462CA /* LoginViewController.swift */,
+				20DFB9651EE72132009462CA /* SpinwheelViewController.swift */,
+				20DFB9551EE72097009462CA /* Main.storyboard */,
+				20DFB9581EE72097009462CA /* Assets.xcassets */,
+				20DFB9741EE742E9009462CA /* Misc */,
+				20DFB9731EE742E3009462CA /* Images */,
+				20DFB95A1EE72097009462CA /* LaunchScreen.storyboard */,
+				20DFB95D1EE72097009462CA /* Info.plist */,
+			);
+			path = Dealwheel;
+			sourceTree = "<group>";
+		};
+		20DFB9731EE742E3009462CA /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				20DFB96C1EE721D0009462CA /* bkg.jpg */,
+				20DFB9711EE72245009462CA /* fblogin.png */,
+				20DFB96B1EE721D0009462CA /* templogo.png */,
+				20DFB96D1EE721D0009462CA /* tempwheel.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		20DFB9741EE742E9009462CA /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				20DFB9671EE72155009462CA /* DealwheelMisc */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		20DFB94D1EE72097009462CA /* Dealwheel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20DFB9601EE72097009462CA /* Build configuration list for PBXNativeTarget "Dealwheel" */;
+			buildPhases = (
+				A1ADD1254B93F53B51CC9BFB /* [CP] Check Pods Manifest.lock */,
+				20DFB94A1EE72097009462CA /* Sources */,
+				20DFB94B1EE72097009462CA /* Frameworks */,
+				20DFB94C1EE72097009462CA /* Resources */,
+				71EA2131624213CF58B5C836 /* [CP] Embed Pods Frameworks */,
+				FED1AD1C047F2C6BA2CAB379 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Dealwheel;
+			productName = Dealwheel;
+			productReference = 20DFB94E1EE72097009462CA /* Dealwheel.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20DFB9461EE72097009462CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = dealwheel;
+				TargetAttributes = {
+					20DFB94D1EE72097009462CA = {
+						CreatedOnToolsVersion = 9.0;
+					};
+				};
+			};
+			buildConfigurationList = 20DFB9491EE72097009462CA /* Build configuration list for PBXProject "Dealwheel" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 20DFB9451EE72097009462CA;
+			productRefGroup = 20DFB94F1EE72097009462CA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				20DFB94D1EE72097009462CA /* Dealwheel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		20DFB94C1EE72097009462CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20DFB9701EE721D1009462CA /* tempwheel.png in Resources */,
+				20DFB96F1EE721D1009462CA /* bkg.jpg in Resources */,
+				20DFB9681EE72155009462CA /* DealwheelMisc in Resources */,
+				20DFB95C1EE72097009462CA /* LaunchScreen.storyboard in Resources */,
+				20DFB9591EE72097009462CA /* Assets.xcassets in Resources */,
+				20DFB9571EE72097009462CA /* Main.storyboard in Resources */,
+				20DFB96E1EE721D1009462CA /* templogo.png in Resources */,
+				20DFB9721EE72245009462CA /* fblogin.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		71EA2131624213CF58B5C836 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Dealwheel/Pods-Dealwheel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1ADD1254B93F53B51CC9BFB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FED1AD1C047F2C6BA2CAB379 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Dealwheel/Pods-Dealwheel-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		20DFB94A1EE72097009462CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20DFB9521EE72097009462CA /* AppDelegate.swift in Sources */,
+				20DFB9661EE72132009462CA /* SpinwheelViewController.swift in Sources */,
+				20DFB96A1EE72166009462CA /* User.swift in Sources */,
+				20DFB9761EE7433F009462CA /* LoginViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		20DFB9551EE72097009462CA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20DFB9561EE72097009462CA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		20DFB95A1EE72097009462CA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20DFB95B1EE72097009462CA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		20DFB95E1EE72097009462CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		20DFB95F1EE72097009462CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		20DFB9611EE72097009462CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8035FC775068B25F04C875E /* Pods-Dealwheel.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HL4WWQQF9X;
+				INFOPLIST_FILE = Dealwheel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dealwheel.Dealwheel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		20DFB9621EE72097009462CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA917210A3F72F23804A55DF /* Pods-Dealwheel.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = HL4WWQQF9X;
+				INFOPLIST_FILE = Dealwheel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dealwheel.Dealwheel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		20DFB9491EE72097009462CA /* Build configuration list for PBXProject "Dealwheel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20DFB95E1EE72097009462CA /* Debug */,
+				20DFB95F1EE72097009462CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20DFB9601EE72097009462CA /* Build configuration list for PBXNativeTarget "Dealwheel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20DFB9611EE72097009462CA /* Debug */,
+				20DFB9621EE72097009462CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20DFB9461EE72097009462CA /* Project object */;
+}
