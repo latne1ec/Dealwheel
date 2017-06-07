@@ -9,10 +9,12 @@
 import UIKit
 import Parse
 import CoreLocation
+import SpinWheelControl
 
-class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, CLLocationManagerDelegate {
+class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, CLLocationManagerDelegate, SpinWheelControlDataSource, SpinWheelControlDelegate {
     
     @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet weak var spinWheelControl: SpinWheelControl!
     @IBOutlet weak var spinwheelImage: UIImageView!
     @IBOutlet weak var spinButton: UIButton!
     
@@ -24,6 +26,7 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         setBackgroundImage ()
         checkIfPreviousUser()
+        initSpinWheel()
         
         spinButton.addTarget(self, action: #selector(spinTheWheel), for: .touchUpInside)
         pickerView.dataSource = self
@@ -34,6 +37,13 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     override func viewWillAppear(_ animated: Bool) {
         initLocationManager()
+    }
+    
+    func initSpinWheel () {
+        spinWheelControl.delegate = self
+        spinWheelControl.dataSource = self
+        spinWheelControl.reloadData()
+        spinWheelControl.addTarget(self, action: #selector(spinWheelDidChangeValue), for: UIControlEvents.valueChanged)
     }
     
     func initLocationManager () {
@@ -82,24 +92,9 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             return
         }
         
-        let radians: CGFloat = CGFloat(atan2f(Float(spinwheelImage.transform.b), Float(spinwheelImage.transform.a)))
-        print(radians)
+        spinWheelControl.manualSpinValue = -5
+        spinWheelControl.manuallySpinTheWheel()
         
-        let rotations: CGFloat = 6
-        let duration: CGFloat = 7
-        let anim = CAKeyframeAnimation(keyPath: "transform.rotation")
-        let touchUpStartAngle: CGFloat = CGFloat(arc4random_uniform(10))
-        // Random Number here
-        let touchUpEndAngle: CGFloat = (.pi)
-        let angularVelocity: CGFloat = CGFloat((((2 * .pi) * rotations) + .pi) / duration)
-        anim.values = [(touchUpStartAngle), (touchUpStartAngle + angularVelocity * duration)]
-        anim.duration = CFTimeInterval(duration)
-        anim.autoreverses = false
-        anim.repeatCount = 1
-        anim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
-        spinwheelImage.layer.add(anim, forKey: nil)
-        spinwheelImage.transform = CGAffineTransform(rotationAngle: touchUpStartAngle + (touchUpEndAngle));
-        Timer.scheduledTimer(timeInterval: 7.0, target: self, selector: #selector(EndSpin), userInfo: nil, repeats: false)
     }
     
     @objc func EndSpin () {
@@ -150,5 +145,23 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         print(coord.latitude)
         print(coord.longitude)
         
+    }
+    
+    // Spin Wheel Control
+    func wedgeForSliceAtIndex(index: UInt) -> SpinWheelWedge {
+        let wedge = SpinWheelWedge()
+        return wedge
+    }
+    func numberOfWedgesInSpinWheel(spinWheel: SpinWheelControl) -> UInt {
+        return 12
+    }
+    @objc func spinWheelDidChangeValue(sender: AnyObject) {
+        print("Value changed to " + String(self.spinWheelControl.selectedIndex))
+    }
+    func spinWheelDidEndDecelerating(spinWheel: SpinWheelControl) {
+        print("The spin wheel did end decelerating.")
+    }
+    func spinWheelDidRotateByRadians(radians: Radians) {
+        print("The wheel did rotate this many radians - " + String(describing: radians))
     }
 }

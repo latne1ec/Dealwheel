@@ -12,3 +12,24 @@
 //        //spinwheelImage.transform = CGAffineTransform(rotationAngle: 10 + (.pi));
 //        spinwheelImage.transform = CGAffineTransform(rotationAngle: CGFloat(dasAngle));
 
+
+
+
+//        let radians: CGFloat = CGFloat(atan2f(Float(spinwheelImage.transform.b), Float(spinwheelImage.transform.a)))
+//        print(radians)
+//
+//        let rotations: CGFloat = 6
+//        let duration: CGFloat = 7
+//        let anim = CAKeyframeAnimation(keyPath: "transform.rotation")
+//        let touchUpStartAngle: CGFloat = CGFloat(arc4random_uniform(10))
+//        // Random Number here
+//        let touchUpEndAngle: CGFloat = (.pi)
+//        let angularVelocity: CGFloat = CGFloat((((2 * .pi) * rotations) + .pi) / duration)
+//        anim.values = [(touchUpStartAngle), (touchUpStartAngle + angularVelocity * duration)]
+//        anim.duration = CFTimeInterval(duration)
+//        anim.autoreverses = false
+//        anim.repeatCount = 1
+//        anim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+//        spinwheelImage.layer.add(anim, forKey: nil)
+//        spinwheelImage.transform = CGAffineTransform(rotationAngle: touchUpStartAngle + (touchUpEndAngle));
+//        Timer.scheduledTimer(timeInterval: 7.0, target: self, selector: #selector(EndSpin), userInfo: nil, repeats: false)

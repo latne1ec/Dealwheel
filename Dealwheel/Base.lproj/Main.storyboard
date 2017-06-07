@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,14 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tempwheel.png" translatesAutoresizingMaskIntoConstraints="NO" id="HbH-DF-pQJ">
-                                <rect key="frame" x="40" y="215" width="242" height="213"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="213" id="IZf-Bw-Fta"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QPo-eK-FBP">
-                                <rect key="frame" x="77" y="446" width="167" height="47"/>
+                                <rect key="frame" x="77" y="456" width="167" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="AgW-bq-vjN"/>
                                 </constraints>
@@ -62,36 +57,42 @@
                                     <constraint firstAttribute="height" constant="77" id="wNh-H2-qbt"/>
                                 </constraints>
                             </pickerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KLy-Ls-B6r" customClass="SpinWheelControl" customModule="SpinWheelControl">
+                                <rect key="frame" x="45" y="214" width="230" height="230"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="I8X-2z-K2o"/>
+                                    <constraint firstAttribute="width" constant="230" id="ruV-Jh-7gM"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="HbH-DF-pQJ" firstAttribute="top" secondItem="iKh-fW-iRz" secondAttribute="bottom" constant="13" id="65P-vO-7aX"/>
-                            <constraint firstItem="Lsi-qa-UlL" firstAttribute="top" secondItem="QPo-eK-FBP" secondAttribute="bottom" constant="41" id="I4h-gn-onD"/>
+                            <constraint firstItem="QPo-eK-FBP" firstAttribute="top" secondItem="KLy-Ls-B6r" secondAttribute="bottom" constant="12" id="7r6-M2-mxc"/>
+                            <constraint firstItem="Lsi-qa-UlL" firstAttribute="top" secondItem="QPo-eK-FBP" secondAttribute="bottom" constant="31" id="I4h-gn-onD"/>
+                            <constraint firstItem="KLy-Ls-B6r" firstAttribute="top" secondItem="iKh-fW-iRz" secondAttribute="bottom" constant="12" id="LpE-mM-hke"/>
                             <constraint firstItem="4nb-uZ-nqP" firstAttribute="leading" secondItem="Lsi-qa-UlL" secondAttribute="trailing" constant="102" id="MtK-Qb-kaq"/>
                             <constraint firstItem="QPo-eK-FBP" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leadingMargin" constant="61" id="PbS-jt-Tl4"/>
-                            <constraint firstItem="HbH-DF-pQJ" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leadingMargin" constant="24" id="S1E-4L-amG"/>
                             <constraint firstItem="Lsi-qa-UlL" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leadingMargin" constant="9.5" id="UHZ-3p-Vaj"/>
                             <constraint firstItem="IST-dJ-o6N" firstAttribute="top" secondItem="Gce-no-STX" secondAttribute="bottom" constant="20" id="WA9-Lr-ljY"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="HbH-DF-pQJ" secondAttribute="trailing" constant="22" id="XQz-5U-oXy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QPo-eK-FBP" secondAttribute="trailing" constant="60" id="cUg-0n-qav"/>
-                            <constraint firstItem="HbH-DF-pQJ" firstAttribute="top" secondItem="iKh-fW-iRz" secondAttribute="bottom" constant="13" id="foy-hD-LzQ"/>
-                            <constraint firstItem="QPo-eK-FBP" firstAttribute="top" secondItem="HbH-DF-pQJ" secondAttribute="bottom" constant="18" id="igK-Xe-ncL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4nb-uZ-nqP" secondAttribute="trailing" id="mRn-fl-vig"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iKh-fW-iRz" secondAttribute="trailing" constant="13" id="mcS-Oe-KVH"/>
                             <constraint firstItem="iKh-fW-iRz" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leadingMargin" constant="15" id="nGH-dj-JO5"/>
                             <constraint firstItem="IST-dJ-o6N" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leadingMargin" constant="31" id="rvo-UM-vDf"/>
                             <constraint firstItem="iKh-fW-iRz" firstAttribute="top" secondItem="IST-dJ-o6N" secondAttribute="bottom" constant="13" id="svm-py-Cib"/>
-                            <constraint firstItem="Otc-s5-teY" firstAttribute="top" secondItem="QPo-eK-FBP" secondAttribute="bottom" constant="75" id="tSv-I0-aEk"/>
-                            <constraint firstItem="QPo-eK-FBP" firstAttribute="top" secondItem="HbH-DF-pQJ" secondAttribute="bottom" constant="18" id="tXA-vX-bQ5"/>
-                            <constraint firstItem="4nb-uZ-nqP" firstAttribute="top" secondItem="QPo-eK-FBP" secondAttribute="bottom" constant="41" id="uvB-AJ-xBg"/>
+                            <constraint firstItem="Otc-s5-teY" firstAttribute="top" secondItem="QPo-eK-FBP" secondAttribute="bottom" constant="65" id="tSv-I0-aEk"/>
+                            <constraint firstItem="4nb-uZ-nqP" firstAttribute="top" secondItem="QPo-eK-FBP" secondAttribute="bottom" constant="31" id="uvB-AJ-xBg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IST-dJ-o6N" secondAttribute="trailing" constant="31" id="vUN-ZX-PRw"/>
+                            <constraint firstItem="KLy-Ls-B6r" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leading" constant="45" id="vip-I7-Hgm"/>
+                            <constraint firstAttribute="trailing" secondItem="KLy-Ls-B6r" secondAttribute="trailing" constant="45" id="z9d-k3-7vJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VYL-ro-7gH"/>
                     <connections>
                         <outlet property="pickerView" destination="iKh-fW-iRz" id="qrV-Iq-7Gy"/>
                         <outlet property="spinButton" destination="QPo-eK-FBP" id="rDw-0V-mB0"/>
-                        <outlet property="spinwheelImage" destination="HbH-DF-pQJ" id="YTg-eN-sPc"/>
+                        <outlet property="spinWheelControl" destination="KLy-Ls-B6r" id="doI-dk-bik"/>
                         <segue destination="evK-1W-l5e" kind="presentation" identifier="showLogin" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Yag-I2-Y12"/>
                     </connections>
                 </viewController>
@@ -159,10 +160,99 @@
             </objects>
             <point key="canvasLocation" x="896" y="131"/>
         </scene>
+        <!--Spinwheel View Controller-->
+        <scene sceneID="Aax-9g-BH3">
+            <objects>
+                <viewController id="fQ4-yT-9TL" customClass="SpinwheelViewController" customModule="Dealwheel" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2nE-Al-p5i"/>
+                        <viewControllerLayoutGuide type="bottom" id="KXM-iW-mol"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MnT-gG-st4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tempwheel.png" translatesAutoresizingMaskIntoConstraints="NO" id="WCf-rf-QQo">
+                                <rect key="frame" x="40" y="215" width="242" height="213"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="213" id="42y-5H-vnu"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQY-C2-HuW">
+                                <rect key="frame" x="77" y="446" width="167" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="Zvg-IC-tje"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <state key="normal" title="spin">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cody Martin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WnV-ZB-1HX">
+                                <rect key="frame" x="25.5" y="534" width="94" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500 points" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Qr-Cr-zJs">
+                                <rect key="frame" x="221.5" y="534" width="82.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="templogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="0jf-yE-Jep">
+                                <rect key="frame" x="47" y="40" width="226" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="226" id="6QF-tv-hC3"/>
+                                    <constraint firstAttribute="height" constant="72" id="aqg-gY-RtB"/>
+                                </constraints>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CfR-fZ-Rdt">
+                                <rect key="frame" x="31" y="125" width="260" height="77"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="9Qs-pd-ffE"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WCf-rf-QQo" firstAttribute="top" secondItem="CfR-fZ-Rdt" secondAttribute="bottom" constant="13" id="1Hx-lU-g50"/>
+                            <constraint firstItem="wQY-C2-HuW" firstAttribute="leading" secondItem="MnT-gG-st4" secondAttribute="leadingMargin" constant="61" id="5A7-yL-jOv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Qr-Cr-zJs" secondAttribute="trailing" id="ENh-OL-b2P"/>
+                            <constraint firstItem="0jf-yE-Jep" firstAttribute="top" secondItem="2nE-Al-p5i" secondAttribute="bottom" constant="20" id="L6q-rV-bgP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wQY-C2-HuW" secondAttribute="trailing" constant="60" id="M8z-Nf-aRW"/>
+                            <constraint firstItem="WnV-ZB-1HX" firstAttribute="top" secondItem="wQY-C2-HuW" secondAttribute="bottom" constant="41" id="Q4e-t1-kH5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CfR-fZ-Rdt" secondAttribute="trailing" constant="13" id="RqK-Qo-h5s"/>
+                            <constraint firstItem="2Qr-Cr-zJs" firstAttribute="top" secondItem="wQY-C2-HuW" secondAttribute="bottom" constant="41" id="T1Y-HK-kqb"/>
+                            <constraint firstItem="KXM-iW-mol" firstAttribute="top" secondItem="wQY-C2-HuW" secondAttribute="bottom" constant="75" id="Ugf-oc-bew"/>
+                            <constraint firstItem="WnV-ZB-1HX" firstAttribute="leading" secondItem="MnT-gG-st4" secondAttribute="leadingMargin" constant="9.5" id="W15-wb-9ru"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WCf-rf-QQo" secondAttribute="trailing" constant="22" id="X03-yJ-FGd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0jf-yE-Jep" secondAttribute="trailing" constant="31" id="YQP-53-g55"/>
+                            <constraint firstItem="WCf-rf-QQo" firstAttribute="leading" secondItem="MnT-gG-st4" secondAttribute="leadingMargin" constant="24" id="bWp-48-v8x"/>
+                            <constraint firstItem="wQY-C2-HuW" firstAttribute="top" secondItem="WCf-rf-QQo" secondAttribute="bottom" constant="18" id="gLK-te-stO"/>
+                            <constraint firstItem="WCf-rf-QQo" firstAttribute="top" secondItem="CfR-fZ-Rdt" secondAttribute="bottom" constant="13" id="hMm-dk-V0j"/>
+                            <constraint firstItem="0jf-yE-Jep" firstAttribute="leading" secondItem="MnT-gG-st4" secondAttribute="leadingMargin" constant="31" id="hNr-8a-GPe"/>
+                            <constraint firstItem="wQY-C2-HuW" firstAttribute="top" secondItem="WCf-rf-QQo" secondAttribute="bottom" constant="18" id="oaO-Ho-vTR"/>
+                            <constraint firstItem="CfR-fZ-Rdt" firstAttribute="leading" secondItem="MnT-gG-st4" secondAttribute="leadingMargin" constant="15" id="ph3-66-ZgM"/>
+                            <constraint firstItem="2Qr-Cr-zJs" firstAttribute="leading" secondItem="WnV-ZB-1HX" secondAttribute="trailing" constant="102" id="vCh-29-h1a"/>
+                            <constraint firstItem="CfR-fZ-Rdt" firstAttribute="top" secondItem="0jf-yE-Jep" secondAttribute="bottom" constant="13" id="xKh-9s-Ahv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dFe-jd-dwx"/>
+                    <connections>
+                        <outlet property="pickerView" destination="CfR-fZ-Rdt" id="Dhe-Qb-2Ll"/>
+                        <outlet property="spinButton" destination="wQY-C2-HuW" id="IKm-To-QFv"/>
+                        <outlet property="spinwheelImage" destination="WCf-rf-QQo" id="Bqr-qN-oFk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gQT-Np-uk6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1686" y="908"/>
+        </scene>
     </scenes>
     <resources>
         <image name="fblogin.png" width="800" height="300"/>
         <image name="templogo.png" width="338" height="209"/>
-        <image name="tempwheel.png" width="715" height="715"/>
+        <image name="tempwheel.png" width="689" height="689"/>
     </resources>
 </document>
