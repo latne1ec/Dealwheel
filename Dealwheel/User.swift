@@ -10,7 +10,6 @@ import Foundation
 import Parse
 import ParseFacebookUtilsV4
 
-
 public class User {
     
     private static let _instance = User()
