@@ -32,46 +32,48 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cody Martin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsi-qa-UlL">
-                                <rect key="frame" x="25.5" y="534" width="94" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Cody Martin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsi-qa-UlL">
+                                <rect key="frame" x="26" y="534" width="94" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500 points" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nb-uZ-nqP">
-                                <rect key="frame" x="221.5" y="534" width="82.5" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="500 points" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nb-uZ-nqP">
+                                <rect key="frame" x="222" y="534" width="83" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="templogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="IST-dJ-o6N">
-                                <rect key="frame" x="47" y="60" width="226" height="72"/>
+                                <rect key="frame" x="47" y="40" width="226" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="226" id="k0b-2R-mGE"/>
                                     <constraint firstAttribute="height" constant="72" id="mZO-J9-cSz"/>
                                 </constraints>
                             </imageView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iKh-fW-iRz">
-                                <rect key="frame" x="31" y="145" width="260" height="77"/>
+                                <rect key="frame" x="31" y="125" width="260" height="77"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="77" id="wNh-H2-qbt"/>
                                 </constraints>
                             </pickerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KLy-Ls-B6r" customClass="SpinWheelControl" customModule="SpinWheelControl">
-                                <rect key="frame" x="45" y="234" width="230" height="210"/>
+                                <rect key="frame" x="50" y="224" width="220" height="220"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="QPo-eK-FBP" firstAttribute="top" secondItem="KLy-Ls-B6r" secondAttribute="bottom" constant="12" id="7r6-M2-mxc"/>
+                            <constraint firstItem="QPo-eK-FBP" firstAttribute="top" secondItem="KLy-Ls-B6r" secondAttribute="bottom" constant="12" id="9Dw-ch-fwL"/>
                             <constraint firstItem="Lsi-qa-UlL" firstAttribute="top" secondItem="QPo-eK-FBP" secondAttribute="bottom" constant="31" id="I4h-gn-onD"/>
-                            <constraint firstItem="KLy-Ls-B6r" firstAttribute="top" secondItem="iKh-fW-iRz" secondAttribute="bottom" constant="12" id="LpE-mM-hke"/>
+                            <constraint firstItem="KLy-Ls-B6r" firstAttribute="centerX" secondItem="QPo-eK-FBP" secondAttribute="centerX" id="MUS-Ci-rbn"/>
                             <constraint firstItem="4nb-uZ-nqP" firstAttribute="leading" secondItem="Lsi-qa-UlL" secondAttribute="trailing" constant="102" id="MtK-Qb-kaq"/>
                             <constraint firstItem="QPo-eK-FBP" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leadingMargin" constant="61" id="PbS-jt-Tl4"/>
+                            <constraint firstItem="KLy-Ls-B6r" firstAttribute="top" secondItem="iKh-fW-iRz" secondAttribute="bottom" constant="22" id="Syh-0o-1lF"/>
                             <constraint firstItem="Lsi-qa-UlL" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leadingMargin" constant="9.5" id="UHZ-3p-Vaj"/>
                             <constraint firstItem="IST-dJ-o6N" firstAttribute="top" secondItem="Gce-no-STX" secondAttribute="bottom" constant="20" id="WA9-Lr-ljY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QPo-eK-FBP" secondAttribute="trailing" constant="60" id="cUg-0n-qav"/>
+                            <constraint firstItem="KLy-Ls-B6r" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leadingMargin" constant="34" id="dGp-tn-URE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4nb-uZ-nqP" secondAttribute="trailing" id="mRn-fl-vig"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iKh-fW-iRz" secondAttribute="trailing" constant="13" id="mcS-Oe-KVH"/>
                             <constraint firstItem="iKh-fW-iRz" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leadingMargin" constant="15" id="nGH-dj-JO5"/>
@@ -80,15 +82,15 @@
                             <constraint firstItem="Otc-s5-teY" firstAttribute="top" secondItem="QPo-eK-FBP" secondAttribute="bottom" constant="65" id="tSv-I0-aEk"/>
                             <constraint firstItem="4nb-uZ-nqP" firstAttribute="top" secondItem="QPo-eK-FBP" secondAttribute="bottom" constant="31" id="uvB-AJ-xBg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IST-dJ-o6N" secondAttribute="trailing" constant="31" id="vUN-ZX-PRw"/>
-                            <constraint firstItem="KLy-Ls-B6r" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leading" constant="45" id="vip-I7-Hgm"/>
-                            <constraint firstAttribute="trailing" secondItem="KLy-Ls-B6r" secondAttribute="trailing" constant="45" id="z9d-k3-7vJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VYL-ro-7gH"/>
                     <connections>
                         <outlet property="pickerView" destination="iKh-fW-iRz" id="qrV-Iq-7Gy"/>
+                        <outlet property="pointsLabel" destination="4nb-uZ-nqP" id="w9H-Yc-0oI"/>
                         <outlet property="spinButton" destination="QPo-eK-FBP" id="rDw-0V-mB0"/>
                         <outlet property="spinWheelControl" destination="KLy-Ls-B6r" id="doI-dk-bik"/>
+                        <outlet property="usernameLabel" destination="Lsi-qa-UlL" id="DDC-Th-2NQ"/>
                         <segue destination="evK-1W-l5e" kind="presentation" identifier="showLogin" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Yag-I2-Y12"/>
                     </connections>
                 </viewController>
@@ -132,6 +134,7 @@
                     </view>
                     <connections>
                         <outlet property="loginButton" destination="21e-7a-6TK" id="yDN-4p-nhb"/>
+                        <segue destination="GKc-d8-bNr" kind="presentation" identifier="showMainScreen" modalTransitionStyle="crossDissolve" id="f8r-GJ-4JX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xiE-wc-PD0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -238,7 +241,6 @@
                     <connections>
                         <outlet property="pickerView" destination="CfR-fZ-Rdt" id="Dhe-Qb-2Ll"/>
                         <outlet property="spinButton" destination="wQY-C2-HuW" id="IKm-To-QFv"/>
-                        <outlet property="spinwheelImage" destination="WCf-rf-QQo" id="Bqr-qN-oFk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gQT-Np-uk6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -251,4 +253,7 @@
         <image name="templogo.png" width="338" height="209"/>
         <image name="tempwheel.png" width="689" height="689"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="f8r-GJ-4JX"/>
+    </inferredMetricsTieBreakers>
 </document>

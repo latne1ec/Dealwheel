@@ -15,7 +15,9 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var spinWheelControl: SpinWheelControl!
-    @IBOutlet weak var spinwheelImage: UIImageView!
+
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var pointsLabel: UILabel!
     @IBOutlet weak var spinButton: UIButton!
     
     var locationManager = CLLocationManager()
@@ -82,7 +84,7 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             self.performSegue(withIdentifier: "showLogin", sender: self)
         } else {
             // We have a User
-            self.performSegue(withIdentifier: "showLogin", sender: self)
+            usernameLabel.text = PFUser.current()?.object(forKey: "fullName") as? String
         }
     }
     
@@ -92,17 +94,10 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             showLocationDeniedError()
             return
         }
-        
         spinWheelControl.manualSpinValue = -5
         spinWheelControl.manuallySpinTheWheel()
         
     }
-    
-    @objc func EndSpin () {
-        let radians: CGFloat = CGFloat(atan2f(Float(spinwheelImage.transform.b), Float(spinwheelImage.transform.a)))
-        print(radians)
-    }
-
     
     // Picker View Stuff
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
