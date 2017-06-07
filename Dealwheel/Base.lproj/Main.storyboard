@@ -45,25 +45,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="templogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="IST-dJ-o6N">
-                                <rect key="frame" x="47" y="40" width="226" height="72"/>
+                                <rect key="frame" x="47" y="60" width="226" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="226" id="k0b-2R-mGE"/>
                                     <constraint firstAttribute="height" constant="72" id="mZO-J9-cSz"/>
                                 </constraints>
                             </imageView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iKh-fW-iRz">
-                                <rect key="frame" x="31" y="125" width="260" height="77"/>
+                                <rect key="frame" x="31" y="145" width="260" height="77"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="77" id="wNh-H2-qbt"/>
                                 </constraints>
                             </pickerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KLy-Ls-B6r" customClass="SpinWheelControl" customModule="SpinWheelControl">
-                                <rect key="frame" x="45" y="214" width="230" height="230"/>
+                                <rect key="frame" x="45" y="234" width="230" height="210"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="230" id="I8X-2z-K2o"/>
-                                    <constraint firstAttribute="width" constant="230" id="ruV-Jh-7gM"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

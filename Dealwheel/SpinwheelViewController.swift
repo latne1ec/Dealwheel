@@ -79,9 +79,10 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     func checkIfPreviousUser() {
         if(PFUser.current() == nil) {
             // No User, show Login screen
-            //self.performSegue(withIdentifier: "showLogin", sender: self)
+            self.performSegue(withIdentifier: "showLogin", sender: self)
         } else {
             // We have a User
+            self.performSegue(withIdentifier: "showLogin", sender: self)
         }
     }
     
@@ -144,7 +145,7 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         let coord = locationObj.coordinate
         print(coord.latitude)
         print(coord.longitude)
-        
+        locationManager.stopUpdatingLocation()
     }
     
     // Spin Wheel Control
