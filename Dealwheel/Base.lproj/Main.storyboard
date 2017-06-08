@@ -9,7 +9,75 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="MqD-R9-3lf">
+            <objects>
+                <viewController id="t2I-bG-JW4" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2M9-HP-z3E"/>
+                        <viewControllerLayoutGuide type="bottom" id="LjM-oH-Mow"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zla-Pu-qQJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RvH-SN-4qd">
+                                <rect key="frame" x="11" y="20" width="298" height="147"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="147" id="fBC-hN-CTh"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SOX-4c-biT">
+                                <rect key="frame" x="11" y="175" width="298" height="266"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kuq-98-Mur" customClass="SpinWheelControl" customModule="SpinWheelControl">
+                                        <rect key="frame" x="29" y="13" width="240" height="240"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="kuq-98-Mur" firstAttribute="leading" secondItem="SOX-4c-biT" secondAttribute="leading" constant="29" id="PDV-EY-KUe"/>
+                                    <constraint firstItem="kuq-98-Mur" firstAttribute="top" secondItem="SOX-4c-biT" secondAttribute="top" constant="13" id="XJJ-Ae-GHW"/>
+                                    <constraint firstItem="kuq-98-Mur" firstAttribute="centerX" secondItem="SOX-4c-biT" secondAttribute="centerX" id="cba-Tk-oMq"/>
+                                    <constraint firstItem="kuq-98-Mur" firstAttribute="centerY" secondItem="SOX-4c-biT" secondAttribute="centerY" id="eqy-yE-CLx"/>
+                                    <constraint firstAttribute="height" constant="266" id="vmD-tu-K5u"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dau-CP-BlK">
+                                <rect key="frame" x="11" y="458" width="298" height="102"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="102" id="o3p-rI-UOf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dau-CP-BlK" firstAttribute="leading" secondItem="zla-Pu-qQJ" secondAttribute="leading" constant="11" id="JeJ-3M-WCt"/>
+                            <constraint firstItem="LjM-oH-Mow" firstAttribute="top" secondItem="dau-CP-BlK" secondAttribute="bottom" constant="8" id="Kq5-Rn-wAW"/>
+                            <constraint firstAttribute="trailing" secondItem="dau-CP-BlK" secondAttribute="trailing" constant="11" id="XJB-c0-Ygy"/>
+                            <constraint firstItem="SOX-4c-biT" firstAttribute="top" secondItem="RvH-SN-4qd" secondAttribute="bottom" constant="8" id="XWk-iu-mj5"/>
+                            <constraint firstAttribute="trailing" secondItem="SOX-4c-biT" secondAttribute="trailing" constant="11" id="YDH-Vk-opj"/>
+                            <constraint firstItem="RvH-SN-4qd" firstAttribute="leading" secondItem="zla-Pu-qQJ" secondAttribute="leading" constant="11" id="Z1A-Qz-VRE"/>
+                            <constraint firstAttribute="trailing" secondItem="RvH-SN-4qd" secondAttribute="trailing" constant="11" id="fVn-w2-uCH"/>
+                            <constraint firstItem="RvH-SN-4qd" firstAttribute="top" secondItem="2M9-HP-z3E" secondAttribute="bottom" id="lTg-Tb-xBc"/>
+                            <constraint firstItem="dau-CP-BlK" firstAttribute="top" secondItem="SOX-4c-biT" secondAttribute="bottom" constant="17" id="m6J-V1-ac5"/>
+                            <constraint firstItem="SOX-4c-biT" firstAttribute="leading" secondItem="zla-Pu-qQJ" secondAttribute="leading" constant="11" id="tYf-0u-dJL"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zbW-ez-sb4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1685.625" y="-652.81690140845069"/>
+        </scene>
         <!--Spinwheel View Controller-->
         <scene sceneID="d9P-6g-B0r">
             <objects>
@@ -22,70 +90,93 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QPo-eK-FBP">
-                                <rect key="frame" x="77" y="456" width="167" height="47"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G9G-AQ-FVM">
+                                <rect key="frame" x="11" y="20" width="298" height="177"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="47" id="AgW-bq-vjN"/>
+                                    <constraint firstAttribute="height" constant="177" id="fER-zg-Ayo"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                <state key="normal" title="spin">
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mSN-Oq-rfe">
+                                <rect key="frame" x="11" y="205" width="298" height="247"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="247" id="jIe-6r-lFe"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KlW-KC-Hfo">
+                                <rect key="frame" x="11" y="460" width="298" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Wdk-U7-bqn"/>
+                                </constraints>
+                            </view>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QPo-eK-FBP">
+                                <rect key="frame" x="76" y="467" width="167" height="40"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                <state key="normal" title="spin the wheel!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Cody Martin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsi-qa-UlL">
-                                <rect key="frame" x="26" y="534" width="94" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evan L" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsi-qa-UlL">
+                                <rect key="frame" x="17" y="525" width="56.5" height="25"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="500 points" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nb-uZ-nqP">
-                                <rect key="frame" x="222" y="534" width="83" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500 points" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nb-uZ-nqP">
+                                <rect key="frame" x="209.5" y="525" width="94.5" height="25"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="templogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="IST-dJ-o6N">
-                                <rect key="frame" x="47" y="40" width="226" height="72"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="226" id="k0b-2R-mGE"/>
-                                    <constraint firstAttribute="height" constant="72" id="mZO-J9-cSz"/>
-                                </constraints>
+                                <rect key="frame" x="47" y="35" width="226" height="72"/>
                             </imageView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iKh-fW-iRz">
-                                <rect key="frame" x="31" y="125" width="260" height="77"/>
+                                <rect key="frame" x="31" y="119" width="260" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="77" id="wNh-H2-qbt"/>
+                                    <constraint firstAttribute="height" constant="70" id="6jC-cD-SyG"/>
                                 </constraints>
                             </pickerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KLy-Ls-B6r" customClass="SpinWheelControl" customModule="SpinWheelControl">
-                                <rect key="frame" x="50" y="224" width="220" height="220"/>
+                            <view contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KLy-Ls-B6r" customClass="SpinWheelControl" customModule="SpinWheelControl">
+                                <rect key="frame" x="44" y="206" width="232" height="232"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="QPo-eK-FBP" firstAttribute="top" secondItem="KLy-Ls-B6r" secondAttribute="bottom" constant="12" id="9Dw-ch-fwL"/>
-                            <constraint firstItem="Lsi-qa-UlL" firstAttribute="top" secondItem="QPo-eK-FBP" secondAttribute="bottom" constant="31" id="I4h-gn-onD"/>
-                            <constraint firstItem="KLy-Ls-B6r" firstAttribute="centerX" secondItem="QPo-eK-FBP" secondAttribute="centerX" id="MUS-Ci-rbn"/>
-                            <constraint firstItem="4nb-uZ-nqP" firstAttribute="leading" secondItem="Lsi-qa-UlL" secondAttribute="trailing" constant="102" id="MtK-Qb-kaq"/>
-                            <constraint firstItem="QPo-eK-FBP" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leadingMargin" constant="61" id="PbS-jt-Tl4"/>
-                            <constraint firstItem="KLy-Ls-B6r" firstAttribute="top" secondItem="iKh-fW-iRz" secondAttribute="bottom" constant="22" id="Syh-0o-1lF"/>
-                            <constraint firstItem="Lsi-qa-UlL" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leadingMargin" constant="9.5" id="UHZ-3p-Vaj"/>
-                            <constraint firstItem="IST-dJ-o6N" firstAttribute="top" secondItem="Gce-no-STX" secondAttribute="bottom" constant="20" id="WA9-Lr-ljY"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="QPo-eK-FBP" secondAttribute="trailing" constant="60" id="cUg-0n-qav"/>
-                            <constraint firstItem="KLy-Ls-B6r" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leadingMargin" constant="34" id="dGp-tn-URE"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="4nb-uZ-nqP" secondAttribute="trailing" id="mRn-fl-vig"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="iKh-fW-iRz" secondAttribute="trailing" constant="13" id="mcS-Oe-KVH"/>
-                            <constraint firstItem="iKh-fW-iRz" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leadingMargin" constant="15" id="nGH-dj-JO5"/>
-                            <constraint firstItem="IST-dJ-o6N" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leadingMargin" constant="31" id="rvo-UM-vDf"/>
-                            <constraint firstItem="iKh-fW-iRz" firstAttribute="top" secondItem="IST-dJ-o6N" secondAttribute="bottom" constant="13" id="svm-py-Cib"/>
-                            <constraint firstItem="Otc-s5-teY" firstAttribute="top" secondItem="QPo-eK-FBP" secondAttribute="bottom" constant="65" id="tSv-I0-aEk"/>
-                            <constraint firstItem="4nb-uZ-nqP" firstAttribute="top" secondItem="QPo-eK-FBP" secondAttribute="bottom" constant="31" id="uvB-AJ-xBg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="IST-dJ-o6N" secondAttribute="trailing" constant="31" id="vUN-ZX-PRw"/>
+                            <constraint firstItem="IST-dJ-o6N" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leadingMargin" constant="31" id="02o-pV-CCO"/>
+                            <constraint firstItem="G9G-AQ-FVM" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leading" constant="11" id="41n-e8-zin"/>
+                            <constraint firstItem="G9G-AQ-FVM" firstAttribute="top" secondItem="Gce-no-STX" secondAttribute="bottom" id="4g1-qG-pt5"/>
+                            <constraint firstItem="Otc-s5-teY" firstAttribute="top" secondItem="Lsi-qa-UlL" secondAttribute="bottom" constant="18" id="7vC-t5-QQg"/>
+                            <constraint firstItem="4nb-uZ-nqP" firstAttribute="trailing" secondItem="381-Je-2LX" secondAttribute="trailingMargin" id="8Qe-l1-RHj"/>
+                            <constraint firstItem="QPo-eK-FBP" firstAttribute="top" secondItem="mSN-Oq-rfe" secondAttribute="bottom" constant="15" id="9rh-Ds-76C"/>
+                            <constraint firstItem="Lsi-qa-UlL" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leadingMargin" constant="1" id="DUM-Wf-4ed"/>
+                            <constraint firstAttribute="trailing" secondItem="KlW-KC-Hfo" secondAttribute="trailing" constant="11" id="GoM-AS-egx"/>
+                            <constraint firstItem="mSN-Oq-rfe" firstAttribute="top" secondItem="G9G-AQ-FVM" secondAttribute="bottom" constant="8" id="Gua-VI-0TB"/>
+                            <constraint firstAttribute="trailing" secondItem="G9G-AQ-FVM" secondAttribute="trailing" constant="11" id="OeG-aV-4D7"/>
+                            <constraint firstItem="mSN-Oq-rfe" firstAttribute="top" secondItem="iKh-fW-iRz" secondAttribute="bottom" constant="16" id="Pag-03-PF4"/>
+                            <constraint firstAttribute="trailing" secondItem="mSN-Oq-rfe" secondAttribute="trailing" constant="11" id="QLV-Ve-lsy"/>
+                            <constraint firstItem="IST-dJ-o6N" firstAttribute="top" secondItem="Gce-no-STX" secondAttribute="bottom" constant="15" id="VgI-N7-UCr"/>
+                            <constraint firstItem="mSN-Oq-rfe" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leading" constant="11" id="XLO-mI-x1a"/>
+                            <constraint firstItem="QPo-eK-FBP" firstAttribute="centerX" secondItem="KlW-KC-Hfo" secondAttribute="centerX" id="aeq-jV-nKP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iKh-fW-iRz" secondAttribute="trailing" constant="13" id="d7X-BD-Uvk"/>
+                            <constraint firstItem="KlW-KC-Hfo" firstAttribute="top" secondItem="mSN-Oq-rfe" secondAttribute="bottom" constant="8" id="fMB-kl-fBt"/>
+                            <constraint firstItem="iKh-fW-iRz" firstAttribute="top" secondItem="IST-dJ-o6N" secondAttribute="bottom" constant="12" id="kSQ-93-U0N"/>
+                            <constraint firstItem="Lsi-qa-UlL" firstAttribute="baseline" secondItem="4nb-uZ-nqP" secondAttribute="baseline" id="oVf-cc-PrH"/>
+                            <constraint firstItem="QPo-eK-FBP" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leadingMargin" constant="60" id="ovg-aF-BAD"/>
+                            <constraint firstItem="IST-dJ-o6N" firstAttribute="centerX" secondItem="G9G-AQ-FVM" secondAttribute="centerX" id="q1m-Ro-ft9"/>
+                            <constraint firstItem="Otc-s5-teY" firstAttribute="top" secondItem="KlW-KC-Hfo" secondAttribute="bottom" constant="8" id="ttv-Gv-Npe"/>
+                            <constraint firstItem="iKh-fW-iRz" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leadingMargin" constant="15" id="wmp-Fj-kkz"/>
+                            <constraint firstItem="Lsi-qa-UlL" firstAttribute="top" secondItem="QPo-eK-FBP" secondAttribute="bottom" constant="18" id="xbs-gC-TZi"/>
+                            <constraint firstItem="KlW-KC-Hfo" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leading" constant="11" id="yT3-fN-isr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VYL-ro-7gH"/>
                     <connections>
+                        <outlet property="centerView" destination="mSN-Oq-rfe" id="WlR-57-SeS"/>
                         <outlet property="pickerView" destination="iKh-fW-iRz" id="qrV-Iq-7Gy"/>
                         <outlet property="pointsLabel" destination="4nb-uZ-nqP" id="w9H-Yc-0oI"/>
                         <outlet property="spinButton" destination="QPo-eK-FBP" id="rDw-0V-mB0"/>
@@ -254,6 +345,6 @@
         <image name="tempwheel.png" width="689" height="689"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="f8r-GJ-4JX"/>
+        <segue reference="ANb-I6-qte"/>
     </inferredMetricsTieBreakers>
 </document>

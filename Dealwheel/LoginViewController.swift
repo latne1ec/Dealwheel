@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Parse
+import ParseFacebookUtilsV4
 
 class LoginViewController: UIViewController {
 
@@ -26,7 +28,51 @@ class LoginViewController: UIViewController {
     }
     
     @objc func loginButtonTapped () {
-         User.Instance.login()
+        PFFacebookUtils.logInInBackground(withReadPermissions: ["email"]) { (user, error) in
+            if let user = user {
+                if user.isNew {
+                    print("User signed up!")
+                    self.getDataFromFacebookUserAccount(user: user)
+                    
+                } else {
+                    print("User logged in through Facebook!")
+                    self.getDataFromFacebookUserAccount(user: user)
+                }
+            } else {
+                print("Uh oh. The user cancelled the Facebook login.")
+            }
+        }
     }
     
+    func getDataFromFacebookUserAccount (user: PFUser) {
+        let graphRequest:FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
+        graphRequest.start(completionHandler: { (connection, result, error) -> Void in
+            
+            if result != nil {
+                guard let data = result as? [String:Any] else { return }
+                
+                let fullname: String = data["name"] as! String
+                print(fullname)
+                
+                if data["email"] == nil {
+                    print("no email found")
+                } else {
+                    let email: String = data["email"] as! String
+                    user.setObject(email, forKey: "email")
+                }
+                
+                user.setObject(fullname, forKey: "fullName")
+                user.saveInBackground(block: { (success, error) in
+                    if success {
+                        print("saved")
+                        self.performSegue(withIdentifier: "showMainScreen", sender: self)
+                    } else {
+                        let alert = UIAlertController(title: "Error", message: "An unknown error occured", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Ok", style: .default) { action in })
+                        self.present(alert, animated: true)
+                    }
+                })
+            }
+        })
+    }
 }
