@@ -24,6 +24,7 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     // Vars
     var player: AVAudioPlayer?
+    var spinning: Bool?
     
     var locationManager = CLLocationManager()
     let categories = ["Food", "Fun", "Vacations", "Adventures", "Gifts", "Things to do"]
@@ -35,20 +36,32 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         checkIfPreviousUser()
         initSpinWheel()
         
-        spinButton.addTarget(self, action: #selector(spinTheWheel), for: .touchUpInside)
         pickerView.dataSource = self
         pickerView.delegate = self
         pickerView.showsSelectionIndicator = false
         
+        // Set Spinwheel frame manually per device size
         if UIScreen.main.bounds.size.height > 568 {
-            // iPhone 6
-//            spinWheelControl.frame = CGRect(x: spinWheelControl.frame.origin.x, y: spinWheelControl.frame.origin.y, width: spinWheelControl.frame.width*1.5, height: spinWheelControl.frame.height*1.5)
+            // iPhone 6, 6s, and 7
+            spinWheelControl.frame.size.width = 290
+            spinWheelControl.frame.size.height = 290
             var civ: CGPoint = spinWheelControl.center
             civ.x = self.view.center.x
             civ.y = self.view.center.y+25
             spinWheelControl.center = civ
-        } else if UIScreen.main.bounds.size.height > 667 {
-            // iPhone Plus
+            spinWheelControl.clear()
+            spinWheelControl.drawWheel()
+        }
+        if UIScreen.main.bounds.size.height > 667 {
+            // iPhone 6 Plus, 7 Plus
+            spinWheelControl.frame.size.width = 320
+            spinWheelControl.frame.size.height = 320
+            var civ: CGPoint = spinWheelControl.center
+            civ.x = self.view.center.x
+            civ.y = self.view.center.y+25
+            spinWheelControl.center = civ
+            spinWheelControl.clear()
+            spinWheelControl.drawWheel()
         }
     }
     
@@ -207,6 +220,7 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     func spinWheelDidEndDecelerating(spinWheel: SpinWheelControl) {
         print("The spin wheel did end decelerating.")
+        spinWheelControl.isUserInteractionEnabled = true
     }
     func spinWheelDidRotateByRadians(radians: Radians) {
         //print("The wheel did rotate this many radians - " + String(describing: radians))
