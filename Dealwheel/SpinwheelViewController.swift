@@ -21,6 +21,7 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet weak var pointsLabel: UILabel!
     @IBOutlet weak var spinButton: UIButton!
     @IBOutlet weak var centerView: UIView!
+    @IBOutlet weak var arrow: UIImageView!
     
     // Vars
     var player: AVAudioPlayer?
@@ -40,9 +41,13 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         pickerView.delegate = self
         pickerView.showsSelectionIndicator = false
         
-        // Set Spinwheel frame manually per device size
+        // Set Spinwheel and Arrow frame manually per device size
         if UIScreen.main.bounds.size.height > 568 {
             // iPhone 6, 6s, and 7
+            var a: CGPoint = spinWheelControl.center
+            a.x = self.view.center.x
+            a.y = self.view.center.y-114
+            arrow.center = a
             spinWheelControl.frame.size.width = 290
             spinWheelControl.frame.size.height = 290
             var civ: CGPoint = spinWheelControl.center
@@ -54,6 +59,10 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
         if UIScreen.main.bounds.size.height > 667 {
             // iPhone 6 Plus, 7 Plus
+            var a: CGPoint = spinWheelControl.center
+            a.x = self.view.center.x
+            a.y = self.view.center.y-125
+            arrow.center = a
             spinWheelControl.frame.size.width = 320
             spinWheelControl.frame.size.height = 320
             var civ: CGPoint = spinWheelControl.center
@@ -112,7 +121,9 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             //self.performSegue(withIdentifier: "showLogin", sender: self)
         } else {
             // We have a User
-            usernameLabel.text = PFUser.current()?.object(forKey: "fullName") as? String
+            let firstNameString = PFUser.current()?.object(forKey: "fullName") as? String
+            let firstWord = firstNameString?.components(separatedBy: " ").first
+            usernameLabel.text = firstWord
         }
     }
     
@@ -153,7 +164,7 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         var pickerLabel = view as? UILabel;
         if (pickerLabel == nil) {
             pickerLabel = UILabel()
-            pickerLabel?.font = UIFont(name: "AvenirNext-Bold", size: 21)
+            pickerLabel?.font = UIFont(name: "BudmoJiggler-Regular", size: 22.5)
             pickerLabel?.textColor = UIColor.white
             pickerLabel?.textAlignment = NSTextAlignment.center
         }

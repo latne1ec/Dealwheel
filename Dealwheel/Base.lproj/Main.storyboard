@@ -6,12 +6,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="AvenirNext.ttc">
-            <string>AvenirNext-Bold</string>
+        <array key="budmo.ttf">
+            <string>BudmoJiggler-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -90,82 +91,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G9G-AQ-FVM">
-                                <rect key="frame" x="11" y="20" width="298" height="177"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="177" id="fER-zg-Ayo"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mSN-Oq-rfe">
-                                <rect key="frame" x="11" y="205" width="298" height="247"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="247" id="jIe-6r-lFe"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KlW-KC-Hfo">
-                                <rect key="frame" x="11" y="460" width="298" height="100"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="Wdk-U7-bqn"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evan L" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsi-qa-UlL">
-                                <rect key="frame" x="17" y="525" width="57" height="25"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsi-qa-UlL">
+                                <rect key="frame" x="24" y="523.5" width="46.5" height="24.5"/>
+                                <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500 points" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nb-uZ-nqP">
-                                <rect key="frame" x="209" y="525" width="95" height="25"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nb-uZ-nqP">
+                                <rect key="frame" x="224.5" y="521.5" width="38.5" height="27"/>
+                                <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="templogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="IST-dJ-o6N">
-                                <rect key="frame" x="47" y="35" width="226" height="72"/>
+                                <rect key="frame" x="47" y="43" width="226" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="tXH-yM-Uoo"/>
+                                </constraints>
                             </imageView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iKh-fW-iRz">
-                                <rect key="frame" x="31" y="119" width="260" height="70"/>
+                                <rect key="frame" x="31" y="127" width="260" height="68"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="6jC-cD-SyG"/>
+                                    <constraint firstAttribute="height" constant="68" id="jPS-Xg-yrz"/>
                                 </constraints>
                             </pickerView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KLy-Ls-B6r" customClass="SpinWheelControl" customModule="SpinWheelControl">
-                                <rect key="frame" x="41" y="208" width="240" height="240"/>
+                                <rect key="frame" x="38" y="210" width="244" height="244"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star@x.png" translatesAutoresizingMaskIntoConstraints="NO" id="oAu-5W-eHU">
+                                <rect key="frame" x="274" y="523" width="20" height="21.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="dTq-hv-3aI"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrowGold.png" translatesAutoresizingMaskIntoConstraints="NO" id="4i0-ur-zMF">
+                                <rect key="frame" x="144" y="199" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="IST-dJ-o6N" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leadingMargin" constant="31" id="02o-pV-CCO"/>
-                            <constraint firstItem="G9G-AQ-FVM" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leading" constant="11" id="41n-e8-zin"/>
-                            <constraint firstItem="G9G-AQ-FVM" firstAttribute="top" secondItem="Gce-no-STX" secondAttribute="bottom" id="4g1-qG-pt5"/>
-                            <constraint firstItem="Otc-s5-teY" firstAttribute="top" secondItem="Lsi-qa-UlL" secondAttribute="bottom" constant="18" id="7vC-t5-QQg"/>
-                            <constraint firstItem="4nb-uZ-nqP" firstAttribute="trailing" secondItem="381-Je-2LX" secondAttribute="trailingMargin" id="8Qe-l1-RHj"/>
-                            <constraint firstItem="Lsi-qa-UlL" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leadingMargin" constant="1" id="DUM-Wf-4ed"/>
-                            <constraint firstAttribute="trailing" secondItem="KlW-KC-Hfo" secondAttribute="trailing" constant="11" id="GoM-AS-egx"/>
-                            <constraint firstItem="mSN-Oq-rfe" firstAttribute="top" secondItem="G9G-AQ-FVM" secondAttribute="bottom" constant="8" id="Gua-VI-0TB"/>
-                            <constraint firstAttribute="trailing" secondItem="G9G-AQ-FVM" secondAttribute="trailing" constant="11" id="OeG-aV-4D7"/>
-                            <constraint firstItem="mSN-Oq-rfe" firstAttribute="top" secondItem="iKh-fW-iRz" secondAttribute="bottom" constant="16" id="Pag-03-PF4"/>
-                            <constraint firstAttribute="trailing" secondItem="mSN-Oq-rfe" secondAttribute="trailing" constant="11" id="QLV-Ve-lsy"/>
-                            <constraint firstItem="IST-dJ-o6N" firstAttribute="top" secondItem="Gce-no-STX" secondAttribute="bottom" constant="15" id="VgI-N7-UCr"/>
-                            <constraint firstItem="mSN-Oq-rfe" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leading" constant="11" id="XLO-mI-x1a"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="iKh-fW-iRz" secondAttribute="trailing" constant="13" id="d7X-BD-Uvk"/>
-                            <constraint firstItem="KlW-KC-Hfo" firstAttribute="top" secondItem="mSN-Oq-rfe" secondAttribute="bottom" constant="8" id="fMB-kl-fBt"/>
-                            <constraint firstItem="iKh-fW-iRz" firstAttribute="top" secondItem="IST-dJ-o6N" secondAttribute="bottom" constant="12" id="kSQ-93-U0N"/>
-                            <constraint firstItem="Lsi-qa-UlL" firstAttribute="baseline" secondItem="4nb-uZ-nqP" secondAttribute="baseline" id="oVf-cc-PrH"/>
-                            <constraint firstItem="IST-dJ-o6N" firstAttribute="centerX" secondItem="G9G-AQ-FVM" secondAttribute="centerX" id="q1m-Ro-ft9"/>
-                            <constraint firstItem="Otc-s5-teY" firstAttribute="top" secondItem="KlW-KC-Hfo" secondAttribute="bottom" constant="8" id="ttv-Gv-Npe"/>
-                            <constraint firstItem="iKh-fW-iRz" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leadingMargin" constant="15" id="wmp-Fj-kkz"/>
-                            <constraint firstItem="KlW-KC-Hfo" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leading" constant="11" id="yT3-fN-isr"/>
+                            <constraint firstItem="Lsi-qa-UlL" firstAttribute="baseline" secondItem="4nb-uZ-nqP" secondAttribute="baseline" id="BwM-F6-yZY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oAu-5W-eHU" secondAttribute="trailing" constant="10" id="F4G-Mx-HM0"/>
+                            <constraint firstItem="iKh-fW-iRz" firstAttribute="top" secondItem="IST-dJ-o6N" secondAttribute="bottom" constant="12" id="GRW-dT-971"/>
+                            <constraint firstItem="Lsi-qa-UlL" firstAttribute="baseline" secondItem="4nb-uZ-nqP" secondAttribute="firstBaseline" id="N8x-oi-CdA"/>
+                            <constraint firstItem="IST-dJ-o6N" firstAttribute="centerX" secondItem="381-Je-2LX" secondAttribute="centerX" id="R33-0j-vn0"/>
+                            <constraint firstItem="4nb-uZ-nqP" firstAttribute="centerY" secondItem="oAu-5W-eHU" secondAttribute="centerY" constant="1.25" id="R4J-qM-MEn"/>
+                            <constraint firstItem="oAu-5W-eHU" firstAttribute="leading" secondItem="4nb-uZ-nqP" secondAttribute="trailing" constant="11" id="Reg-6M-aRE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iKh-fW-iRz" secondAttribute="trailing" constant="13" id="hgZ-t2-ydV"/>
+                            <constraint firstItem="Lsi-qa-UlL" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leadingMargin" constant="8" id="iod-pp-pFB"/>
+                            <constraint firstItem="Otc-s5-teY" firstAttribute="top" secondItem="oAu-5W-eHU" secondAttribute="bottom" constant="23.5" id="m9V-6M-4gZ"/>
+                            <constraint firstItem="iKh-fW-iRz" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leadingMargin" constant="15" id="nNo-Nt-qwM"/>
+                            <constraint firstItem="IST-dJ-o6N" firstAttribute="top" secondItem="Gce-no-STX" secondAttribute="bottom" constant="23" id="nNw-vv-KZe"/>
+                            <constraint firstItem="IST-dJ-o6N" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leadingMargin" constant="31" id="pzb-De-BMQ"/>
+                            <constraint firstItem="Otc-s5-teY" firstAttribute="top" secondItem="Lsi-qa-UlL" secondAttribute="bottom" constant="20" id="r8o-Rw-Ic0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VYL-ro-7gH"/>
                     <connections>
-                        <outlet property="centerView" destination="mSN-Oq-rfe" id="WlR-57-SeS"/>
+                        <outlet property="arrow" destination="4i0-ur-zMF" id="a2O-gr-0Pg"/>
                         <outlet property="pickerView" destination="iKh-fW-iRz" id="qrV-Iq-7Gy"/>
                         <outlet property="pointsLabel" destination="4nb-uZ-nqP" id="w9H-Yc-0oI"/>
                         <outlet property="spinWheelControl" destination="KLy-Ls-B6r" id="doI-dk-bik"/>
@@ -328,11 +314,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrowGold.png" width="80" height="80"/>
         <image name="fblogin.png" width="800" height="300"/>
+        <image name="star@x.png" width="256" height="256"/>
         <image name="templogo.png" width="338" height="209"/>
         <image name="tempwheel.png" width="689" height="689"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ANb-I6-qte"/>
+        <segue reference="f8r-GJ-4JX"/>
     </inferredMetricsTieBreakers>
 </document>
