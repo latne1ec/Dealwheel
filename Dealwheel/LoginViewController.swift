@@ -27,23 +27,25 @@ class LoginViewController: UIViewController {
         self.view.backgroundColor = UIColor(patternImage: image)
     }
     
+    // User tapped login button
     @objc func loginButtonTapped () {
         PFFacebookUtils.logInInBackground(withReadPermissions: ["email"]) { (user, error) in
             if let user = user {
                 if user.isNew {
-                    print("User signed up!")
+                    // User signed up!
                     self.getDataFromFacebookUserAccount(user: user)
                     
                 } else {
-                    print("User logged in through Facebook!")
+                    // User logged in!
                     self.getDataFromFacebookUserAccount(user: user)
                 }
             } else {
-                print("Uh oh. The user cancelled the Facebook login.")
+                // User canceled fb login
             }
         }
     }
     
+    // Get user data from facebook account
     func getDataFromFacebookUserAccount (user: PFUser) {
         let graphRequest:FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
         graphRequest.start(completionHandler: { (connection, result, error) -> Void in

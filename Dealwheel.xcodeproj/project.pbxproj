@@ -33,8 +33,8 @@
 
 /* Begin PBXFileReference section */
 		204B0A271EE86FD9000C6D3D /* Dealwheel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Dealwheel.entitlements; sourceTree = "<group>"; };
-		20912F041EE8E02F009AE0B1 /* tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = tick.mp3; path = ../../../../../../Downloads/tick.mp3; sourceTree = "<group>"; };
-		20912F061EE8E480009AE0B1 /* tick2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = tick2.mp3; path = ../../../../../../Downloads/tick2.mp3; sourceTree = "<group>"; };
+		20912F041EE8E02F009AE0B1 /* tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tick.mp3; sourceTree = "<group>"; };
+		20912F061EE8E480009AE0B1 /* tick2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tick2.mp3; sourceTree = "<group>"; };
 		20DFB94E1EE72097009462CA /* Dealwheel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dealwheel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20DFB9511EE72097009462CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20DFB9561EE72097009462CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -118,8 +118,7 @@
 				20DFB9651EE72132009462CA /* SpinwheelViewController.swift */,
 				20DFB9551EE72097009462CA /* Main.storyboard */,
 				20DFB9581EE72097009462CA /* Assets.xcassets */,
-				20912F041EE8E02F009AE0B1 /* tick.mp3 */,
-				20912F061EE8E480009AE0B1 /* tick2.mp3 */,
+				20F97F211EE9E5D70008D13E /* Audio */,
 				20DFB9741EE742E9009462CA /* Misc */,
 				20DFB9731EE742E3009462CA /* Images */,
 				20DFB95A1EE72097009462CA /* LaunchScreen.storyboard */,
@@ -152,6 +151,15 @@
 				20DFB9671EE72155009462CA /* DealwheelMisc */,
 			);
 			path = Misc;
+			sourceTree = "<group>";
+		};
+		20F97F211EE9E5D70008D13E /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				20912F041EE8E02F009AE0B1 /* tick.mp3 */,
+				20912F061EE8E480009AE0B1 /* tick2.mp3 */,
+			);
+			path = Audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

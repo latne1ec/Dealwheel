@@ -36,10 +36,7 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         setBackgroundImage ()
         checkIfPreviousUser()
         initSpinWheel()
-        
-        pickerView.dataSource = self
-        pickerView.delegate = self
-        pickerView.showsSelectionIndicator = false
+        initPickerView()
         
         // Set Spinwheel and Arrow frame manually per device size
         if UIScreen.main.bounds.size.height > 568 {
@@ -61,13 +58,13 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             // iPhone 6 Plus, 7 Plus
             var a: CGPoint = spinWheelControl.center
             a.x = self.view.center.x
-            a.y = self.view.center.y-125
+            a.y = self.view.center.y-115
             arrow.center = a
             spinWheelControl.frame.size.width = 320
             spinWheelControl.frame.size.height = 320
             var civ: CGPoint = spinWheelControl.center
             civ.x = self.view.center.x
-            civ.y = self.view.center.y+25
+            civ.y = self.view.center.y+40
             spinWheelControl.center = civ
             spinWheelControl.clear()
             spinWheelControl.drawWheel()
@@ -76,6 +73,12 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     override func viewWillAppear(_ animated: Bool) {
         initLocationManager()
+    }
+    
+    func initPickerView () {
+        pickerView.dataSource = self
+        pickerView.delegate = self
+        pickerView.showsSelectionIndicator = false
     }
     
     func initSpinWheel () {
@@ -140,8 +143,6 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         spinWheelControl.manualSpinValue = -5
         spinWheelControl.manuallySpinTheWheel()
         
-       // Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(self.playSound), userInfo: nil, repeats: true)
-        
     }
     
     // Picker View Stuff
@@ -197,7 +198,6 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         return 12
     }
     @objc func spinWheelDidChangeValue(sender: AnyObject) {
-        //print("Value changed to " + String(self.spinWheelControl.selectedIndex))
         
         switch self.spinWheelControl.selectedIndex {
         case 0:
@@ -239,7 +239,6 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     func prepareSound() {
         let url = Bundle.main.url(forResource: "tick2", withExtension: "mp3")!
-        
         do {
             player = try AVAudioPlayer(contentsOf: url)
             guard let player = player else {
