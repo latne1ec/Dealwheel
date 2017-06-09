@@ -92,13 +92,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsi-qa-UlL">
-                                <rect key="frame" x="24" y="523.5" width="46.5" height="24.5"/>
+                                <rect key="frame" x="24" y="524.5" width="47.5" height="23.5"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nb-uZ-nqP">
-                                <rect key="frame" x="224.5" y="521.5" width="38.5" height="27"/>
+                                <rect key="frame" x="229.5" y="523" width="33.5" height="25.5"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -121,7 +121,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star@x.png" translatesAutoresizingMaskIntoConstraints="NO" id="oAu-5W-eHU">
-                                <rect key="frame" x="274" y="523" width="20" height="21.5"/>
+                                <rect key="frame" x="274" y="524.5" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="dTq-hv-3aI"/>
                                 </constraints>
@@ -176,25 +176,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tempwheel.png" translatesAutoresizingMaskIntoConstraints="NO" id="EJk-S5-T0w">
-                                <rect key="frame" x="24" y="100" width="272" height="245"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="245" id="tKr-cs-nVt"/>
-                                </constraints>
+                                <rect key="frame" x="43" y="100" width="232" height="232"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21e-7a-6TK">
-                                <rect key="frame" x="46" y="392" width="228" height="93"/>
+                                <rect key="frame" x="40" y="392" width="241" height="98"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="241" id="CLN-2X-uDu"/>
+                                    <constraint firstAttribute="height" constant="98" id="P7V-QV-UMC"/>
+                                </constraints>
                                 <state key="normal" image="fblogin.png"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="EJk-S5-T0w" firstAttribute="leading" secondItem="pUJ-AE-GvE" secondAttribute="leadingMargin" constant="8" id="5al-Q4-fsl"/>
-                            <constraint firstItem="EJk-S5-T0w" firstAttribute="centerX" secondItem="pUJ-AE-GvE" secondAttribute="centerX" id="Nzp-nm-iNj"/>
-                            <constraint firstItem="21e-7a-6TK" firstAttribute="leading" secondItem="pUJ-AE-GvE" secondAttribute="leadingMargin" constant="30" id="Tv0-Lt-1ig"/>
-                            <constraint firstItem="EJk-S5-T0w" firstAttribute="top" secondItem="XvL-Gq-2Nd" secondAttribute="bottom" constant="80" id="i4h-dU-3hX"/>
-                            <constraint firstItem="I0j-gt-zKH" firstAttribute="top" secondItem="21e-7a-6TK" secondAttribute="bottom" constant="83" id="lHM-ms-RFV"/>
-                            <constraint firstItem="21e-7a-6TK" firstAttribute="top" secondItem="EJk-S5-T0w" secondAttribute="bottom" constant="47" id="n0B-9D-yAN"/>
-                            <constraint firstItem="21e-7a-6TK" firstAttribute="centerX" secondItem="EJk-S5-T0w" secondAttribute="centerX" id="oJP-H7-fQC"/>
+                            <constraint firstItem="EJk-S5-T0w" firstAttribute="leading" secondItem="pUJ-AE-GvE" secondAttribute="leadingMargin" constant="27" id="Kkt-0I-zUW"/>
+                            <constraint firstItem="I0j-gt-zKH" firstAttribute="top" secondItem="21e-7a-6TK" secondAttribute="bottom" constant="78" id="T83-sH-M7Y"/>
+                            <constraint firstItem="EJk-S5-T0w" firstAttribute="top" secondItem="XvL-Gq-2Nd" secondAttribute="bottom" constant="80" id="USG-b8-tim"/>
+                            <constraint firstItem="21e-7a-6TK" firstAttribute="top" secondItem="EJk-S5-T0w" secondAttribute="bottom" constant="60" id="bFb-CA-CVN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EJk-S5-T0w" secondAttribute="trailing" constant="29" id="wPb-QD-oez"/>
+                            <constraint firstItem="21e-7a-6TK" firstAttribute="centerX" secondItem="pUJ-AE-GvE" secondAttribute="centerX" id="yVS-av-e5i"/>
                         </constraints>
                     </view>
                     <connections>
@@ -204,7 +204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xiE-wc-PD0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2406" y="131"/>
+            <point key="canvasLocation" x="2405.625" y="130.98591549295776"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UxX-eM-kYT">

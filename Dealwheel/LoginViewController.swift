@@ -49,7 +49,6 @@ class LoginViewController: UIViewController {
     func getDataFromFacebookUserAccount (user: PFUser) {
         let graphRequest:FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
         graphRequest.start(completionHandler: { (connection, result, error) -> Void in
-            
             if result != nil {
                 guard let data = result as? [String:Any] else { return }
                 

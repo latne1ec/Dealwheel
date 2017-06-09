@@ -29,9 +29,8 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     var spinning: Bool?
     var userLat: CLLocationDegrees?
     var userLon: CLLocationDegrees?
-    
     var locationManager = CLLocationManager()
-    let categories = ["Food", "Fun", "Vacations", "Adventures", "Gifts", "Things to do"]
+    var categories = ["Food", "Fun", "Vacations", "Adventures", "Gifts", "Things to do"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -127,12 +126,12 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     func checkIfPreviousUser() {
         if(PFUser.current() == nil) {
             // No User, show Login screen
-            //self.performSegue(withIdentifier: "showLogin", sender: self)
+            self.performSegue(withIdentifier: "showLogin", sender: self)
         } else {
             // We have a User
             let firstNameString = PFUser.current()?.object(forKey: "fullName") as? String
-            let firstWord = firstNameString?.components(separatedBy: " ").first
-            usernameLabel.text = firstWord
+            let firstName = firstNameString?.components(separatedBy: " ").first
+            usernameLabel.text = firstName
         }
     }
     
@@ -151,9 +150,8 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
     }
     
-    // Picker View Stuff
+    // Picker View
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        
         pickerView.subviews.forEach({
             $0.isHidden = $0.frame.height < 1.0
         })
@@ -244,7 +242,6 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         spinWheelControl.isUserInteractionEnabled = true
     }
     func spinWheelDidRotateByRadians(radians: Radians) {
-        //print("The wheel did rotate this many radians - " + String(describing: radians))
     }
     
     func prepareSound() {
@@ -252,7 +249,6 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         do {
             player = try AVAudioPlayer(contentsOf: url)
             guard let player = player else {
-                print("why")
                 return
             }
             player.prepareToPlay()
@@ -262,6 +258,8 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
     }
     
+    
+    // Groupon API Calls
     func getDeal () {
         
         let urlString = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", userLat!, userLon!, currentCategory!, (PFUser.current()?.objectId)!)
