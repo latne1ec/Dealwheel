@@ -24,8 +24,11 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet weak var arrow: UIImageView!
     
     // Vars
+    var currentCategory: String?
     var player: AVAudioPlayer?
     var spinning: Bool?
+    var userLat: CLLocationDegrees?
+    var userLon: CLLocationDegrees?
     
     var locationManager = CLLocationManager()
     let categories = ["Food", "Fun", "Vacations", "Adventures", "Gifts", "Things to do"]
@@ -38,34 +41,36 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         initSpinWheel()
         initPickerView()
         
+        currentCategory = categories[0]
+        
         // Set Spinwheel and Arrow frame manually per device size
         if UIScreen.main.bounds.size.height > 568 {
             // iPhone 6, 6s, and 7
-            var a: CGPoint = spinWheelControl.center
-            a.x = self.view.center.x
-            a.y = self.view.center.y-114
-            arrow.center = a
+            var arrowCenter: CGPoint = spinWheelControl.center
+            arrowCenter.x = self.view.center.x
+            arrowCenter.y = self.view.center.y-114
+            arrow.center = arrowCenter
             spinWheelControl.frame.size.width = 290
             spinWheelControl.frame.size.height = 290
-            var civ: CGPoint = spinWheelControl.center
-            civ.x = self.view.center.x
-            civ.y = self.view.center.y+25
-            spinWheelControl.center = civ
+            var spinWheelCenter: CGPoint = spinWheelControl.center
+            spinWheelCenter.x = self.view.center.x
+            spinWheelCenter.y = self.view.center.y+25
+            spinWheelControl.center = spinWheelCenter
             spinWheelControl.clear()
             spinWheelControl.drawWheel()
         }
         if UIScreen.main.bounds.size.height > 667 {
             // iPhone 6 Plus, 7 Plus
-            var a: CGPoint = spinWheelControl.center
-            a.x = self.view.center.x
-            a.y = self.view.center.y-115
-            arrow.center = a
+            var arrowCenter: CGPoint = spinWheelControl.center
+            arrowCenter.x = self.view.center.x
+            arrowCenter.y = self.view.center.y-115
+            arrow.center = arrowCenter
             spinWheelControl.frame.size.width = 320
             spinWheelControl.frame.size.height = 320
-            var civ: CGPoint = spinWheelControl.center
-            civ.x = self.view.center.x
-            civ.y = self.view.center.y+40
-            spinWheelControl.center = civ
+            var spinWheelCenter: CGPoint = spinWheelControl.center
+            spinWheelCenter.x = self.view.center.x
+            spinWheelCenter.y = self.view.center.y+40
+            spinWheelControl.center = spinWheelCenter
             spinWheelControl.clear()
             spinWheelControl.drawWheel()
         }
@@ -102,6 +107,7 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         locationManager.distanceFilter = kCLDistanceFilterNone
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
+        
     }
     
     func showLocationDeniedError () {
@@ -160,6 +166,8 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         return categories[row]
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        currentCategory = categories[row]
+        getDeal()
     }
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         var pickerLabel = view as? UILabel;
@@ -184,6 +192,8 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         let locationArray = locations as NSArray
         let locationObj = locationArray.lastObject as! CLLocation
         let coord = locationObj.coordinate
+        userLat = coord.latitude
+        userLon = coord.longitude
         print(coord.latitude)
         print(coord.longitude)
         locationManager.stopUpdatingLocation()
@@ -251,6 +261,48 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             print(error.description)
         }
     }
+    
+    func getDeal () {
+        
+        let urlString = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", userLat!, userLon!, currentCategory!, (PFUser.current()?.objectId)!)
+        
+        let url = URL(string: urlString)
+        
+        URLSession.shared.dataTask(with: url!, completionHandler: {
+            (data, response, error) in
+            if(error != nil){
+                print("error")
+            }else{
+                do{
+                    let json = try JSONSerialization.jsonObject(with: data!, options:.allowFragments) as! [String : AnyObject]
+                    print(json)
+                    
+                }catch let error as NSError{
+                    print(error)
+                }
+            }
+        }).resume()
+    }
+    
+    func detectIfUserMadePurchase () {
+        let urlString = String(format:"https://partner-api.groupon.com/reporting/v2/order.json?clientId=01faac2db87949ba744486af455c30e03662bd78&group=TopCategory&date=[2017-01-01&date=2017-12-31]&campaign.currency=USD&Sid=%@", (PFUser.current()?.objectId)!)
+        print(urlString)
+        
+        let url = URL(string: urlString)
+        
+        URLSession.shared.dataTask(with: url!, completionHandler: {
+            (data, response, error) in
+            if(error != nil){
+                print("error")
+            }else{
+                do{
+                    let json = try JSONSerialization.jsonObject(with: data!, options:.allowFragments) as! [String : AnyObject]
+                    print(json)
+                    
+                }catch let error as NSError{
+                    print(error)
+                }
+            }
+        }).resume()
+    }
 }
-
-

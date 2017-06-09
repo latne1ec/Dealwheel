@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		206C1C351EEAE642000CFBCE /* star@x.png in Resources */ = {isa = PBXBuildFile; fileRef = 206C1C331EEAE642000CFBCE /* star@x.png */; };
+		206C1C361EEAE642000CFBCE /* arrowGold@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 206C1C341EEAE642000CFBCE /* arrowGold@2x.png */; };
 		20912F051EE8E02F009AE0B1 /* tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 20912F041EE8E02F009AE0B1 /* tick.mp3 */; };
 		20912F071EE8E480009AE0B1 /* tick2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 20912F061EE8E480009AE0B1 /* tick2.mp3 */; };
 		20DFB9521EE72097009462CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DFB9511EE72097009462CA /* AppDelegate.swift */; };
@@ -21,18 +23,14 @@
 		20DFB9701EE721D1009462CA /* tempwheel.png in Resources */ = {isa = PBXBuildFile; fileRef = 20DFB96D1EE721D0009462CA /* tempwheel.png */; };
 		20DFB9721EE72245009462CA /* fblogin.png in Resources */ = {isa = PBXBuildFile; fileRef = 20DFB9711EE72245009462CA /* fblogin.png */; };
 		20DFB9761EE7433F009462CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DFB9751EE7433F009462CA /* LoginViewController.swift */; };
-		20F97F141EE9CFED0008D13E /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20F97F131EE9CFED0008D13E /* arrow@2x.png */; };
 		20F97F161EE9DAC20008D13E /* budmo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20F97F151EE9DAC20008D13E /* budmo.ttf */; };
-		20F97F181EE9DD9D0008D13E /* star@x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20F97F171EE9DD9C0008D13E /* star@x.png */; };
-		20F97F1A1EE9DE2D0008D13E /* arrowDark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20F97F191EE9DE2D0008D13E /* arrowDark@2x.png */; };
-		20F97F1C1EE9DEF10008D13E /* arrow2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20F97F1B1EE9DEF10008D13E /* arrow2@2x.png */; };
-		20F97F1E1EE9DF5D0008D13E /* arrow3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20F97F1D1EE9DF5C0008D13E /* arrow3@2x.png */; };
-		20F97F201EE9E0BB0008D13E /* arrowGold@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20F97F1F1EE9E0BB0008D13E /* arrowGold@2x.png */; };
 		F4602C16C2DF9E9BB9D80296 /* Pods_Dealwheel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7A2FB03049FD56B44D388C /* Pods_Dealwheel.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		204B0A271EE86FD9000C6D3D /* Dealwheel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Dealwheel.entitlements; sourceTree = "<group>"; };
+		206C1C331EEAE642000CFBCE /* star@x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "star@x.png"; path = "../../../Design/star@x.png"; sourceTree = "<group>"; };
+		206C1C341EEAE642000CFBCE /* arrowGold@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrowGold@2x.png"; path = "../../../Design/arrowGold@2x.png"; sourceTree = "<group>"; };
 		20912F041EE8E02F009AE0B1 /* tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tick.mp3; sourceTree = "<group>"; };
 		20912F061EE8E480009AE0B1 /* tick2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tick2.mp3; sourceTree = "<group>"; };
 		20DFB94E1EE72097009462CA /* Dealwheel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dealwheel.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,13 +47,7 @@
 		20DFB96D1EE721D0009462CA /* tempwheel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tempwheel.png; sourceTree = "<group>"; };
 		20DFB9711EE72245009462CA /* fblogin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fblogin.png; sourceTree = "<group>"; };
 		20DFB9751EE7433F009462CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		20F97F131EE9CFED0008D13E /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow@2x.png"; path = "../../../../../../arrow@2x.png"; sourceTree = "<group>"; };
 		20F97F151EE9DAC20008D13E /* budmo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = budmo.ttf; path = ../../../../../../../Downloads/budmo/budmo.ttf; sourceTree = "<group>"; };
-		20F97F171EE9DD9C0008D13E /* star@x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "star@x.png"; path = "../../../../../../star@x.png"; sourceTree = "<group>"; };
-		20F97F191EE9DE2D0008D13E /* arrowDark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrowDark@2x.png"; path = "../../../../../../arrowDark@2x.png"; sourceTree = "<group>"; };
-		20F97F1B1EE9DEF10008D13E /* arrow2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow2@2x.png"; path = "../../../../../../arrow2@2x.png"; sourceTree = "<group>"; };
-		20F97F1D1EE9DF5C0008D13E /* arrow3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow3@2x.png"; path = "../../../../../../arrow3@2x.png"; sourceTree = "<group>"; };
-		20F97F1F1EE9E0BB0008D13E /* arrowGold@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrowGold@2x.png"; path = "../../../../../../arrowGold@2x.png"; sourceTree = "<group>"; };
 		5B7A2FB03049FD56B44D388C /* Pods_Dealwheel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dealwheel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8035FC775068B25F04C875E /* Pods-Dealwheel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dealwheel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dealwheel/Pods-Dealwheel.debug.xcconfig"; sourceTree = "<group>"; };
 		FA917210A3F72F23804A55DF /* Pods-Dealwheel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dealwheel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dealwheel/Pods-Dealwheel.release.xcconfig"; sourceTree = "<group>"; };
@@ -130,12 +122,8 @@
 		20DFB9731EE742E3009462CA /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				20F97F1F1EE9E0BB0008D13E /* arrowGold@2x.png */,
-				20F97F1D1EE9DF5C0008D13E /* arrow3@2x.png */,
-				20F97F1B1EE9DEF10008D13E /* arrow2@2x.png */,
-				20F97F191EE9DE2D0008D13E /* arrowDark@2x.png */,
-				20F97F171EE9DD9C0008D13E /* star@x.png */,
-				20F97F131EE9CFED0008D13E /* arrow@2x.png */,
+				206C1C341EEAE642000CFBCE /* arrowGold@2x.png */,
+				206C1C331EEAE642000CFBCE /* star@x.png */,
 				20DFB96C1EE721D0009462CA /* bkg.jpg */,
 				20DFB9711EE72245009462CA /* fblogin.png */,
 				20DFB96B1EE721D0009462CA /* templogo.png */,
@@ -232,18 +220,14 @@
 				20DFB9701EE721D1009462CA /* tempwheel.png in Resources */,
 				20DFB96F1EE721D1009462CA /* bkg.jpg in Resources */,
 				20912F051EE8E02F009AE0B1 /* tick.mp3 in Resources */,
-				20F97F201EE9E0BB0008D13E /* arrowGold@2x.png in Resources */,
-				20F97F141EE9CFED0008D13E /* arrow@2x.png in Resources */,
 				20DFB9681EE72155009462CA /* DealwheelMisc in Resources */,
 				20DFB95C1EE72097009462CA /* LaunchScreen.storyboard in Resources */,
-				20F97F181EE9DD9D0008D13E /* star@x.png in Resources */,
-				20F97F1E1EE9DF5D0008D13E /* arrow3@2x.png in Resources */,
 				20DFB9591EE72097009462CA /* Assets.xcassets in Resources */,
+				206C1C351EEAE642000CFBCE /* star@x.png in Resources */,
 				20912F071EE8E480009AE0B1 /* tick2.mp3 in Resources */,
-				20F97F1A1EE9DE2D0008D13E /* arrowDark@2x.png in Resources */,
 				20DFB9571EE72097009462CA /* Main.storyboard in Resources */,
-				20F97F1C1EE9DEF10008D13E /* arrow2@2x.png in Resources */,
 				20DFB96E1EE721D1009462CA /* templogo.png in Resources */,
+				206C1C361EEAE642000CFBCE /* arrowGold@2x.png in Resources */,
 				20DFB9721EE72245009462CA /* fblogin.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
