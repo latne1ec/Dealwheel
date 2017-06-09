@@ -75,8 +75,13 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if PFUser.current() != nil {
+            initLocationManager()
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
-        initLocationManager()
     }
     
     func initPickerView () {

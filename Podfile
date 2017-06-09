@@ -10,5 +10,6 @@ target 'Dealwheel' do
   pod 'FBSDKCoreKit'
   pod 'ParseFacebookUtilsV4'
   pod 'SpinWheelControl'
+  pod 'ProgressHUD'
 
 end

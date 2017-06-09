@@ -17,12 +17,14 @@ PODS:
     - FBSDKLoginKit (~> 4.10)
     - FBSDKTVOSKit (~> 4.10)
     - Parse (~> 1.12)
+  - ProgressHUD (2.4)
   - SpinWheelControl (0.1.5)
 
 DEPENDENCIES:
   - FBSDKCoreKit
   - Parse
   - ParseFacebookUtilsV4
+  - ProgressHUD
   - SpinWheelControl
 
 SPEC CHECKSUMS:
@@ -31,8 +33,9 @@ SPEC CHECKSUMS:
   FBSDKLoginKit: 6b92bd65f319d669d2b0730e49db495ef1660566
   Parse: b0aa91d2c435e53d4a9af26e741e014c9b35c42e
   ParseFacebookUtilsV4: 2f30c2b7021c8005d3042781da7ef87d06589421
+  ProgressHUD: 4b66b0df0e08519c5c7283a198fd2867a114c95a
   SpinWheelControl: a4c151fc62fcbed65b31804d0022f7161c47cc2b
 
-PODFILE CHECKSUM: b76835e9ebf7b4d89b5d5733b3a7f4da3e2a8fd8
+PODFILE CHECKSUM: 568613904751d321fed840733384fde61947029e
 
 COCOAPODS: 1.2.0
