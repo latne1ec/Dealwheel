@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		206C1C351EEAE642000CFBCE /* star@x.png in Resources */ = {isa = PBXBuildFile; fileRef = 206C1C331EEAE642000CFBCE /* star@x.png */; };
 		206C1C361EEAE642000CFBCE /* arrowGold@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 206C1C341EEAE642000CFBCE /* arrowGold@2x.png */; };
+		206C1C3F1EEB0240000CFBCE /* DealView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 206C1C3E1EEB0240000CFBCE /* DealView.xib */; };
+		206C1C411EEB0460000CFBCE /* DealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206C1C401EEB0460000CFBCE /* DealView.swift */; };
+		206C1C431EEB1394000CFBCE /* wedge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 206C1C421EEB1394000CFBCE /* wedge@2x.png */; };
 		20912F051EE8E02F009AE0B1 /* tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 20912F041EE8E02F009AE0B1 /* tick.mp3 */; };
 		20912F071EE8E480009AE0B1 /* tick2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 20912F061EE8E480009AE0B1 /* tick2.mp3 */; };
 		20DFB9521EE72097009462CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DFB9511EE72097009462CA /* AppDelegate.swift */; };
@@ -31,6 +34,9 @@
 		204B0A271EE86FD9000C6D3D /* Dealwheel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Dealwheel.entitlements; sourceTree = "<group>"; };
 		206C1C331EEAE642000CFBCE /* star@x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "star@x.png"; path = "../../../Design/star@x.png"; sourceTree = "<group>"; };
 		206C1C341EEAE642000CFBCE /* arrowGold@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrowGold@2x.png"; path = "../../../Design/arrowGold@2x.png"; sourceTree = "<group>"; };
+		206C1C3E1EEB0240000CFBCE /* DealView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DealView.xib; sourceTree = "<group>"; };
+		206C1C401EEB0460000CFBCE /* DealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealView.swift; sourceTree = "<group>"; };
+		206C1C421EEB1394000CFBCE /* wedge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wedge@2x.png"; path = "../../../Design/wedge@2x.png"; sourceTree = "<group>"; };
 		20912F041EE8E02F009AE0B1 /* tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tick.mp3; sourceTree = "<group>"; };
 		20912F061EE8E480009AE0B1 /* tick2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tick2.mp3; sourceTree = "<group>"; };
 		20DFB94E1EE72097009462CA /* Dealwheel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dealwheel.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +114,8 @@
 				20DFB9691EE72166009462CA /* User.swift */,
 				20DFB9751EE7433F009462CA /* LoginViewController.swift */,
 				20DFB9651EE72132009462CA /* SpinwheelViewController.swift */,
+				206C1C401EEB0460000CFBCE /* DealView.swift */,
+				206C1C3E1EEB0240000CFBCE /* DealView.xib */,
 				20DFB9551EE72097009462CA /* Main.storyboard */,
 				20DFB9581EE72097009462CA /* Assets.xcassets */,
 				20F97F211EE9E5D70008D13E /* Audio */,
@@ -122,6 +130,7 @@
 		20DFB9731EE742E3009462CA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				206C1C421EEB1394000CFBCE /* wedge@2x.png */,
 				206C1C341EEAE642000CFBCE /* arrowGold@2x.png */,
 				206C1C331EEAE642000CFBCE /* star@x.png */,
 				20DFB96C1EE721D0009462CA /* bkg.jpg */,
@@ -222,8 +231,10 @@
 				20912F051EE8E02F009AE0B1 /* tick.mp3 in Resources */,
 				20DFB9681EE72155009462CA /* DealwheelMisc in Resources */,
 				20DFB95C1EE72097009462CA /* LaunchScreen.storyboard in Resources */,
+				206C1C431EEB1394000CFBCE /* wedge@2x.png in Resources */,
 				20DFB9591EE72097009462CA /* Assets.xcassets in Resources */,
 				206C1C351EEAE642000CFBCE /* star@x.png in Resources */,
+				206C1C3F1EEB0240000CFBCE /* DealView.xib in Resources */,
 				20912F071EE8E480009AE0B1 /* tick2.mp3 in Resources */,
 				20DFB9571EE72097009462CA /* Main.storyboard in Resources */,
 				20DFB96E1EE721D1009462CA /* templogo.png in Resources */,
@@ -289,6 +300,7 @@
 			files = (
 				20DFB9521EE72097009462CA /* AppDelegate.swift in Sources */,
 				20DFB9661EE72132009462CA /* SpinwheelViewController.swift in Sources */,
+				206C1C411EEB0460000CFBCE /* DealView.swift in Sources */,
 				20DFB96A1EE72166009462CA /* User.swift in Sources */,
 				20DFB9761EE7433F009462CA /* LoginViewController.swift in Sources */,
 			);

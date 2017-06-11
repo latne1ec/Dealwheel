@@ -24,7 +24,7 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet weak var arrow: UIImageView!
     
     // Vars
-    var currentCategory: String?
+    var currentCategory: String = ""
     var player: AVAudioPlayer?
     var spinning: Bool?
     var userLat: CLLocationDegrees?
@@ -35,6 +35,7 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     override func viewDidLoad() {
         super.viewDidLoad()
         //prepareSound()
+        setWheelAndArrowFrames()
         setBackgroundImage ()
         checkIfPreviousUser()
         initSpinWheel()
@@ -42,6 +43,22 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         currentCategory = categories[0]
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if PFUser.current() != nil {
+            initLocationManager()
+        }
+    }
+    
+    func initPickerView () {
+        pickerView.dataSource = self
+        pickerView.delegate = self
+        pickerView.showsSelectionIndicator = false
+        
+    }
+    
+    func setWheelAndArrowFrames () {
         // Set Spinwheel and Arrow frame manually per device size
         if UIScreen.main.bounds.size.height > 568 {
             // iPhone 6, 6s, and 7
@@ -73,21 +90,6 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             spinWheelControl.clear()
             spinWheelControl.drawWheel()
         }
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        if PFUser.current() != nil {
-            initLocationManager()
-        }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-    }
-    
-    func initPickerView () {
-        pickerView.dataSource = self
-        pickerView.delegate = self
-        pickerView.showsSelectionIndicator = false
     }
     
     func initSpinWheel () {
@@ -241,7 +243,18 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             print("default")
         }
         
+        let view = DealView.instanceFromNib() as! DealView
+        view.setDefaults()
+        view.setWedgeColor(index: spinWheelControl.selectedIndex)
+        view.frame = CGRect(x: 0, y: 100, width: self.view.frame.width, height: self.view.frame.height-100)
+        self.view.addSubview(view)
+        UIView.animate(withDuration: 0.5, animations: {
+            view.alpha = 1.0
+        }) { (success) in
+        }
+        
     }
+    
     func spinWheelDidEndDecelerating(spinWheel: SpinWheelControl) {
         print("The spin wheel did end decelerating.")
         spinWheelControl.isUserInteractionEnabled = true
@@ -267,7 +280,7 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     // Groupon API Calls
     func getDeal () {
         
-        let urlString = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", userLat!, userLon!, currentCategory!, (PFUser.current()?.objectId)!)
+        let urlString = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", userLat!, userLon!, currentCategory, (PFUser.current()?.objectId)!)
         
         let url = URL(string: urlString)
         

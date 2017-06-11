@@ -14,10 +14,16 @@ import ProgressHUD
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var loginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setBackgroundImage ()
+        setLoginButtonDefaults()        
+    }
+    
+    func setLoginButtonDefaults () {
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+        loginButton.imageView?.contentMode = .scaleAspectFit
     }
     
     func setBackgroundImage () {
@@ -35,12 +41,12 @@ class LoginViewController: UIViewController {
                 if user.isNew {
                     // User signed up!
                     self.getDataFromFacebookUserAccount(user: user)
-                    //ProgressHUD.show("", interaction: false)
+                    ProgressHUD.show("", interaction: false)
                     
                 } else {
                     // User logged in!
                     self.getDataFromFacebookUserAccount(user: user)
-                    //ProgressHUD.show("", interaction: false)
+                    ProgressHUD.show("", interaction: false)
                 }
             } else {
                 // User canceled fb login
@@ -66,11 +72,11 @@ class LoginViewController: UIViewController {
                 user.setObject(fullname, forKey: "fullName")
                 user.saveInBackground(block: { (success, error) in
                     if success {
-                        //ProgressHUD.dismiss()
+                        ProgressHUD.dismiss()
                         print("saved")
                         self.performSegue(withIdentifier: "showMainScreen", sender: self)
                     } else {
-                        //ProgressHUD.dismiss()
+                        ProgressHUD.dismiss()
                         let alert = UIAlertController(title: "Error", message: "An unknown error occured", preferredStyle: .alert)
                         alert.addAction(UIAlertAction(title: "Ok", style: .default) { action in })
                         self.present(alert, animated: true)
