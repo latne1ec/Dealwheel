@@ -40,9 +40,7 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         checkIfPreviousUser()
         initSpinWheel()
         initPickerView()
-        
         currentCategory = categories[0]
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -51,12 +49,7 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
     }
     
-    func initPickerView () {
-        pickerView.dataSource = self
-        pickerView.delegate = self
-        pickerView.showsSelectionIndicator = false
-        
-    }
+    // MARK: - Init Methods
     
     func setWheelAndArrowFrames () {
         // Set Spinwheel and Arrow frame manually per device size
@@ -92,6 +85,12 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
     }
     
+    func initPickerView () {
+        pickerView.dataSource = self
+        pickerView.delegate = self
+        pickerView.showsSelectionIndicator = false
+    }
+    
     func initSpinWheel () {
         spinWheelControl.delegate = self
         spinWheelControl.dataSource = self
@@ -109,7 +108,6 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         if CLLocationManager.authorizationStatus() == .denied {
             showLocationDeniedError()
         }
-        
         locationManager.distanceFilter = kCLDistanceFilterNone
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
@@ -133,7 +131,7 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     func checkIfPreviousUser() {
         if(PFUser.current() == nil) {
             // No User, show Login screen
-            self.performSegue(withIdentifier: "showLogin", sender: self)
+            //self.performSegue(withIdentifier: "showLogin", sender: self)
         } else {
             // We have a User
             let firstNameString = PFUser.current()?.object(forKey: "fullName") as? String
@@ -142,22 +140,8 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
     }
     
-    @objc func playSound () {
-        player?.play()
-    }
+    /// MARK: - Picker View
     
-    @objc func spinTheWheel () {
-        
-        if CLLocationManager.authorizationStatus() == .denied {
-            showLocationDeniedError()
-            return
-        }
-        spinWheelControl.manualSpinValue = -5
-        spinWheelControl.manuallySpinTheWheel()
-        
-    }
-    
-    // Picker View
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         pickerView.subviews.forEach({
             $0.isHidden = $0.frame.height < 1.0
@@ -187,7 +171,8 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     
-    // Location Callbacks
+    // MARK: - Location Callbacks
+    
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         locationManager.stopUpdatingLocation()
             print(error)
@@ -199,12 +184,11 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         let coord = locationObj.coordinate
         userLat = coord.latitude
         userLon = coord.longitude
-        print(coord.latitude)
-        print(coord.longitude)
         locationManager.stopUpdatingLocation()
     }
     
-    // Spin Wheel Control
+    // MARK: - Spin Wheel Control
+    
     func wedgeForSliceAtIndex(index: UInt) -> SpinWheelWedge {
         let wedge = SpinWheelWedge()
         return wedge
@@ -277,10 +261,16 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     
-    // Groupon API Calls
+    // MARK: - Groupon API Methods
+    
+    // Merchant - name
+    // Title
+    // Large Image Url
+    // Link
+    
     func getDeal () {
         
-        let urlString = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", userLat!, userLon!, currentCategory, (PFUser.current()?.objectId)!)
+        let urlString = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", userLat!, userLon!, getCurrentCategory(), (PFUser.current()?.objectId)!)
         
         let url = URL(string: urlString)
         
@@ -291,8 +281,8 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             }else{
                 do{
                     let json = try JSONSerialization.jsonObject(with: data!, options:.allowFragments) as! [String : AnyObject]
-                    print(json)
-                    
+                    let deals = json["deals"] as! [[String:Any]]
+                  
                 }catch let error as NSError{
                     print(error)
                 }
@@ -320,5 +310,37 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
                 }
             }
         }).resume()
+    }
+    
+    func getCurrentCategory () -> String {
+        
+        switch pickerView.selectedRow(inComponent: 0) {
+        case 0:
+            return "food-and-drink"
+        case 1:
+            return "food-and-drink"
+        case 2:
+            return "food-and-drink"
+        case 3:
+            return "food-and-drink"
+        case 4:
+            return "food-and-drink"
+        case 5:
+            return "food-and-drink"
+        case 6:
+            return "food-and-drink"
+        case 7:
+            return "food-and-drink"
+        case 8:
+            return "food-and-drink"
+        case 9:
+            return "food-and-drink"
+        case 10:
+            return "food-and-drink"
+        case 11:
+            return "food-and-drink"
+        default:
+            return ""
+        }
     }
 }
