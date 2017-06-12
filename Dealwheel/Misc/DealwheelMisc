@@ -33,3 +33,13 @@
 //        spinwheelImage.layer.add(anim, forKey: nil)
 //        spinwheelImage.transform = CGAffineTransform(rotationAngle: touchUpStartAngle + (touchUpEndAngle));
 //        Timer.scheduledTimer(timeInterval: 7.0, target: self, selector: #selector(EndSpin), userInfo: nil, repeats: false)
+
+
+
+//do{
+//                    let json = try JSONSerialization.jsonObject(with: data!, options:.allowFragments) as! [String : AnyObject]
+//                    let deals = json["deals"] as! [[String:Any]]
+
+//                }catch let error as NSError{
+//                    print(error)
+//                }

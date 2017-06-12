@@ -11,6 +11,7 @@ import Parse
 import CoreLocation
 import SpinWheelControl
 import AVFoundation
+import SwiftyJSON
 
 class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, CLLocationManagerDelegate, SpinWheelControlDataSource, SpinWheelControlDelegate {
     
@@ -263,14 +264,15 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     // MARK: - Groupon API Methods
     
-    // Merchant - name
-    // Title
+    // Merchant - name √
+    // Title √
     // Large Image Url
     // Link
     
     func getDeal () {
         
         let urlString = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", userLat!, userLon!, getCurrentCategory(), (PFUser.current()?.objectId)!)
+        print(urlString)
         
         let url = URL(string: urlString)
         
@@ -279,12 +281,24 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             if(error != nil){
                 print("error")
             }else{
-                do{
-                    let json = try JSONSerialization.jsonObject(with: data!, options:.allowFragments) as! [String : AnyObject]
-                    let deals = json["deals"] as! [[String:Any]]
-                  
-                }catch let error as NSError{
-                    print(error)
+                    
+                let json = JSON(data: data!)
+                //print(json["deals"][0])
+                //print(json["deals"][0]["options"])
+                //print(json["deals"][0]["options"][0]["title"])
+                //print(json["deals"][0]["largeImageUrl"])
+                
+                if let merchantName = json["deals"][0]["merchant"]["name"].string {
+                    print(merchantName)
+                }
+                if let dealTitle = json["deals"][0]["options"][0]["title"].string {
+                    print(dealTitle)
+                }
+                if let dealUrl = json["deals"][0]["dealUrl"].string {
+                    print(dealUrl)
+                }
+                if let dealImageUrl = json["deals"][0]["largeImageUrl"].string {
+                    print(dealImageUrl)
                 }
             }
         }).resume()
@@ -318,9 +332,9 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         case 0:
             return "food-and-drink"
         case 1:
-            return "food-and-drink"
+            return "electronics"
         case 2:
-            return "food-and-drink"
+            return "health-and-fitness"
         case 3:
             return "food-and-drink"
         case 4:

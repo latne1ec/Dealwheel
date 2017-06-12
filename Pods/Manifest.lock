@@ -19,6 +19,7 @@ PODS:
     - Parse (~> 1.12)
   - ProgressHUD (2.4)
   - SpinWheelControl (0.1.5)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - FBSDKCoreKit
@@ -26,6 +27,7 @@ DEPENDENCIES:
   - ParseFacebookUtilsV4
   - ProgressHUD
   - SpinWheelControl
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
@@ -35,7 +37,8 @@ SPEC CHECKSUMS:
   ParseFacebookUtilsV4: 2f30c2b7021c8005d3042781da7ef87d06589421
   ProgressHUD: 4b66b0df0e08519c5c7283a198fd2867a114c95a
   SpinWheelControl: a4c151fc62fcbed65b31804d0022f7161c47cc2b
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 568613904751d321fed840733384fde61947029e
+PODFILE CHECKSUM: cddf517bf1aad4c96a100c28b32881d3ff0a46b5
 
 COCOAPODS: 1.2.0

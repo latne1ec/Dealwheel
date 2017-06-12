@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		200E234B1EEEEDFB00DAA97F /* GrouponAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200E234A1EEEEDFB00DAA97F /* GrouponAPIManager.swift */; };
 		206C1C351EEAE642000CFBCE /* star@x.png in Resources */ = {isa = PBXBuildFile; fileRef = 206C1C331EEAE642000CFBCE /* star@x.png */; };
 		206C1C361EEAE642000CFBCE /* arrowGold@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 206C1C341EEAE642000CFBCE /* arrowGold@2x.png */; };
 		206C1C3F1EEB0240000CFBCE /* DealView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 206C1C3E1EEB0240000CFBCE /* DealView.xib */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		200E234A1EEEEDFB00DAA97F /* GrouponAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrouponAPIManager.swift; sourceTree = "<group>"; };
 		204B0A271EE86FD9000C6D3D /* Dealwheel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Dealwheel.entitlements; sourceTree = "<group>"; };
 		206C1C331EEAE642000CFBCE /* star@x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "star@x.png"; path = "../../../Design/star@x.png"; sourceTree = "<group>"; };
 		206C1C341EEAE642000CFBCE /* arrowGold@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrowGold@2x.png"; path = "../../../Design/arrowGold@2x.png"; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				204B0A271EE86FD9000C6D3D /* Dealwheel.entitlements */,
 				20DFB9511EE72097009462CA /* AppDelegate.swift */,
 				20DFB9691EE72166009462CA /* User.swift */,
+				200E234A1EEEEDFB00DAA97F /* GrouponAPIManager.swift */,
 				20DFB9751EE7433F009462CA /* LoginViewController.swift */,
 				20DFB9651EE72132009462CA /* SpinwheelViewController.swift */,
 				206C1C401EEB0460000CFBCE /* DealView.swift */,
@@ -301,6 +304,7 @@
 				20DFB9521EE72097009462CA /* AppDelegate.swift in Sources */,
 				20DFB9661EE72132009462CA /* SpinwheelViewController.swift in Sources */,
 				206C1C411EEB0460000CFBCE /* DealView.swift in Sources */,
+				200E234B1EEEEDFB00DAA97F /* GrouponAPIManager.swift in Sources */,
 				20DFB96A1EE72166009462CA /* User.swift in Sources */,
 				20DFB9761EE7433F009462CA /* LoginViewController.swift in Sources */,
 			);
