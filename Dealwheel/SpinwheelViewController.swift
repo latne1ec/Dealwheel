@@ -31,7 +31,8 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     var userLat: CLLocationDegrees?
     var userLon: CLLocationDegrees?
     var locationManager = CLLocationManager()
-    var categories = ["Food", "Fun", "Vacations", "Adventures", "Gifts", "Things to do"]
+    var categories = ["automotive", "beauty and spas", "food and drink", "health and fitness", "home improvement", "personal services", "retail", "Things to do"]
+    var responseDic: Dictionary<String, Any> = ["" : ""]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -157,7 +158,9 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         currentCategory = categories[row]
-        getDeal()
+        if userLat != nil {
+            retrieveDeal()
+        }
     }
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         var pickerLabel = view as? UILabel;
@@ -186,6 +189,7 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         userLat = coord.latitude
         userLon = coord.longitude
         locationManager.stopUpdatingLocation()
+        retrieveDeal()
     }
     
     // MARK: - Spin Wheel Control
@@ -228,16 +232,7 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             print("default")
         }
         
-        let view = DealView.instanceFromNib() as! DealView
-        view.setDefaults()
-        view.setWedgeColor(index: spinWheelControl.selectedIndex)
-        view.frame = CGRect(x: 0, y: 100, width: self.view.frame.width, height: self.view.frame.height-100)
-        self.view.addSubview(view)
-        UIView.animate(withDuration: 0.5, animations: {
-            view.alpha = 1.0
-        }) { (success) in
-        }
-        
+        showDealVC()
     }
     
     func spinWheelDidEndDecelerating(spinWheel: SpinWheelControl) {
@@ -261,47 +256,18 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
     }
     
+    func showDealVC () {
+        self.performSegue(withIdentifier: "showDeal", sender: self)
+    }
     
-    // MARK: - Groupon API Methods
     
-    // Merchant - name √
-    // Title √
-    // Large Image Url
-    // Link
+    // MARK: - Data Management
     
-    func getDeal () {
+    func retrieveDeal () {
         
         let urlString = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", userLat!, userLon!, getCurrentCategory(), (PFUser.current()?.objectId)!)
-        print(urlString)
-        
         let url = URL(string: urlString)
-        
-        URLSession.shared.dataTask(with: url!, completionHandler: {
-            (data, response, error) in
-            if(error != nil){
-                print("error")
-            }else{
-                    
-                let json = JSON(data: data!)
-                //print(json["deals"][0])
-                //print(json["deals"][0]["options"])
-                //print(json["deals"][0]["options"][0]["title"])
-                //print(json["deals"][0]["largeImageUrl"])
-                
-                if let merchantName = json["deals"][0]["merchant"]["name"].string {
-                    print(merchantName)
-                }
-                if let dealTitle = json["deals"][0]["options"][0]["title"].string {
-                    print(dealTitle)
-                }
-                if let dealUrl = json["deals"][0]["dealUrl"].string {
-                    print(dealUrl)
-                }
-                if let dealImageUrl = json["deals"][0]["largeImageUrl"].string {
-                    print(dealImageUrl)
-                }
-            }
-        }).resume()
+        DataManager.Instance.getDeal(url: url!)
     }
     
     func detectIfUserMadePurchase () {
@@ -330,29 +296,21 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         switch pickerView.selectedRow(inComponent: 0) {
         case 0:
-            return "food-and-drink"
+            return "automotive"
         case 1:
-            return "electronics"
+            return "beauty-and-spas"
         case 2:
-            return "health-and-fitness"
+            return "food-and-drink"
         case 3:
-            return "food-and-drink"
+            return "health-and-fitness"
         case 4:
-            return "food-and-drink"
+            return "home-improvement"
         case 5:
-            return "food-and-drink"
+            return "personal-services"
         case 6:
-            return "food-and-drink"
+            return "retail"
         case 7:
-            return "food-and-drink"
-        case 8:
-            return "food-and-drink"
-        case 9:
-            return "food-and-drink"
-        case 10:
-            return "food-and-drink"
-        case 11:
-            return "food-and-drink"
+            return "things-to-do"
         default:
             return ""
         }

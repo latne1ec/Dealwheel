@@ -19,9 +19,17 @@ class DealView: UIView, SFSafariViewControllerDelegate {
     
     public func setDefaults () {
         self.layer.cornerRadius = 4
-        self.backgroundColor = UIColor.red
         self.alpha = 0.0
+        setBackgroundImage()
     }
+    func setBackgroundImage () {
+        UIGraphicsBeginImageContext(self.frame.size)
+        UIImage(named: "bkg.jpg")?.draw(in: self.bounds)
+        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        self.backgroundColor = UIColor(patternImage: image)
+    }
+    
     
     @IBAction func respinButtonTapped(_ sender: Any) {
         hideView()
@@ -65,6 +73,10 @@ class DealView: UIView, SFSafariViewControllerDelegate {
         }
     }
     
+    public func setDealValues (dic: Dictionary <String, Any>) {
+        print(dic)
+    }
+    
     @IBAction func purchaseButtonTapped(_ sender: Any) {
         if let url = URL(string: "http://apple.com") {
             let vc = SFSafariViewController(url: url, entersReaderIfAvailable: true)
@@ -77,6 +89,4 @@ class DealView: UIView, SFSafariViewControllerDelegate {
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
         print("finished")
     }
-    
-    
 }

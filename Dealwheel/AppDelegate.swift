@@ -25,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.initialize(with: configuration)
         PFFacebookUtils.initializeFacebook(applicationLaunchOptions: launchOptions)
         
+        
+        
         return true
     }
     

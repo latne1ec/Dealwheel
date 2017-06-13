@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -78,6 +79,96 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zbW-ez-sb4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="384" y="-733"/>
+        </scene>
+        <!--Deal View Controller-->
+        <scene sceneID="irW-nR-F7G">
+            <objects>
+                <viewController id="9fM-Cq-fdk" customClass="DealViewController" customModule="Dealwheel" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kWG-e5-ABa"/>
+                        <viewControllerLayoutGuide type="bottom" id="om5-9y-xU4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zPe-tn-85L">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wedge.png" translatesAutoresizingMaskIntoConstraints="NO" id="Y5b-yC-biB">
+                                <rect key="frame" x="75" y="52" width="170" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Y5b-yC-biB" secondAttribute="height" multiplier="85:64" id="gTn-aR-Gcf"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You won" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWo-Px-V66">
+                                <rect key="frame" x="110" y="191" width="100" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="LeC-fc-roc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tempfoodimage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7zh-e3-NF7">
+                                <rect key="frame" x="40" y="239" width="240" height="136"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7zh-e3-NF7" secondAttribute="height" multiplier="30:17" id="wLc-e3-xWg"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is an awesome deal I just won on this app" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Hu-tG-gii">
+                                <rect key="frame" x="40" y="385" width="240" height="42"/>
+                                <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFk-pD-KEL">
+                                <rect key="frame" x="112" y="495" width="96" height="33"/>
+                                <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="18"/>
+                                <state key="normal" title="Re-spin">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="respinButtonTapped:" destination="9fM-Cq-fdk" eventType="touchUpInside" id="hNQ-Eg-ER0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YB4-0H-6h2">
+                                <rect key="frame" x="60" y="454" width="200" height="33"/>
+                                <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="18"/>
+                                <state key="normal" title="Buy now for 50 points">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buyButtonTapped:" destination="9fM-Cq-fdk" eventType="touchUpInside" id="S9E-70-92S"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Y5b-yC-biB" firstAttribute="top" secondItem="kWG-e5-ABa" secondAttribute="bottom" constant="32" id="0zc-Cx-xhF"/>
+                            <constraint firstItem="YB4-0H-6h2" firstAttribute="leading" secondItem="zPe-tn-85L" secondAttribute="leadingMargin" constant="44" id="2l9-Yn-GqO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7Hu-tG-gii" secondAttribute="trailing" constant="24" id="4i3-4O-rdc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kFk-pD-KEL" secondAttribute="trailing" constant="96" id="7CM-uw-pPO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YB4-0H-6h2" secondAttribute="trailing" constant="44" id="7ci-FI-zeZ"/>
+                            <constraint firstItem="7zh-e3-NF7" firstAttribute="top" secondItem="TWo-Px-V66" secondAttribute="bottom" constant="28" id="8Au-TN-Hdg"/>
+                            <constraint firstItem="kFk-pD-KEL" firstAttribute="leading" secondItem="zPe-tn-85L" secondAttribute="leadingMargin" constant="96" id="GSn-N1-3vp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Y5b-yC-biB" secondAttribute="trailing" constant="59" id="My1-QJ-xVR"/>
+                            <constraint firstItem="kFk-pD-KEL" firstAttribute="top" secondItem="YB4-0H-6h2" secondAttribute="bottom" constant="8" id="QqA-il-h3V"/>
+                            <constraint firstItem="7zh-e3-NF7" firstAttribute="leading" secondItem="zPe-tn-85L" secondAttribute="leadingMargin" constant="24" id="Rpl-gd-ABy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TWo-Px-V66" secondAttribute="trailing" constant="94" id="daI-kj-zzt"/>
+                            <constraint firstItem="TWo-Px-V66" firstAttribute="leading" secondItem="zPe-tn-85L" secondAttribute="leadingMargin" constant="94" id="e1k-Ar-2aT"/>
+                            <constraint firstItem="7Hu-tG-gii" firstAttribute="leading" secondItem="zPe-tn-85L" secondAttribute="leadingMargin" constant="24" id="f0e-bY-vAV"/>
+                            <constraint firstItem="om5-9y-xU4" firstAttribute="top" secondItem="kFk-pD-KEL" secondAttribute="bottom" constant="40" id="jch-sY-gsI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7zh-e3-NF7" secondAttribute="trailing" constant="24" id="jl6-r8-HZV"/>
+                            <constraint firstItem="7Hu-tG-gii" firstAttribute="top" secondItem="7zh-e3-NF7" secondAttribute="bottom" constant="10" id="oFf-M7-8Hi"/>
+                            <constraint firstItem="TWo-Px-V66" firstAttribute="top" secondItem="Y5b-yC-biB" secondAttribute="bottom" constant="11" id="wJK-Dn-nIs"/>
+                            <constraint firstItem="Y5b-yC-biB" firstAttribute="leading" secondItem="zPe-tn-85L" secondAttribute="leadingMargin" constant="59" id="zOd-DQ-nT9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="GKc-d8-bNr" kind="presentation" identifier="showMain" modalTransitionStyle="crossDissolve" id="hEa-qF-j0m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ly0-bg-5Cq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1685.625" y="-630.63380281690138"/>
         </scene>
         <!--Spinwheel View Controller-->
         <scene sceneID="d9P-6g-B0r">
@@ -157,6 +248,7 @@
                         <outlet property="spinWheelControl" destination="KLy-Ls-B6r" id="doI-dk-bik"/>
                         <outlet property="usernameLabel" destination="Lsi-qa-UlL" id="DDC-Th-2NQ"/>
                         <segue destination="evK-1W-l5e" kind="presentation" identifier="showLogin" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Yag-I2-Y12"/>
+                        <segue destination="9fM-Cq-fdk" kind="presentation" identifier="showDeal" modalTransitionStyle="crossDissolve" id="Rsg-Mp-Qlm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zWF-sz-m3S" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -204,7 +296,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xiE-wc-PD0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2405.625" y="130.98591549295776"/>
+            <point key="canvasLocation" x="1686" y="926"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UxX-eM-kYT">
@@ -222,7 +314,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xej-11-6kE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="896" y="131"/>
+            <point key="canvasLocation" x="778" y="131"/>
         </scene>
         <!--Spinwheel View Controller-->
         <scene sceneID="Aax-9g-BH3">
@@ -310,17 +402,19 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gQT-Np-uk6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1686" y="908"/>
+            <point key="canvasLocation" x="448" y="925"/>
         </scene>
     </scenes>
     <resources>
         <image name="arrowGold.png" width="80" height="80"/>
         <image name="fblogin.png" width="800" height="300"/>
         <image name="star@x.png" width="256" height="256"/>
+        <image name="tempfoodimage.jpg" width="440" height="264"/>
         <image name="templogo.png" width="338" height="209"/>
         <image name="tempwheel.png" width="689" height="689"/>
+        <image name="wedge.png" width="150" height="150"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="f8r-GJ-4JX"/>
+        <segue reference="hEa-qF-j0m"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -43,3 +43,45 @@
 //                }catch let error as NSError{
 //                    print(error)
 //                }
+
+
+
+//        let urlString = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", userLat!, userLon!, getCurrentCategory(), (PFUser.current()?.objectId)!)
+//        let urlString = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", 45.0, -32.0, getCurrentCategory(), "12345")
+//        let url = URL(string: urlString)
+//
+//        URLSession.shared.dataTask(with: url!, completionHandler: {
+//            (data, response, error) in
+//            if(error != nil){
+//                print("error")
+//            } else {
+//
+//                let json = JSON(data: data!)
+//
+//                self.responseDic = ["merchantName" : "", "dealTitle" : "", "dealImageURL" : "", "dealUrl" : ""]
+//
+//                if let merchantName = json["deals"][0]["merchant"]["name"].string {
+//                    self.responseDic["merchantName"] = merchantName
+//                }
+//                if let dealTitle = json["deals"][0]["options"][0]["title"].string {
+//                    self.responseDic["dealTitle"] = dealTitle
+//                }
+//                if let dealUrl = json["deals"][0]["dealUrl"].string {
+//                    self.responseDic["dealUrl"] = dealUrl
+//                }
+//                if let dealImageUrl = json["deals"][0]["largeImageUrl"].string {
+//                    self.responseDic["dealImageUrl"] = dealImageUrl
+//                }
+//            }
+//        }).resume()
+
+//        let view = DealView.instanceFromNib() as! DealView
+//        view.setDefaults()
+//        view.setDealValues(dic: self.responseDic)
+//        view.setWedgeColor(index: self.spinWheelControl.selectedIndex)
+//        view.frame = CGRect(x: 0, y: 68, width: self.view.frame.width, height: self.view.frame.height-68)
+//        self.view.addSubview(view)
+//        UIView.animate(withDuration: 0.5, animations: {
+//            view.alpha = 1.0
+//        }) { (success) in
+//        }

@@ -14,6 +14,7 @@ import ProgressHUD
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var loginButton: UIButton!
+    var progressView: ProgressView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,19 +35,23 @@ class LoginViewController: UIViewController {
         self.view.backgroundColor = UIColor(patternImage: image)
     }
     
-    // User tapped login button
+    // MARK: - User tapped login button
+    
     @objc func loginButtonTapped () {
+        //ProgressHUD.show("", interaction: false)
+        progressView = ProgressView()
+        progressView.frame = self.view.frame
+        self.view.addSubview(progressView)
+        
         PFFacebookUtils.logInInBackground(withReadPermissions: ["email"]) { (user, error) in
             if let user = user {
                 if user.isNew {
                     // User signed up!
                     self.getDataFromFacebookUserAccount(user: user)
-                    ProgressHUD.show("", interaction: false)
                     
                 } else {
                     // User logged in!
                     self.getDataFromFacebookUserAccount(user: user)
-                    ProgressHUD.show("", interaction: false)
                 }
             } else {
                 // User canceled fb login
@@ -54,7 +59,7 @@ class LoginViewController: UIViewController {
         }
     }
     
-    // Get user data from facebook account
+    // MARK: - Get user data from facebook account
     func getDataFromFacebookUserAccount (user: PFUser) {
         let graphRequest:FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
         graphRequest.start(completionHandler: { (connection, result, error) -> Void in
@@ -72,11 +77,10 @@ class LoginViewController: UIViewController {
                 user.setObject(fullname, forKey: "fullName")
                 user.saveInBackground(block: { (success, error) in
                     if success {
-                        ProgressHUD.dismiss()
                         print("saved")
                         self.performSegue(withIdentifier: "showMainScreen", sender: self)
                     } else {
-                        ProgressHUD.dismiss()
+                        self.progressView.dismiss()
                         let alert = UIAlertController(title: "Error", message: "An unknown error occured", preferredStyle: .alert)
                         alert.addAction(UIAlertAction(title: "Ok", style: .default) { action in })
                         self.present(alert, animated: true)
