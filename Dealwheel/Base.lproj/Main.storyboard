@@ -99,28 +99,28 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You won" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWo-Px-V66">
-                                <rect key="frame" x="110" y="191" width="100" height="20"/>
+                                <rect key="frame" x="110" y="191" width="100" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="LeC-fc-roc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tempfoodimage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7zh-e3-NF7">
-                                <rect key="frame" x="40" y="239" width="240" height="136"/>
+                                <rect key="frame" x="40" y="240" width="240" height="136"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="7zh-e3-NF7" secondAttribute="height" multiplier="30:17" id="wLc-e3-xWg"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is an awesome deal I just won on this app" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Hu-tG-gii">
-                                <rect key="frame" x="40" y="385" width="240" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is an awesome deal I just won on this app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Hu-tG-gii">
+                                <rect key="frame" x="40" y="386" width="240" height="42"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFk-pD-KEL">
-                                <rect key="frame" x="112" y="495" width="96" height="33"/>
+                                <rect key="frame" x="112" y="485" width="96" height="33"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="18"/>
                                 <state key="normal" title="Re-spin">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -130,7 +130,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YB4-0H-6h2">
-                                <rect key="frame" x="60" y="454" width="200" height="33"/>
+                                <rect key="frame" x="60" y="444" width="200" height="33"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="18"/>
                                 <state key="normal" title="Buy now for 50 points">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -155,7 +155,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="TWo-Px-V66" secondAttribute="trailing" constant="94" id="daI-kj-zzt"/>
                             <constraint firstItem="TWo-Px-V66" firstAttribute="leading" secondItem="zPe-tn-85L" secondAttribute="leadingMargin" constant="94" id="e1k-Ar-2aT"/>
                             <constraint firstItem="7Hu-tG-gii" firstAttribute="leading" secondItem="zPe-tn-85L" secondAttribute="leadingMargin" constant="24" id="f0e-bY-vAV"/>
-                            <constraint firstItem="om5-9y-xU4" firstAttribute="top" secondItem="kFk-pD-KEL" secondAttribute="bottom" constant="40" id="jch-sY-gsI"/>
+                            <constraint firstItem="om5-9y-xU4" firstAttribute="top" secondItem="kFk-pD-KEL" secondAttribute="bottom" constant="50" id="jch-sY-gsI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7zh-e3-NF7" secondAttribute="trailing" constant="24" id="jl6-r8-HZV"/>
                             <constraint firstItem="7Hu-tG-gii" firstAttribute="top" secondItem="7zh-e3-NF7" secondAttribute="bottom" constant="10" id="oFf-M7-8Hi"/>
                             <constraint firstItem="TWo-Px-V66" firstAttribute="top" secondItem="Y5b-yC-biB" secondAttribute="bottom" constant="11" id="wJK-Dn-nIs"/>
@@ -163,6 +163,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dealImageView" destination="7zh-e3-NF7" id="tJn-jL-dc1"/>
+                        <outlet property="dealTitleLabel" destination="7Hu-tG-gii" id="hpQ-Hf-MiU"/>
+                        <outlet property="wedgeImageView" destination="Y5b-yC-biB" id="ZXw-dC-1y4"/>
                         <segue destination="GKc-d8-bNr" kind="presentation" identifier="showMain" modalTransitionStyle="crossDissolve" id="hEa-qF-j0m"/>
                     </connections>
                 </viewController>

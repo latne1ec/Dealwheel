@@ -25,8 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.initialize(with: configuration)
         PFFacebookUtils.initializeFacebook(applicationLaunchOptions: launchOptions)
         
-        
-        
         return true
     }
     
@@ -39,18 +37,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
-        
     }
     
     func applicationDidEnterBackground(_ application: UIApplication) {
-        
     }
     
     func applicationWillEnterForeground(_ application: UIApplication) {
-        
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
-        
     }
 }

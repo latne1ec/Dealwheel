@@ -24,7 +24,7 @@
                     <rect key="frame" x="90" y="10" width="138" height="150"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Won" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbE-fI-6d7">
-                    <rect key="frame" x="122.5" y="168" width="75" height="21"/>
+                    <rect key="frame" x="122" y="168" width="75" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="au1-42-Jpj"/>
                     </constraints>

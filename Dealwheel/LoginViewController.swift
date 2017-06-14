@@ -68,18 +68,20 @@ class LoginViewController: UIViewController {
                 let fullname: String = data["name"] as! String
                 
                 if data["email"] == nil {
-                    print("no email found")
+                    // No email found
                 } else {
                     let email: String = data["email"] as! String
                     user.setObject(email, forKey: "email")
                 }
-                
+                // Save user info to Backend
                 user.setObject(fullname, forKey: "fullName")
+                user.setObject(0, forKey: "points")
                 user.saveInBackground(block: { (success, error) in
                     if success {
-                        print("saved")
+                        // Saved Successfully
                         self.performSegue(withIdentifier: "showMainScreen", sender: self)
                     } else {
+                        // An error occured trying to save user fb info
                         self.progressView.dismiss()
                         let alert = UIAlertController(title: "Error", message: "An unknown error occured", preferredStyle: .alert)
                         alert.addAction(UIAlertAction(title: "Ok", style: .default) { action in })

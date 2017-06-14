@@ -14,7 +14,7 @@ class ProgressView: UIView {
     
     override init (frame : CGRect) {
         super.init(frame : frame)
-        // Do what you want.
+        
         self.frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height)
         self.backgroundColor = UIColor.black
         self.alpha = 0.75
@@ -24,7 +24,6 @@ class ProgressView: UIView {
         activityIndicator.startAnimating()
         self.addSubview(activityIndicator)
         self.bringSubview(toFront: activityIndicator)
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -33,7 +32,6 @@ class ProgressView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        //self.frame will be correct here
         activityIndicator.center = self.center
     }
     

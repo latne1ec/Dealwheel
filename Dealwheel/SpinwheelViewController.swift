@@ -133,7 +133,7 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     func checkIfPreviousUser() {
         if(PFUser.current() == nil) {
             // No User, show Login screen
-            //self.performSegue(withIdentifier: "showLogin", sender: self)
+            self.performSegue(withIdentifier: "showLogin", sender: self)
         } else {
             // We have a User
             let firstNameString = PFUser.current()?.object(forKey: "fullName") as? String
@@ -236,7 +236,6 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     func spinWheelDidEndDecelerating(spinWheel: SpinWheelControl) {
-        print("The spin wheel did end decelerating.")
         spinWheelControl.isUserInteractionEnabled = true
     }
     func spinWheelDidRotateByRadians(radians: Radians) {
@@ -257,7 +256,13 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     
     func showDealVC () {
-        self.performSegue(withIdentifier: "showDeal", sender: self)
+        if DataManager.Instance.dealTitle != nil {
+            self.performSegue(withIdentifier: "showDeal", sender: self)
+        } else {
+            let alert = UIAlertController(title: "No deals", message: "There are currently no deals available in your area!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default) { action in })
+            self.present(alert, animated: true)
+        }
     }
     
     
@@ -267,29 +272,12 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         let urlString = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", userLat!, userLon!, getCurrentCategory(), (PFUser.current()?.objectId)!)
         let url = URL(string: urlString)
+        
+//        let urlString2 = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", 37.776072, -122.417696, getCurrentCategory(), "12345")
+//
+//        let dasUrl = URL(string: urlString2)
+        
         DataManager.Instance.getDeal(url: url!)
-    }
-    
-    func detectIfUserMadePurchase () {
-        let urlString = String(format:"https://partner-api.groupon.com/reporting/v2/order.json?clientId=01faac2db87949ba744486af455c30e03662bd78&group=TopCategory&date=[2017-01-01&date=2017-12-31]&campaign.currency=USD&Sid=%@", (PFUser.current()?.objectId)!)
-        print(urlString)
-        
-        let url = URL(string: urlString)
-        
-        URLSession.shared.dataTask(with: url!, completionHandler: {
-            (data, response, error) in
-            if(error != nil){
-                print("error")
-            }else{
-                do{
-                    let json = try JSONSerialization.jsonObject(with: data!, options:.allowFragments) as! [String : AnyObject]
-                    print(json)
-                    
-                }catch let error as NSError{
-                    print(error)
-                }
-            }
-        }).resume()
     }
     
     func getCurrentCategory () -> String {

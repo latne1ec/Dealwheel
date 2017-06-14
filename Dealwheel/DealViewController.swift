@@ -10,10 +10,16 @@ import UIKit
 import SafariServices
 class DealViewController: UIViewController, SFSafariViewControllerDelegate {
 
+    @IBOutlet weak var wedgeImageView: UIImageView!
+    @IBOutlet weak var dealImageView: UIImageView!
+    
+    @IBOutlet weak var dealTitleLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setBackgroundImage()
-        print(DataManager.Instance.responseDic)
+        setDealImage()
+        setDealTitle()
     }
     
     func setBackgroundImage () {
@@ -23,10 +29,26 @@ class DealViewController: UIViewController, SFSafariViewControllerDelegate {
         UIGraphicsEndImageContext()
         self.view.backgroundColor = UIColor(patternImage: image)
     }
+    
+    func setDealTitle () {
+        dealTitleLabel.text = DataManager.Instance.dealTitle
+    }
+    func setDealImage () {
+        
+        if DataManager.Instance.dealImageUrlString != nil {
+            let dealImageUrl = URL(string: DataManager.Instance.dealImageUrlString!)
+            let data = try? Data(contentsOf: dealImageUrl!)
+            if data != nil {
+                dealImageView.image = UIImage(data: data!)
+            }
+            dealImageView.layer.cornerRadius = 5
+        }
+        
+    }
 
     @IBAction func buyButtonTapped(_ sender: Any) {
         
-        if let url = URL(string: "http://apple.com") {
+        if let url = URL(string: DataManager.Instance.dealUrlString!) {
             let vc = SFSafariViewController(url: url, entersReaderIfAvailable: true)
             vc.delegate = self
             self.present(vc, animated: true, completion: nil)

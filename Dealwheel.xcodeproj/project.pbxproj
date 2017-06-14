@@ -17,7 +17,6 @@
 		20912F051EE8E02F009AE0B1 /* tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 20912F041EE8E02F009AE0B1 /* tick.mp3 */; };
 		20912F071EE8E480009AE0B1 /* tick2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 20912F061EE8E480009AE0B1 /* tick2.mp3 */; };
 		20AB17AB1EF027250007310A /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB17AA1EF027250007310A /* AudioManager.swift */; };
-		20AB17AD1EF02B2A0007310A /* tempfoodimage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20AB17AC1EF02B2A0007310A /* tempfoodimage.jpg */; };
 		20AB17B31EF0471F0007310A /* DealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB17B21EF0471F0007310A /* DealViewController.swift */; };
 		20AB17B51EF049F70007310A /* main.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20AB17B41EF049F70007310A /* main.wav */; };
 		20AB17B71EF052740007310A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB17B61EF052740007310A /* DataManager.swift */; };
@@ -49,7 +48,6 @@
 		20912F041EE8E02F009AE0B1 /* tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tick.mp3; sourceTree = "<group>"; };
 		20912F061EE8E480009AE0B1 /* tick2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tick2.mp3; sourceTree = "<group>"; };
 		20AB17AA1EF027250007310A /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
-		20AB17AC1EF02B2A0007310A /* tempfoodimage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tempfoodimage.jpg; path = ../../../../../../tempfoodimage.jpg; sourceTree = "<group>"; };
 		20AB17B21EF0471F0007310A /* DealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealViewController.swift; sourceTree = "<group>"; };
 		20AB17B41EF049F70007310A /* main.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = main.wav; path = ../../../../../../../Downloads/main.wav; sourceTree = "<group>"; };
 		20AB17B61EF052740007310A /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -113,6 +111,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		200C4D071EF05C5C00A43CEF /* ProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				200E234C1EEEF48D00DAA97F /* ProgressView.swift */,
+			);
+			path = ProgressView;
+			sourceTree = "<group>";
+		};
 		20DFB9451EE72097009462CA = {
 			isa = PBXGroup;
 			children = (
@@ -134,15 +140,13 @@
 		20DFB9501EE72097009462CA /* Dealwheel */ = {
 			isa = PBXGroup;
 			children = (
+				200C4D071EF05C5C00A43CEF /* ProgressView */,
 				200C4D061EF0584A00A43CEF /* Model */,
 				204B0A271EE86FD9000C6D3D /* Dealwheel.entitlements */,
 				20DFB9511EE72097009462CA /* AppDelegate.swift */,
-				200E234C1EEEF48D00DAA97F /* ProgressView.swift */,
 				20DFB9751EE7433F009462CA /* LoginViewController.swift */,
 				20DFB9651EE72132009462CA /* SpinwheelViewController.swift */,
 				20AB17B21EF0471F0007310A /* DealViewController.swift */,
-				206C1C401EEB0460000CFBCE /* DealView.swift */,
-				206C1C3E1EEB0240000CFBCE /* DealView.xib */,
 				20DFB9551EE72097009462CA /* Main.storyboard */,
 				20DFB9581EE72097009462CA /* Assets.xcassets */,
 				20F97F211EE9E5D70008D13E /* Audio */,
@@ -157,7 +161,6 @@
 		20DFB9731EE742E3009462CA /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				20AB17AC1EF02B2A0007310A /* tempfoodimage.jpg */,
 				206C1C421EEB1394000CFBCE /* wedge@2x.png */,
 				206C1C341EEAE642000CFBCE /* arrowGold@2x.png */,
 				206C1C331EEAE642000CFBCE /* star@x.png */,
@@ -172,6 +175,8 @@
 		20DFB9741EE742E9009462CA /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				206C1C401EEB0460000CFBCE /* DealView.swift */,
+				206C1C3E1EEB0240000CFBCE /* DealView.xib */,
 				20F97F151EE9DAC20008D13E /* budmo.ttf */,
 				20DFB9671EE72155009462CA /* DealwheelMisc */,
 			);
@@ -255,7 +260,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				20F97F161EE9DAC20008D13E /* budmo.ttf in Resources */,
-				20AB17AD1EF02B2A0007310A /* tempfoodimage.jpg in Resources */,
 				20DFB9701EE721D1009462CA /* tempwheel.png in Resources */,
 				20DFB96F1EE721D1009462CA /* bkg.jpg in Resources */,
 				20912F051EE8E02F009AE0B1 /* tick.mp3 in Resources */,
