@@ -19,6 +19,7 @@ public class DataManager {
         return _instance
     }
     
+    public var currentWedgeColor: Int?
     public var merchantName: String?
     public var dealTitle: String?
     public var dealUrlString: String?
@@ -59,14 +60,9 @@ public class DataManager {
             (data, response, error) in
             if(error != nil){
                 print("error")
-            }else{
-                do{
-                    let json = JSON(data: data!)
-                    print(json)
-                    
-                }catch let error as NSError{
-                    print(error)
-                }
+            } else {
+                let json = JSON(data: data!)
+                print(json)
             }
         }).resume()
     }

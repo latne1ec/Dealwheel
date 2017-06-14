@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		200E234B1EEEEDFB00DAA97F /* GrouponAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200E234A1EEEEDFB00DAA97F /* GrouponAPIManager.swift */; };
 		200E234D1EEEF48D00DAA97F /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200E234C1EEEF48D00DAA97F /* ProgressView.swift */; };
+		20630A051EF18927001A2A77 /* 1and7.wav in Resources */ = {isa = PBXBuildFile; fileRef = 206309FF1EF18927001A2A77 /* 1and7.wav */; };
+		20630A061EF18927001A2A77 /* 3and9.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20630A001EF18927001A2A77 /* 3and9.wav */; };
+		20630A071EF18927001A2A77 /* 6and11.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20630A011EF18927001A2A77 /* 6and11.wav */; };
+		20630A081EF18927001A2A77 /* 4and10.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20630A021EF18927001A2A77 /* 4and10.wav */; };
+		20630A091EF18927001A2A77 /* 2and8.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20630A031EF18927001A2A77 /* 2and8.wav */; };
+		20630A0A1EF18927001A2A77 /* 7and12.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20630A041EF18927001A2A77 /* 7and12.wav */; };
 		206C1C351EEAE642000CFBCE /* star@x.png in Resources */ = {isa = PBXBuildFile; fileRef = 206C1C331EEAE642000CFBCE /* star@x.png */; };
 		206C1C361EEAE642000CFBCE /* arrowGold@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 206C1C341EEAE642000CFBCE /* arrowGold@2x.png */; };
 		206C1C3F1EEB0240000CFBCE /* DealView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 206C1C3E1EEB0240000CFBCE /* DealView.xib */; };
@@ -40,6 +46,12 @@
 		200E234A1EEEEDFB00DAA97F /* GrouponAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrouponAPIManager.swift; sourceTree = "<group>"; };
 		200E234C1EEEF48D00DAA97F /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		204B0A271EE86FD9000C6D3D /* Dealwheel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Dealwheel.entitlements; sourceTree = "<group>"; };
+		206309FF1EF18927001A2A77 /* 1and7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 1and7.wav; path = ../../../../../../../Downloads/1and7.wav; sourceTree = "<group>"; };
+		20630A001EF18927001A2A77 /* 3and9.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 3and9.wav; path = ../../../../../../../Downloads/3and9.wav; sourceTree = "<group>"; };
+		20630A011EF18927001A2A77 /* 6and11.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 6and11.wav; path = ../../../../../../../Downloads/6and11.wav; sourceTree = "<group>"; };
+		20630A021EF18927001A2A77 /* 4and10.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 4and10.wav; path = ../../../../../../../Downloads/4and10.wav; sourceTree = "<group>"; };
+		20630A031EF18927001A2A77 /* 2and8.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 2and8.wav; path = ../../../../../../../Downloads/2and8.wav; sourceTree = "<group>"; };
+		20630A041EF18927001A2A77 /* 7and12.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 7and12.wav; path = ../../../../../../../Downloads/7and12.wav; sourceTree = "<group>"; };
 		206C1C331EEAE642000CFBCE /* star@x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "star@x.png"; path = "../../../Design/star@x.png"; sourceTree = "<group>"; };
 		206C1C341EEAE642000CFBCE /* arrowGold@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrowGold@2x.png"; path = "../../../Design/arrowGold@2x.png"; sourceTree = "<group>"; };
 		206C1C3E1EEB0240000CFBCE /* DealView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DealView.xib; sourceTree = "<group>"; };
@@ -187,6 +199,12 @@
 			isa = PBXGroup;
 			children = (
 				20AB17B41EF049F70007310A /* main.wav */,
+				206309FF1EF18927001A2A77 /* 1and7.wav */,
+				20630A031EF18927001A2A77 /* 2and8.wav */,
+				20630A001EF18927001A2A77 /* 3and9.wav */,
+				20630A021EF18927001A2A77 /* 4and10.wav */,
+				20630A011EF18927001A2A77 /* 6and11.wav */,
+				20630A041EF18927001A2A77 /* 7and12.wav */,
 				20912F041EE8E02F009AE0B1 /* tick.mp3 */,
 				20912F061EE8E480009AE0B1 /* tick2.mp3 */,
 			);
@@ -263,17 +281,23 @@
 				20DFB9701EE721D1009462CA /* tempwheel.png in Resources */,
 				20DFB96F1EE721D1009462CA /* bkg.jpg in Resources */,
 				20912F051EE8E02F009AE0B1 /* tick.mp3 in Resources */,
+				20630A061EF18927001A2A77 /* 3and9.wav in Resources */,
+				20630A0A1EF18927001A2A77 /* 7and12.wav in Resources */,
 				20DFB9681EE72155009462CA /* DealwheelMisc in Resources */,
+				20630A081EF18927001A2A77 /* 4and10.wav in Resources */,
 				20DFB95C1EE72097009462CA /* LaunchScreen.storyboard in Resources */,
 				206C1C431EEB1394000CFBCE /* wedge@2x.png in Resources */,
+				20630A091EF18927001A2A77 /* 2and8.wav in Resources */,
 				20DFB9591EE72097009462CA /* Assets.xcassets in Resources */,
 				20AB17B51EF049F70007310A /* main.wav in Resources */,
+				20630A051EF18927001A2A77 /* 1and7.wav in Resources */,
 				206C1C351EEAE642000CFBCE /* star@x.png in Resources */,
 				206C1C3F1EEB0240000CFBCE /* DealView.xib in Resources */,
 				20912F071EE8E480009AE0B1 /* tick2.mp3 in Resources */,
 				20DFB9571EE72097009462CA /* Main.storyboard in Resources */,
 				20DFB96E1EE721D1009462CA /* templogo.png in Resources */,
 				206C1C361EEAE642000CFBCE /* arrowGold@2x.png in Resources */,
+				20630A071EF18927001A2A77 /* 6and11.wav in Resources */,
 				20DFB9721EE72245009462CA /* fblogin.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

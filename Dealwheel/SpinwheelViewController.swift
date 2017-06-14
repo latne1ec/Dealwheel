@@ -48,6 +48,7 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     override func viewDidAppear(_ animated: Bool) {
         if PFUser.current() != nil {
             initLocationManager()
+            AudioManager.Instance.playMainScreenMusic()
         }
     }
     
@@ -231,7 +232,8 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         default:
             print("default")
         }
-        
+        AudioManager.Instance.playSoundForWedgeAtIndex(index: self.spinWheelControl.selectedIndex)
+        DataManager.Instance.currentWedgeColor = self.spinWheelControl.selectedIndex
         showDealVC()
     }
     
@@ -259,7 +261,7 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         if DataManager.Instance.dealTitle != nil {
             self.performSegue(withIdentifier: "showDeal", sender: self)
         } else {
-            let alert = UIAlertController(title: "No deals", message: "There are currently no deals available in your area!", preferredStyle: .alert)
+            let alert = UIAlertController(title: "No deals", message: "There are currently no deals available in this area. Please try again later!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default) { action in })
             self.present(alert, animated: true)
         }

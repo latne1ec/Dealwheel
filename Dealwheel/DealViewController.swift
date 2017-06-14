@@ -20,6 +20,7 @@ class DealViewController: UIViewController, SFSafariViewControllerDelegate {
         setBackgroundImage()
         setDealImage()
         setDealTitle()
+        setWedgeColor()
     }
     
     func setBackgroundImage () {
@@ -43,7 +44,41 @@ class DealViewController: UIViewController, SFSafariViewControllerDelegate {
             }
             dealImageView.layer.cornerRadius = 5
         }
+    }
+    
+    func setWedgeColor () {
         
+        if DataManager.Instance.currentWedgeColor != nil {
+            let index = DataManager.Instance.currentWedgeColor!
+            switch index {
+            case 0:
+                wedgeImageView.image = UIImage(named: "")
+            case 1:
+                wedgeImageView.image = UIImage(named: "")
+            case 2:
+                wedgeImageView.image = UIImage(named: "")
+            case 3:
+                wedgeImageView.image = UIImage(named: "")
+            case 4:
+                wedgeImageView.image = UIImage(named: "")
+            case 5:
+                wedgeImageView.image = UIImage(named: "")
+            case 6:
+                wedgeImageView.image = UIImage(named: "")
+            case 7:
+                wedgeImageView.image = UIImage(named: "")
+            case 8:
+                wedgeImageView.image = UIImage(named: "")
+            case 9:
+                wedgeImageView.image = UIImage(named: "")
+            case 10:
+                wedgeImageView.image = UIImage(named: "")
+            case 11:
+                wedgeImageView.image = UIImage(named: "")
+            default:
+                print("default")
+            }
+        }
     }
 
     @IBAction func buyButtonTapped(_ sender: Any) {
@@ -53,8 +88,8 @@ class DealViewController: UIViewController, SFSafariViewControllerDelegate {
             vc.delegate = self
             self.present(vc, animated: true, completion: nil)
         }
-        
     }
+    
     @IBAction func respinButtonTapped(_ sender: Any) {
         
         self.performSegue(withIdentifier: "showMain", sender: self)

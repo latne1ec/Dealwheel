@@ -75,7 +75,7 @@ class LoginViewController: UIViewController {
                 }
                 // Save user info to Backend
                 user.setObject(fullname, forKey: "fullName")
-                user.setObject(0, forKey: "points")
+                user.setObject(50, forKey: "points")
                 user.saveInBackground(block: { (success, error) in
                     if success {
                         // Saved Successfully
