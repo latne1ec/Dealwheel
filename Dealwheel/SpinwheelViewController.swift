@@ -34,27 +34,31 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     var categories = ["automotive", "beauty and spas", "food and drink", "health and fitness", "home improvement", "personal services", "retail", "Things to do"]
     var responseDic: Dictionary<String, Any> = ["" : ""]
     
+    var lastRadian: CGFloat?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //prepareSound()
         setWheelAndArrowFrames()
         setBackgroundImage ()
         checkIfPreviousUser()
         initSpinWheel()
         initPickerView()
         currentCategory = categories[0]
+        //AudioManager.Instance.initTickNoisePlayer()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         if PFUser.current() != nil {
             initLocationManager()
-            AudioManager.Instance.playMainScreenMusic()
+            //AudioManager.Instance.initTickNoisePlayer()
+            //AudioManager.Instance.playMainScreenMusic()
         }
     }
     
     // MARK: - Init Methods
     
     func setWheelAndArrowFrames () {
+        
         // Set Spinwheel and Arrow frame manually per device size
         if UIScreen.main.bounds.size.height > 568 {
             // iPhone 6, 6s, and 7
@@ -134,7 +138,7 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     func checkIfPreviousUser() {
         if(PFUser.current() == nil) {
             // No User, show Login screen
-            self.performSegue(withIdentifier: "showLogin", sender: self)
+            //self.performSegue(withIdentifier: "showLogin", sender: self)
         } else {
             // We have a User
             let firstNameString = PFUser.current()?.object(forKey: "fullName") as? String
@@ -203,35 +207,7 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         return 12
     }
     @objc func spinWheelDidChangeValue(sender: AnyObject) {
-        
-        switch self.spinWheelControl.selectedIndex {
-        case 0:
-            print("yellow")
-        case 1:
-            print("orange 1")
-        case 2:
-            print("orange 2")
-        case 3:
-            print("orange 3")
-        case 4:
-            print("red")
-        case 5:
-            print("pink")
-        case 6:
-            print("purple")
-        case 7:
-            print("blue 1")
-        case 8:
-            print("blue 2")
-        case 9:
-            print("blue 3")
-        case 10:
-            print("green 1")
-        case 11:
-            print("green 2")
-        default:
-            print("default")
-        }
+        lastRadian = 100
         AudioManager.Instance.playSoundForWedgeAtIndex(index: self.spinWheelControl.selectedIndex)
         DataManager.Instance.currentWedgeColor = self.spinWheelControl.selectedIndex
         showDealVC()
@@ -241,20 +217,22 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         spinWheelControl.isUserInteractionEnabled = true
     }
     func spinWheelDidRotateByRadians(radians: Radians) {
-    }
-    
-    func prepareSound() {
-        let url = Bundle.main.url(forResource: "tick2", withExtension: "mp3")!
-        do {
-            player = try AVAudioPlayer(contentsOf: url)
-            guard let player = player else {
-                return
-            }
-            player.prepareToPlay()
-            
-        } catch let error as NSError {
-            print(error.description)
+        
+        let degrees:CGFloat = radians * (CGFloat(180) / CGFloat(Double.pi) )
+        let zero: CGFloat = 0.0
+        if lastRadian == nil {
+            lastRadian = degrees
         }
+        if lastRadian! < zero {
+            lastRadian = degrees
+        }
+        if lastRadian! > degrees + 0.4 {
+            AudioManager.Instance.playSpinSound()
+            lastRadian = degrees
+        }
+        
+        print("last: %f", lastRadian)
+        print(degrees)
     }
     
     func showDealVC () {

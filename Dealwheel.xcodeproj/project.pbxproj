@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		200E234B1EEEEDFB00DAA97F /* GrouponAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200E234A1EEEEDFB00DAA97F /* GrouponAPIManager.swift */; };
 		200E234D1EEEF48D00DAA97F /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200E234C1EEEF48D00DAA97F /* ProgressView.swift */; };
 		20630A051EF18927001A2A77 /* 1and7.wav in Resources */ = {isa = PBXBuildFile; fileRef = 206309FF1EF18927001A2A77 /* 1and7.wav */; };
 		20630A061EF18927001A2A77 /* 3and9.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20630A001EF18927001A2A77 /* 3and9.wav */; };
@@ -20,8 +19,7 @@
 		206C1C3F1EEB0240000CFBCE /* DealView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 206C1C3E1EEB0240000CFBCE /* DealView.xib */; };
 		206C1C411EEB0460000CFBCE /* DealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206C1C401EEB0460000CFBCE /* DealView.swift */; };
 		206C1C431EEB1394000CFBCE /* wedge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 206C1C421EEB1394000CFBCE /* wedge@2x.png */; };
-		20912F051EE8E02F009AE0B1 /* tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 20912F041EE8E02F009AE0B1 /* tick.mp3 */; };
-		20912F071EE8E480009AE0B1 /* tick2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 20912F061EE8E480009AE0B1 /* tick2.mp3 */; };
+		20912F071EE8E480009AE0B1 /* tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 20912F061EE8E480009AE0B1 /* tick.mp3 */; };
 		20AB17AB1EF027250007310A /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB17AA1EF027250007310A /* AudioManager.swift */; };
 		20AB17B31EF0471F0007310A /* DealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB17B21EF0471F0007310A /* DealViewController.swift */; };
 		20AB17B51EF049F70007310A /* main.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20AB17B41EF049F70007310A /* main.wav */; };
@@ -32,7 +30,6 @@
 		20DFB95C1EE72097009462CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20DFB95A1EE72097009462CA /* LaunchScreen.storyboard */; };
 		20DFB9661EE72132009462CA /* SpinwheelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DFB9651EE72132009462CA /* SpinwheelViewController.swift */; };
 		20DFB9681EE72155009462CA /* DealwheelMisc in Resources */ = {isa = PBXBuildFile; fileRef = 20DFB9671EE72155009462CA /* DealwheelMisc */; };
-		20DFB96A1EE72166009462CA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DFB9691EE72166009462CA /* User.swift */; };
 		20DFB96E1EE721D1009462CA /* templogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 20DFB96B1EE721D0009462CA /* templogo.png */; };
 		20DFB96F1EE721D1009462CA /* bkg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 20DFB96C1EE721D0009462CA /* bkg.jpg */; };
 		20DFB9701EE721D1009462CA /* tempwheel.png in Resources */ = {isa = PBXBuildFile; fileRef = 20DFB96D1EE721D0009462CA /* tempwheel.png */; };
@@ -43,7 +40,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		200E234A1EEEEDFB00DAA97F /* GrouponAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrouponAPIManager.swift; sourceTree = "<group>"; };
 		200E234C1EEEF48D00DAA97F /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		204B0A271EE86FD9000C6D3D /* Dealwheel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Dealwheel.entitlements; sourceTree = "<group>"; };
 		206309FF1EF18927001A2A77 /* 1and7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 1and7.wav; path = ../../../../../../../Downloads/1and7.wav; sourceTree = "<group>"; };
@@ -57,8 +53,7 @@
 		206C1C3E1EEB0240000CFBCE /* DealView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DealView.xib; sourceTree = "<group>"; };
 		206C1C401EEB0460000CFBCE /* DealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealView.swift; sourceTree = "<group>"; };
 		206C1C421EEB1394000CFBCE /* wedge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wedge@2x.png"; path = "../../../Design/wedge@2x.png"; sourceTree = "<group>"; };
-		20912F041EE8E02F009AE0B1 /* tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tick.mp3; sourceTree = "<group>"; };
-		20912F061EE8E480009AE0B1 /* tick2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tick2.mp3; sourceTree = "<group>"; };
+		20912F061EE8E480009AE0B1 /* tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tick.mp3; sourceTree = "<group>"; };
 		20AB17AA1EF027250007310A /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		20AB17B21EF0471F0007310A /* DealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealViewController.swift; sourceTree = "<group>"; };
 		20AB17B41EF049F70007310A /* main.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = main.wav; path = ../../../../../../../Downloads/main.wav; sourceTree = "<group>"; };
@@ -71,7 +66,6 @@
 		20DFB95D1EE72097009462CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20DFB9651EE72132009462CA /* SpinwheelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinwheelViewController.swift; sourceTree = "<group>"; };
 		20DFB9671EE72155009462CA /* DealwheelMisc */ = {isa = PBXFileReference; lastKnownFileType = text; path = DealwheelMisc; sourceTree = "<group>"; };
-		20DFB9691EE72166009462CA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		20DFB96B1EE721D0009462CA /* templogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = templogo.png; sourceTree = "<group>"; };
 		20DFB96C1EE721D0009462CA /* bkg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bkg.jpg; sourceTree = "<group>"; };
 		20DFB96D1EE721D0009462CA /* tempwheel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tempwheel.png; sourceTree = "<group>"; };
@@ -115,9 +109,7 @@
 		200C4D061EF0584A00A43CEF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				20DFB9691EE72166009462CA /* User.swift */,
 				20AB17AA1EF027250007310A /* AudioManager.swift */,
-				200E234A1EEEEDFB00DAA97F /* GrouponAPIManager.swift */,
 				20AB17B61EF052740007310A /* DataManager.swift */,
 			);
 			path = Model;
@@ -205,8 +197,7 @@
 				20630A021EF18927001A2A77 /* 4and10.wav */,
 				20630A011EF18927001A2A77 /* 6and11.wav */,
 				20630A041EF18927001A2A77 /* 7and12.wav */,
-				20912F041EE8E02F009AE0B1 /* tick.mp3 */,
-				20912F061EE8E480009AE0B1 /* tick2.mp3 */,
+				20912F061EE8E480009AE0B1 /* tick.mp3 */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -280,7 +271,6 @@
 				20F97F161EE9DAC20008D13E /* budmo.ttf in Resources */,
 				20DFB9701EE721D1009462CA /* tempwheel.png in Resources */,
 				20DFB96F1EE721D1009462CA /* bkg.jpg in Resources */,
-				20912F051EE8E02F009AE0B1 /* tick.mp3 in Resources */,
 				20630A061EF18927001A2A77 /* 3and9.wav in Resources */,
 				20630A0A1EF18927001A2A77 /* 7and12.wav in Resources */,
 				20DFB9681EE72155009462CA /* DealwheelMisc in Resources */,
@@ -293,7 +283,7 @@
 				20630A051EF18927001A2A77 /* 1and7.wav in Resources */,
 				206C1C351EEAE642000CFBCE /* star@x.png in Resources */,
 				206C1C3F1EEB0240000CFBCE /* DealView.xib in Resources */,
-				20912F071EE8E480009AE0B1 /* tick2.mp3 in Resources */,
+				20912F071EE8E480009AE0B1 /* tick.mp3 in Resources */,
 				20DFB9571EE72097009462CA /* Main.storyboard in Resources */,
 				20DFB96E1EE721D1009462CA /* templogo.png in Resources */,
 				206C1C361EEAE642000CFBCE /* arrowGold@2x.png in Resources */,
@@ -363,9 +353,7 @@
 				20AB17AB1EF027250007310A /* AudioManager.swift in Sources */,
 				20AB17B31EF0471F0007310A /* DealViewController.swift in Sources */,
 				206C1C411EEB0460000CFBCE /* DealView.swift in Sources */,
-				200E234B1EEEEDFB00DAA97F /* GrouponAPIManager.swift in Sources */,
 				200E234D1EEEF48D00DAA97F /* ProgressView.swift in Sources */,
-				20DFB96A1EE72166009462CA /* User.swift in Sources */,
 				20DFB9761EE7433F009462CA /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

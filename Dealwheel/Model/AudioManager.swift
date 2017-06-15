@@ -19,12 +19,26 @@ public class AudioManager {
     var mainScreenPlayer: AVAudioPlayer?
     var soundEffectPlayer: AVAudioPlayer?
     var mainMusicUrl = Bundle.main.url(forResource: "main", withExtension: "wav")
+    var tickNoise = Bundle.main.url(forResource: "tick", withExtension: "mp3")
     var m1and7 = Bundle.main.url(forResource: "1and7", withExtension: "wav")
     var m2and8 = Bundle.main.url(forResource: "2and8", withExtension: "wav")
     var m3and9 = Bundle.main.url(forResource: "3and9", withExtension: "wav")
     var m4and10 = Bundle.main.url(forResource: "4and10", withExtension: "wav")
     var m6and11 = Bundle.main.url(forResource: "6and11", withExtension: "wav")
     var m7and12 = Bundle.main.url(forResource: "7and12", withExtension: "wav")
+    
+    public func playSpinSound () {
+        if self.soundEffectPlayer != nil {
+             self.soundEffectPlayer?.play()
+            return
+        }
+        do {
+            self.soundEffectPlayer = try AVAudioPlayer(contentsOf: tickNoise!)
+            self.soundEffectPlayer?.prepareToPlay()
+            self.soundEffectPlayer?.play()
+            
+        } catch { print("error") }
+    }
     
     public func playMainScreenMusic () {
         
@@ -39,8 +53,10 @@ public class AudioManager {
     }
     
     public func pauseMainScreenMusic () {
-        if (self.mainScreenPlayer?.isPlaying)! {
-            self.mainScreenPlayer?.pause()
+        if self.mainScreenPlayer != nil {
+            if (self.mainScreenPlayer?.isPlaying)! {
+                self.mainScreenPlayer?.pause()
+            }
         }
     }
     
