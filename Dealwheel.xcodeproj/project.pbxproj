@@ -24,6 +24,8 @@
 		20AB17B31EF0471F0007310A /* DealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB17B21EF0471F0007310A /* DealViewController.swift */; };
 		20AB17B51EF049F70007310A /* main.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20AB17B41EF049F70007310A /* main.wav */; };
 		20AB17B71EF052740007310A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB17B61EF052740007310A /* DataManager.swift */; };
+		20B6F8641EF4852200DFC854 /* SignupRewardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B6F8631EF4852200DFC854 /* SignupRewardView.swift */; };
+		20B6F8661EF4879200DFC854 /* SignupRewardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20B6F8651EF4879200DFC854 /* SignupRewardView.xib */; };
 		20DFB9521EE72097009462CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DFB9511EE72097009462CA /* AppDelegate.swift */; };
 		20DFB9571EE72097009462CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20DFB9551EE72097009462CA /* Main.storyboard */; };
 		20DFB9591EE72097009462CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20DFB9581EE72097009462CA /* Assets.xcassets */; };
@@ -58,6 +60,8 @@
 		20AB17B21EF0471F0007310A /* DealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealViewController.swift; sourceTree = "<group>"; };
 		20AB17B41EF049F70007310A /* main.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = main.wav; path = ../../../../../../../Downloads/main.wav; sourceTree = "<group>"; };
 		20AB17B61EF052740007310A /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		20B6F8631EF4852200DFC854 /* SignupRewardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRewardView.swift; sourceTree = "<group>"; };
+		20B6F8651EF4879200DFC854 /* SignupRewardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupRewardView.xib; sourceTree = "<group>"; };
 		20DFB94E1EE72097009462CA /* Dealwheel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dealwheel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20DFB9511EE72097009462CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20DFB9561EE72097009462CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -115,11 +119,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		200C4D071EF05C5C00A43CEF /* ProgressView */ = {
+		200C4D071EF05C5C00A43CEF /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				200E234C1EEEF48D00DAA97F /* ProgressView.swift */,
+				20B6F8631EF4852200DFC854 /* SignupRewardView.swift */,
+				20B6F8651EF4879200DFC854 /* SignupRewardView.xib */,
 			);
+			name = Views;
 			path = ProgressView;
 			sourceTree = "<group>";
 		};
@@ -144,7 +151,7 @@
 		20DFB9501EE72097009462CA /* Dealwheel */ = {
 			isa = PBXGroup;
 			children = (
-				200C4D071EF05C5C00A43CEF /* ProgressView */,
+				200C4D071EF05C5C00A43CEF /* Views */,
 				200C4D061EF0584A00A43CEF /* Model */,
 				204B0A271EE86FD9000C6D3D /* Dealwheel.entitlements */,
 				20DFB9511EE72097009462CA /* AppDelegate.swift */,
@@ -279,6 +286,7 @@
 				206C1C431EEB1394000CFBCE /* wedge@2x.png in Resources */,
 				20630A091EF18927001A2A77 /* 2and8.wav in Resources */,
 				20DFB9591EE72097009462CA /* Assets.xcassets in Resources */,
+				20B6F8661EF4879200DFC854 /* SignupRewardView.xib in Resources */,
 				20AB17B51EF049F70007310A /* main.wav in Resources */,
 				20630A051EF18927001A2A77 /* 1and7.wav in Resources */,
 				206C1C351EEAE642000CFBCE /* star@x.png in Resources */,
@@ -348,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20DFB9521EE72097009462CA /* AppDelegate.swift in Sources */,
+				20B6F8641EF4852200DFC854 /* SignupRewardView.swift in Sources */,
 				20AB17B71EF052740007310A /* DataManager.swift in Sources */,
 				20DFB9661EE72132009462CA /* SpinwheelViewController.swift in Sources */,
 				20AB17AB1EF027250007310A /* AudioManager.swift in Sources */,

@@ -99,7 +99,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You won" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWo-Px-V66">
-                                <rect key="frame" x="110" y="191" width="100" height="21"/>
+                                <rect key="frame" x="110" y="191" width="100" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="LeC-fc-roc"/>
                                 </constraints>
@@ -108,19 +108,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tempfoodimage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7zh-e3-NF7">
-                                <rect key="frame" x="40" y="240" width="240" height="136"/>
+                                <rect key="frame" x="40" y="239" width="240" height="136"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="7zh-e3-NF7" secondAttribute="height" multiplier="30:17" id="wLc-e3-xWg"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is an awesome deal I just won on this app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Hu-tG-gii">
-                                <rect key="frame" x="40" y="386" width="240" height="42"/>
+                                <rect key="frame" x="40" y="385" width="240" height="39.5"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFk-pD-KEL">
-                                <rect key="frame" x="112" y="485" width="96" height="33"/>
+                                <rect key="frame" x="112" y="486" width="96" height="32"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="18"/>
                                 <state key="normal" title="Re-spin">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -130,7 +130,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YB4-0H-6h2">
-                                <rect key="frame" x="60" y="444" width="200" height="33"/>
+                                <rect key="frame" x="60" y="446" width="200" height="32"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="18"/>
                                 <state key="normal" title="Buy now for 50 points">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -186,13 +186,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsi-qa-UlL">
-                                <rect key="frame" x="24" y="523.5" width="46.5" height="24.5"/>
+                                <rect key="frame" x="24" y="524.5" width="47.5" height="23.5"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nb-uZ-nqP">
-                                <rect key="frame" x="224.5" y="521.5" width="38.5" height="27"/>
+                                <rect key="frame" x="229.5" y="523" width="33.5" height="25.5"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -215,7 +215,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star@x.png" translatesAutoresizingMaskIntoConstraints="NO" id="oAu-5W-eHU">
-                                <rect key="frame" x="274" y="523" width="20" height="21.5"/>
+                                <rect key="frame" x="274" y="524.5" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="dTq-hv-3aI"/>
                                 </constraints>

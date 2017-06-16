@@ -48,6 +48,9 @@ class DealViewController: UIViewController, SFSafariViewControllerDelegate {
     
     func setWedgeColor () {
         
+        wedgeImageView.image = UIImage(named: "wedge")
+        return
+        
         if DataManager.Instance.currentWedgeColor != nil {
             let index = DataManager.Instance.currentWedgeColor!
             switch index {

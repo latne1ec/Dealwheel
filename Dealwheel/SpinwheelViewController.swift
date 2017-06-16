@@ -43,6 +43,7 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         checkIfPreviousUser()
         initSpinWheel()
         initPickerView()
+        initRewardView()
         currentCategory = categories[0]
         //AudioManager.Instance.initTickNoisePlayer()
     }
@@ -105,6 +106,17 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         spinWheelControl.addTarget(self, action: #selector(spinWheelDidChangeValue), for: UIControlEvents.valueChanged)
     }
     
+    func initRewardView () {
+        let signupRewardView = SignupRewardView.instanceFromNib()
+        signupRewardView.frame = self.view.frame
+        signupRewardView.alpha = 0.0
+        self.view.addSubview(signupRewardView)
+        UIView.animate(withDuration: 0.25, animations: {
+            signupRewardView.alpha = 1.0
+        }) { (success) in
+        }
+    }
+    
     func initLocationManager () {
         
         locationManager.delegate = self
@@ -163,9 +175,9 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         currentCategory = categories[row]
-        if userLat != nil {
+        //if userLat != nil {
             retrieveDeal()
-        }
+        //}
     }
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         var pickerLabel = view as? UILabel;
@@ -250,14 +262,14 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     
     func retrieveDeal () {
         
-        let urlString = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", userLat!, userLon!, getCurrentCategory(), (PFUser.current()?.objectId)!)
-        let url = URL(string: urlString)
+//        let urlString = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", userLat!, userLon!, getCurrentCategory(), (PFUser.current()?.objectId)!)
+//        let url = URL(string: urlString)
         
-//        let urlString2 = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", 37.776072, -122.417696, getCurrentCategory(), "12345")
-//
-//        let dasUrl = URL(string: urlString2)
+        let urlString2 = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", 37.776072, -122.417696, getCurrentCategory(), "12345")
         
-        DataManager.Instance.getDeal(url: url!)
+        let dasUrl = URL(string: urlString2)
+        
+        DataManager.Instance.getDeal(url: dasUrl!)
     }
     
     func getCurrentCategory () -> String {
