@@ -12,11 +12,12 @@ import CoreLocation
 import SpinWheelControl
 import AVFoundation
 import SwiftyJSON
+import UIDropDown
 
-class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, CLLocationManagerDelegate, SpinWheelControlDataSource, SpinWheelControlDelegate {
+class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, SpinWheelControlDataSource, SpinWheelControlDelegate {
     
     // Outlets
-    @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet weak var dropDown: UIDropDown!
     @IBOutlet weak var spinWheelControl: SpinWheelControl!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var pointsLabel: UILabel!
@@ -31,7 +32,7 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     var userLat: CLLocationDegrees?
     var userLon: CLLocationDegrees?
     var locationManager = CLLocationManager()
-    var categories = ["automotive", "beauty and spas", "food and drink", "health and fitness", "home improvement", "personal services", "retail", "Things to do"]
+    var categories = ["Automotive", "Beauty and Spas", "Food and Drink", "Health and Fitness", "Home Improvement", "Personal Services", "Retail", "Things to do", "For the Home"]
     var responseDic: Dictionary<String, Any> = ["" : ""]
     
     var lastRadian: CGFloat?
@@ -42,7 +43,7 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         setBackgroundImage ()
         checkIfPreviousUser()
         initSpinWheel()
-        initPickerView()
+        initDropDown()
         initRewardView()
         currentCategory = categories[0]
         //AudioManager.Instance.initTickNoisePlayer()
@@ -93,10 +94,16 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
     }
     
-    func initPickerView () {
-        pickerView.dataSource = self
-        pickerView.delegate = self
-        pickerView.showsSelectionIndicator = false
+    func initDropDown () {
+        dropDown.animationType = .Classic
+        dropDown.tableHeight = 250
+        dropDown.hideOptionsWhenSelect = true
+        dropDown.placeholder = "Select category"
+        dropDown.options = categories
+        dropDown.didSelect { (option, index) in
+            print("You just select: \(option) at index: \(index)")
+            self.retrieveDeal()
+        }
     }
     
     func initSpinWheel () {
@@ -159,39 +166,6 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
     }
     
-    /// MARK: - Picker View
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        pickerView.subviews.forEach({
-            $0.isHidden = $0.frame.height < 1.0
-        })
-        return 1
-    }
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return categories.count
-    }
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return categories[row]
-    }
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        currentCategory = categories[row]
-        //if userLat != nil {
-            retrieveDeal()
-        //}
-    }
-    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-        var pickerLabel = view as? UILabel;
-        if (pickerLabel == nil) {
-            pickerLabel = UILabel()
-            pickerLabel?.font = UIFont(name: "BudmoJiggler-Regular", size: 22.5)
-            pickerLabel?.textColor = UIColor.white
-            pickerLabel?.textAlignment = NSTextAlignment.center
-        }
-        pickerLabel?.text = categories[row]
-        return pickerLabel!;
-    }
-    
-    
     // MARK: - Location Callbacks
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
@@ -243,8 +217,8 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             lastRadian = degrees
         }
         
-        print("last: %f", lastRadian)
-        print(degrees)
+        //print("last: %f", lastRadian)
+        //print(degrees)
     }
     
     func showDealVC () {
@@ -257,42 +231,33 @@ class SpinwheelViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
     }
     
-    
-    // MARK: - Data Management
+    // MARK: - Data Helper Methods
     
     func retrieveDeal () {
         
-//        let urlString = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", userLat!, userLon!, getCurrentCategory(), (PFUser.current()?.objectId)!)
-//        let url = URL(string: urlString)
+        let urlString = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", userLat!, userLon!, getCurrentCategory(), (PFUser.current()?.objectId)!)
+        let url = URL(string: urlString)
         
-        let urlString2 = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", 37.776072, -122.417696, getCurrentCategory(), "12345")
+//        let urlString2 = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", 37.776072, -122.417696, getCurrentCategory(), "12345")
+//
+//        let dasUrl = URL(string: urlString2)
         
-        let dasUrl = URL(string: urlString2)
-        
-        DataManager.Instance.getDeal(url: dasUrl!)
+        DataManager.Instance.getDeal(url: url!)
     }
     
     func getCurrentCategory () -> String {
         
-        switch pickerView.selectedRow(inComponent: 0) {
-        case 0:
-            return "automotive"
-        case 1:
-            return "beauty-and-spas"
-        case 2:
-            return "food-and-drink"
-        case 3:
-            return "health-and-fitness"
-        case 4:
-            return "home-improvement"
-        case 5:
-            return "personal-services"
-        case 6:
-            return "retail"
-        case 7:
-            return "things-to-do"
-        default:
-            return ""
+        if dropDown.selectedIndex == nil {
+            let randomIndex = Int(arc4random_uniform(UInt32(categories.count)))
+            return getCategoryParsed(category: categories[randomIndex])
+        } else {
+            return getCategoryParsed(category: categories[dropDown.selectedIndex!])
         }
+    }
+    
+    func getCategoryParsed (category: String) -> String {
+        let lowercasedCategory = category.lowercased()
+        let newString = lowercasedCategory.replacingOccurrences(of: " ", with: "-")
+        return newString
     }
 }

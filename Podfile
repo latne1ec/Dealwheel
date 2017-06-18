@@ -12,5 +12,6 @@ target 'Dealwheel' do
   pod 'SpinWheelControl'
   pod 'ProgressHUD'
   pod 'SwiftyJSON'
+  pod 'UIDropDown'
 
 end
