@@ -32,10 +32,8 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
     var userLat: CLLocationDegrees?
     var userLon: CLLocationDegrees?
     var locationManager = CLLocationManager()
-    var categories = ["Automotive", "Beauty and Spas", "Food and Drink", "Health and Fitness", "Home Improvement", "Personal Services", "Retail", "Things to do", "For the Home"]
-    var responseDic: Dictionary<String, Any> = ["" : ""]
-    
     var lastRadian: CGFloat?
+    var categories = ["Automotive", "Auto And Home Improvement", "baby-kids-and-toys", "Beauty and Spas", "Collectibles", "Cruise Travel", "Electronics", "Entertainment and Media", "Flights and Transportation", "Food and Drink", "For the Home", "Groceries Household and Pets", "Health and Beauty", "Health and Fitness", "Home Improvement", "Hotels and Accommodations", "Jewelry and Watches", "Mens Clothing Shoes and Accessories", "Personal Services", "Sports and Outdoors", "Retail", "Things to do", "Tour Travel", "Womens Clothing Shoes and Accessories"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +53,8 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
             //AudioManager.Instance.initTickNoisePlayer()
             //AudioManager.Instance.playMainScreenMusic()
         }
+        // Adjust Dropdown Title to center of Device
+        dropDown.title.frame = CGRect(x: 0, y: 0, width: dropDown.frame.width, height: dropDown.frame.height)
     }
     
     // MARK: - Init Methods
@@ -95,13 +95,23 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
     }
     
     func initDropDown () {
+        //let image = UIImage(named: "bkg.jpg")
+        dropDown.title.layoutIfNeeded()
+        dropDown.setNeedsLayout()
+        dropDown.layoutIfNeeded()
         dropDown.animationType = .Classic
+        dropDown.rowBackgroundColor = UIColor.white
+        dropDown.backgroundColor = UIColor.clear //UIColor(patternImage: image!)
+        dropDown.textColor = UIColor.white
+        dropDown.optionsTextColor = UIColor.darkText
+        dropDown.optionsTextAlignment = .center
+        dropDown.font = "BudmoJiggler-Regular"
+        dropDown.fontSize = 22
         dropDown.tableHeight = 250
         dropDown.hideOptionsWhenSelect = true
         dropDown.placeholder = "Select category"
         dropDown.options = categories
         dropDown.didSelect { (option, index) in
-            print("You just select: \(option) at index: \(index)")
             self.retrieveDeal()
         }
     }
@@ -235,18 +245,17 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
     
     func retrieveDeal () {
         
-        let urlString = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", userLat!, userLon!, getCurrentCategory(), (PFUser.current()?.objectId)!)
-        let url = URL(string: urlString)
+//        let urlString = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", userLat!, userLon!, getCurrentCategory(), (PFUser.current()?.objectId)!)
+//        let url = URL(string: urlString)
         
-//        let urlString2 = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", 37.776072, -122.417696, getCurrentCategory(), "12345")
-//
-//        let dasUrl = URL(string: urlString2)
+        let urlString2 = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", 37.776072, -122.417696, getCurrentCategory(), "12345")
         
-        DataManager.Instance.getDeal(url: url!)
+        let dasUrl = URL(string: urlString2)
+        
+        DataManager.Instance.getDeal(url: dasUrl!)
     }
     
     func getCurrentCategory () -> String {
-        
         if dropDown.selectedIndex == nil {
             let randomIndex = Int(arc4random_uniform(UInt32(categories.count)))
             return getCategoryParsed(category: categories[randomIndex])
