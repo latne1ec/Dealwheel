@@ -8,6 +8,7 @@
 
 import UIKit
 import SafariServices
+
 class DealViewController: UIViewController, SFSafariViewControllerDelegate {
 
     @IBOutlet weak var wedgeImageView: UIImageView!
@@ -33,6 +34,7 @@ class DealViewController: UIViewController, SFSafariViewControllerDelegate {
     func setDealTitle () {
         dealTitleLabel.text = DataManager.Instance.dealTitle
     }
+    
     func setDealImage () {
         
         if DataManager.Instance.dealImageUrlString != nil {
@@ -47,7 +49,8 @@ class DealViewController: UIViewController, SFSafariViewControllerDelegate {
     
     func setWedgeColor () {
          if DataManager.Instance.currentWedgeColor != nil {
-            let imageNameString = String(format: "wedge%@", DataManager.Instance.currentWedgeColor!)
+            let imageNameString = String(format: "wedge%d", DataManager.Instance.currentWedgeColor!)
+            print(imageNameString)
             wedgeImageView.image = UIImage(named: imageNameString)
         }
     }

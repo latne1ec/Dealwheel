@@ -19,7 +19,7 @@ public class DataManager {
         return _instance
     }
     
-    public var currentWedgeColor: Int?
+    public var currentWedgeColor: Int!
     public var merchantName: String?
     public var dealTitle: String?
     public var dealUrlString: String?

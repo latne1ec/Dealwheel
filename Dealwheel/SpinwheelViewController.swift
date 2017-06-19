@@ -28,11 +28,12 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
     // Vars
     var currentCategory: String = ""
     var player: AVAudioPlayer?
-    var spinning: Bool?
     var userLat: CLLocationDegrees?
     var userLon: CLLocationDegrees?
     var locationManager = CLLocationManager()
     var lastRadian: CGFloat?
+    var spinning: Bool?
+    var dealMode: Bool?
     var categories = ["Automotive", "Auto And Home Improvement", "baby-kids-and-toys", "Beauty and Spas", "Collectibles", "Cruise Travel", "Electronics", "Entertainment and Media", "Flights and Transportation", "Food and Drink", "For the Home", "Groceries Household and Pets", "Health and Beauty", "Health and Fitness", "Home Improvement", "Hotels and Accommodations", "Jewelry and Watches", "Mens Clothing Shoes and Accessories", "Personal Services", "Sports and Outdoors", "Retail", "Things to do", "Tour Travel", "Womens Clothing Shoes and Accessories"]
     
     override func viewDidLoad() {
@@ -42,7 +43,7 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
         checkIfPreviousUser()
         initSpinWheel()
         initDropDown()
-        //initRewardView()
+        initRewardView()
         currentCategory = categories[0]
         //AudioManager.Instance.initTickNoisePlayer()
     }
@@ -125,13 +126,17 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
     }
     
     func initRewardView () {
-        let signupRewardView = SignupRewardView.instanceFromNib()
-        signupRewardView.frame = self.view.frame
-        signupRewardView.alpha = 0.0
-        self.view.addSubview(signupRewardView)
-        UIView.animate(withDuration: 0.25, animations: {
-            signupRewardView.alpha = 1.0
-        }) { (success) in
+        let value = UserDefaults.standard.bool(forKey: "hasShown50PointSignupReward")
+        if value == false {
+            UserDefaults.standard.set( true, forKey: "hasShown50PointSignupReward")
+            let signupRewardView = SignupRewardView.instanceFromNib()
+            signupRewardView.frame = self.view.frame
+            signupRewardView.alpha = 0.0
+            self.view.addSubview(signupRewardView)
+            UIView.animate(withDuration: 0.25, animations: {
+                signupRewardView.alpha = 1.0
+            }) { (success) in
+            }
         }
     }
     
@@ -168,12 +173,14 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
     func checkIfPreviousUser() {
         if(PFUser.current() == nil) {
             // No User, show Login screen
-            //self.performSegue(withIdentifier: "showLogin", sender: self)
+            self.performSegue(withIdentifier: "showLogin", sender: self)
         } else {
             // We have a User
             let firstNameString = PFUser.current()?.object(forKey: "fullName") as? String
             let firstName = firstNameString?.components(separatedBy: " ").first
             usernameLabel.text = firstName
+            let numberOfPoints = PFUser.current()?.object(forKey: "points") as? Int
+            pointsLabel.text = String(format: "%d", numberOfPoints!)
         }
     }
     
@@ -207,6 +214,8 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
         lastRadian = 100
         AudioManager.Instance.playSoundForWedgeAtIndex(index: self.spinWheelControl.selectedIndex)
         DataManager.Instance.currentWedgeColor = self.spinWheelControl.selectedIndex
+        print(self.spinWheelControl.selectedIndex)
+        print(DataManager.Instance.currentWedgeColor)
         showDealVC()
     }
     
