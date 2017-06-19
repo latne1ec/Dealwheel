@@ -47,18 +47,22 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
         initRewardView()
         currentCategory = categories[0]
         redeemButton.imageView?.contentMode = .scaleAspectFit
-        //AudioManager.Instance.initTickNoisePlayer()
+        redeemButton.addTarget(self, action: #selector(redeemButtonTapped), for: .touchUpInside)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         if PFUser.current() != nil {
             initLocationManager()
-            //AudioManager.Instance.initTickNoisePlayer()
-            //AudioManager.Instance.playMainScreenMusic()
+            AudioManager.Instance.playMainScreenMusic()
+            AudioManager.Instance.initTickNoisePlayer()
         }
         // Adjust Dropdown Title to center of Device
         dropDown.title.frame = CGRect(x: 0, y: 0, width: dropDown.frame.width, height: dropDown.frame.height)
         dropDown.alpha = 1.0
+    }
+    
+    @objc func redeemButtonTapped () {
+        
     }
     
     // MARK: - Init Methods
@@ -218,8 +222,6 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
         lastRadian = 100
         AudioManager.Instance.playSoundForWedgeAtIndex(index: self.spinWheelControl.selectedIndex)
         DataManager.Instance.currentWedgeColor = self.spinWheelControl.selectedIndex
-        print(self.spinWheelControl.selectedIndex)
-        print(DataManager.Instance.currentWedgeColor)
         showDealVC()
     }
     
@@ -236,13 +238,10 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
         if lastRadian! < zero {
             lastRadian = degrees
         }
-        if lastRadian! > degrees + 0.4 {
+        if lastRadian! > degrees + 0.2 || lastRadian! < degrees - 0.2 {
             AudioManager.Instance.playSpinSound()
             lastRadian = degrees
         }
-        
-        //print("last: %f", lastRadian)
-        //print(degrees)
     }
     
     func showDealVC () {
@@ -259,14 +258,14 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
     
     func retrieveDeal () {
         
-//        let urlString = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", userLat!, userLon!, getCurrentCategory(), (PFUser.current()?.objectId)!)
-//        let url = URL(string: urlString)
+        let urlString = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", userLat!, userLon!, getCurrentCategory(), (PFUser.current()?.objectId)!)
+        let url = URL(string: urlString)
         
-        let urlString2 = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", 37.776072, -122.417696, getCurrentCategory(), "12345")
+//        let urlString2 = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", 37.776072, -122.417696, getCurrentCategory(), "12345")
+//
+//        let dasUrl = URL(string: urlString2)
         
-        let dasUrl = URL(string: urlString2)
-        
-        DataManager.Instance.getDeal(url: dasUrl!)
+        DataManager.Instance.getDeal(url: url!)
     }
     
     func getCurrentCategory () -> String {
