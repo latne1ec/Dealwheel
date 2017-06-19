@@ -99,7 +99,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You won" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWo-Px-V66">
-                                <rect key="frame" x="110" y="191" width="100" height="20"/>
+                                <rect key="frame" x="110" y="191" width="100" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="LeC-fc-roc"/>
                                 </constraints>
@@ -108,19 +108,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7zh-e3-NF7">
-                                <rect key="frame" x="40" y="239" width="240" height="136"/>
+                                <rect key="frame" x="40" y="240" width="240" height="136"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="7zh-e3-NF7" secondAttribute="height" multiplier="30:17" id="wLc-e3-xWg"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is an awesome deal I just won on this app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Hu-tG-gii">
-                                <rect key="frame" x="40" y="385" width="240" height="39.5"/>
+                                <rect key="frame" x="40" y="386" width="240" height="42"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFk-pD-KEL">
-                                <rect key="frame" x="112" y="486" width="96" height="32"/>
+                                <rect key="frame" x="112" y="485" width="96" height="33"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="18"/>
                                 <state key="normal" title="Re-spin">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -130,7 +130,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YB4-0H-6h2">
-                                <rect key="frame" x="60" y="446" width="200" height="32"/>
+                                <rect key="frame" x="60" y="444" width="200" height="33"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="18"/>
                                 <state key="normal" title="Buy now for 50 points">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -186,13 +186,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsi-qa-UlL">
-                                <rect key="frame" x="24" y="524.5" width="47.5" height="23.5"/>
+                                <rect key="frame" x="24" y="523.5" width="46.5" height="24.5"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nb-uZ-nqP">
-                                <rect key="frame" x="229.5" y="523" width="33.5" height="25.5"/>
+                                <rect key="frame" x="224.5" y="521.5" width="38.5" height="27"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -204,41 +204,54 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KLy-Ls-B6r" customClass="SpinWheelControl" customModule="SpinWheelControl">
-                                <rect key="frame" x="38" y="210" width="244" height="244"/>
+                                <rect key="frame" x="38" y="230" width="244" height="244"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star@x.png" translatesAutoresizingMaskIntoConstraints="NO" id="oAu-5W-eHU">
-                                <rect key="frame" x="274" y="524.5" width="20" height="20"/>
+                                <rect key="frame" x="274" y="523" width="20" height="21.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="dTq-hv-3aI"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrowGold.png" translatesAutoresizingMaskIntoConstraints="NO" id="4i0-ur-zMF">
-                                <rect key="frame" x="144" y="199" width="32" height="32"/>
+                                <rect key="frame" x="144" y="219" width="32" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TL3-kV-ujm" customClass="UIDropDown" customModule="UIDropDown">
-                                <rect key="frame" x="27" y="149" width="267" height="38"/>
+                                <rect key="frame" x="27" y="168" width="267" height="38"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="267" id="0cb-Il-2e9"/>
                                     <constraint firstAttribute="height" constant="38" id="8mh-cF-Ibp"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcY-rV-sLq">
+                                <rect key="frame" x="102" y="126" width="118" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="118" id="i3n-ej-bZB"/>
+                                    <constraint firstAttribute="height" constant="33" id="qIs-xy-TBo"/>
+                                </constraints>
+                                <state key="normal" image="redeemButton.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="kcY-rV-sLq" secondAttribute="trailing" constant="100" id="6Gs-Mi-L9X"/>
+                            <constraint firstItem="kcY-rV-sLq" firstAttribute="top" secondItem="IST-dJ-o6N" secondAttribute="bottom" constant="11" id="A0f-yC-Lwf"/>
                             <constraint firstItem="Lsi-qa-UlL" firstAttribute="baseline" secondItem="4nb-uZ-nqP" secondAttribute="baseline" id="BwM-F6-yZY"/>
+                            <constraint firstItem="kcY-rV-sLq" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leading" constant="102" id="EPb-yW-AL5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oAu-5W-eHU" secondAttribute="trailing" constant="10" id="F4G-Mx-HM0"/>
                             <constraint firstAttribute="trailing" secondItem="TL3-kV-ujm" secondAttribute="trailing" constant="26" id="N4N-zR-oXb"/>
                             <constraint firstItem="Lsi-qa-UlL" firstAttribute="baseline" secondItem="4nb-uZ-nqP" secondAttribute="firstBaseline" id="N8x-oi-CdA"/>
                             <constraint firstItem="IST-dJ-o6N" firstAttribute="centerX" secondItem="381-Je-2LX" secondAttribute="centerX" id="R33-0j-vn0"/>
                             <constraint firstItem="4nb-uZ-nqP" firstAttribute="centerY" secondItem="oAu-5W-eHU" secondAttribute="centerY" constant="1.25" id="R4J-qM-MEn"/>
                             <constraint firstItem="oAu-5W-eHU" firstAttribute="leading" secondItem="4nb-uZ-nqP" secondAttribute="trailing" constant="11" id="Reg-6M-aRE"/>
+                            <constraint firstItem="TL3-kV-ujm" firstAttribute="top" secondItem="kcY-rV-sLq" secondAttribute="bottom" constant="9" id="ToD-7H-aA1"/>
                             <constraint firstItem="TL3-kV-ujm" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leading" constant="27" id="i0G-H4-Yz6"/>
                             <constraint firstItem="Lsi-qa-UlL" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leadingMargin" constant="8" id="iod-pp-pFB"/>
-                            <constraint firstItem="TL3-kV-ujm" firstAttribute="top" secondItem="IST-dJ-o6N" secondAttribute="bottom" constant="34" id="kve-to-cXW"/>
                             <constraint firstItem="Otc-s5-teY" firstAttribute="top" secondItem="oAu-5W-eHU" secondAttribute="bottom" constant="23.5" id="m9V-6M-4gZ"/>
                             <constraint firstItem="IST-dJ-o6N" firstAttribute="top" secondItem="Gce-no-STX" secondAttribute="bottom" constant="23" id="nNw-vv-KZe"/>
                             <constraint firstItem="IST-dJ-o6N" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leadingMargin" constant="31" id="pzb-De-BMQ"/>
@@ -250,6 +263,7 @@
                         <outlet property="arrow" destination="4i0-ur-zMF" id="a2O-gr-0Pg"/>
                         <outlet property="dropDown" destination="TL3-kV-ujm" id="u8P-3x-YHd"/>
                         <outlet property="pointsLabel" destination="4nb-uZ-nqP" id="w9H-Yc-0oI"/>
+                        <outlet property="redeemButton" destination="kcY-rV-sLq" id="Mw8-za-6Pj"/>
                         <outlet property="spinWheelControl" destination="KLy-Ls-B6r" id="doI-dk-bik"/>
                         <outlet property="usernameLabel" destination="Lsi-qa-UlL" id="DDC-Th-2NQ"/>
                         <segue destination="evK-1W-l5e" kind="presentation" identifier="showLogin" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Yag-I2-Y12"/>
@@ -428,7 +442,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You won" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YwO-H1-VLQ">
-                                <rect key="frame" x="110" y="235" width="100" height="20"/>
+                                <rect key="frame" x="110" y="235" width="100" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="tu6-LH-Pi0"/>
                                 </constraints>
@@ -437,13 +451,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is an awesome deal I just won on this app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPU-V0-F3D">
-                                <rect key="frame" x="40" y="299" width="240" height="39.5"/>
+                                <rect key="frame" x="40" y="300" width="240" height="42"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEc-cs-I14">
-                                <rect key="frame" x="112" y="454" width="96" height="32"/>
+                                <rect key="frame" x="112" y="453" width="96" height="33"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="18"/>
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -454,7 +468,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We'll email you the details!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIp-jW-K3m">
-                                <rect key="frame" x="40" y="353" width="240" height="39.5"/>
+                                <rect key="frame" x="40" y="356.5" width="240" height="39.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39.5" id="PkX-dS-Xcq"/>
                                 </constraints>
@@ -495,6 +509,7 @@
     <resources>
         <image name="arrowGold.png" width="80" height="80"/>
         <image name="fblogin.png" width="800" height="300"/>
+        <image name="redeemButton.png" width="175" height="50"/>
         <image name="star@x.png" width="256" height="256"/>
         <image name="templogo.png" width="338" height="209"/>
         <image name="tempwheel.png" width="689" height="689"/>

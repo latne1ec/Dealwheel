@@ -10,6 +10,7 @@
 		200E234D1EEEF48D00DAA97F /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200E234C1EEEF48D00DAA97F /* ProgressView.swift */; };
 		20289A251EF8111900DF6A0E /* wedge0.png in Resources */ = {isa = PBXBuildFile; fileRef = 20289A241EF8111900DF6A0E /* wedge0.png */; };
 		20289A271EF81AA500DF6A0E /* PrizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20289A261EF81AA500DF6A0E /* PrizeViewController.swift */; };
+		20289A291EF822C000DF6A0E /* redeemButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20289A281EF822C000DF6A0E /* redeemButton@2x.png */; };
 		20630A051EF18927001A2A77 /* 1and7.wav in Resources */ = {isa = PBXBuildFile; fileRef = 206309FF1EF18927001A2A77 /* 1and7.wav */; };
 		20630A061EF18927001A2A77 /* 3and9.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20630A001EF18927001A2A77 /* 3and9.wav */; };
 		20630A071EF18927001A2A77 /* 6and11.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20630A011EF18927001A2A77 /* 6and11.wav */; };
@@ -47,6 +48,7 @@
 		200E234C1EEEF48D00DAA97F /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		20289A241EF8111900DF6A0E /* wedge0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wedge0.png; path = ../../../../../../../Downloads/All12files/wedge0.png; sourceTree = "<group>"; };
 		20289A261EF81AA500DF6A0E /* PrizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizeViewController.swift; sourceTree = "<group>"; };
+		20289A281EF822C000DF6A0E /* redeemButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "redeemButton@2x.png"; path = "../../../Design/redeemButton@2x.png"; sourceTree = "<group>"; };
 		204B0A271EE86FD9000C6D3D /* Dealwheel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Dealwheel.entitlements; sourceTree = "<group>"; };
 		206309FF1EF18927001A2A77 /* 1and7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 1and7.wav; path = ../../../../../../../Downloads/1and7.wav; sourceTree = "<group>"; };
 		20630A001EF18927001A2A77 /* 3and9.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 3and9.wav; path = ../../../../../../../Downloads/3and9.wav; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 		20DFB9731EE742E3009462CA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				20289A281EF822C000DF6A0E /* redeemButton@2x.png */,
 				20289A241EF8111900DF6A0E /* wedge0.png */,
 				206C1C421EEB1394000CFBCE /* wedge@2x.png */,
 				206C1C341EEAE642000CFBCE /* arrowGold@2x.png */,
@@ -287,6 +290,7 @@
 				20630A061EF18927001A2A77 /* 3and9.wav in Resources */,
 				20630A0A1EF18927001A2A77 /* 7and12.wav in Resources */,
 				20DFB9681EE72155009462CA /* DealwheelMisc in Resources */,
+				20289A291EF822C000DF6A0E /* redeemButton@2x.png in Resources */,
 				20630A081EF18927001A2A77 /* 4and10.wav in Resources */,
 				20DFB95C1EE72097009462CA /* LaunchScreen.storyboard in Resources */,
 				206C1C431EEB1394000CFBCE /* wedge@2x.png in Resources */,

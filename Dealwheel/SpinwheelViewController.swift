@@ -18,6 +18,7 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
     
     // Outlets
     @IBOutlet weak var dropDown: UIDropDown!
+    @IBOutlet weak var redeemButton: UIButton!
     @IBOutlet weak var spinWheelControl: SpinWheelControl!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var pointsLabel: UILabel!
@@ -45,6 +46,7 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
         initDropDown()
         initRewardView()
         currentCategory = categories[0]
+        redeemButton.imageView?.contentMode = .scaleAspectFit
         //AudioManager.Instance.initTickNoisePlayer()
     }
     
@@ -56,6 +58,7 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
         }
         // Adjust Dropdown Title to center of Device
         dropDown.title.frame = CGRect(x: 0, y: 0, width: dropDown.frame.width, height: dropDown.frame.height)
+        dropDown.alpha = 1.0
     }
     
     // MARK: - Init Methods
@@ -67,13 +70,13 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
             // iPhone 6, 6s, and 7
             var arrowCenter: CGPoint = spinWheelControl.center
             arrowCenter.x = self.view.center.x
-            arrowCenter.y = self.view.center.y-114
+            arrowCenter.y = self.view.center.y-98
             arrow.center = arrowCenter
             spinWheelControl.frame.size.width = 290
             spinWheelControl.frame.size.height = 290
             var spinWheelCenter: CGPoint = spinWheelControl.center
             spinWheelCenter.x = self.view.center.x
-            spinWheelCenter.y = self.view.center.y+25
+            spinWheelCenter.y = self.view.center.y+45
             spinWheelControl.center = spinWheelCenter
             spinWheelControl.clear()
             spinWheelControl.drawWheel()
@@ -82,13 +85,13 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
             // iPhone 6 Plus, 7 Plus
             var arrowCenter: CGPoint = spinWheelControl.center
             arrowCenter.x = self.view.center.x
-            arrowCenter.y = self.view.center.y-115
+            arrowCenter.y = self.view.center.y-95
             arrow.center = arrowCenter
             spinWheelControl.frame.size.width = 320
             spinWheelControl.frame.size.height = 320
             var spinWheelCenter: CGPoint = spinWheelControl.center
             spinWheelCenter.x = self.view.center.x
-            spinWheelCenter.y = self.view.center.y+40
+            spinWheelCenter.y = self.view.center.y+65
             spinWheelControl.center = spinWheelCenter
             spinWheelControl.clear()
             spinWheelControl.drawWheel()
@@ -113,6 +116,7 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
         dropDown.hideOptionsWhenSelect = true
         dropDown.placeholder = "Select category"
         dropDown.options = categories
+        dropDown.alpha = 0.0
         dropDown.didSelect { (option, index) in
             self.retrieveDeal()
         }
@@ -173,7 +177,7 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
     func checkIfPreviousUser() {
         if(PFUser.current() == nil) {
             // No User, show Login screen
-            self.performSegue(withIdentifier: "showLogin", sender: self)
+            //self.performSegue(withIdentifier: "showLogin", sender: self)
         } else {
             // We have a User
             let firstNameString = PFUser.current()?.object(forKey: "fullName") as? String
