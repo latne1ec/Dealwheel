@@ -42,7 +42,7 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
         checkIfPreviousUser()
         initSpinWheel()
         initDropDown()
-        initRewardView()
+        //initRewardView()
         currentCategory = categories[0]
         //AudioManager.Instance.initTickNoisePlayer()
     }
@@ -95,13 +95,14 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
     }
     
     func initDropDown () {
-        //let image = UIImage(named: "bkg.jpg")
+        let image = UIImage(named: "bkg.jpg")
         dropDown.title.layoutIfNeeded()
         dropDown.setNeedsLayout()
         dropDown.layoutIfNeeded()
+        dropDown.cornerRadius = 8
         dropDown.animationType = .Classic
         dropDown.rowBackgroundColor = UIColor.white
-        dropDown.backgroundColor = UIColor.clear //UIColor(patternImage: image!)
+        dropDown.backgroundColor = UIColor(patternImage: image!) //UIColor.clear
         dropDown.textColor = UIColor.white
         dropDown.optionsTextColor = UIColor.darkText
         dropDown.optionsTextAlignment = .center
