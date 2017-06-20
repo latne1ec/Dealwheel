@@ -62,7 +62,7 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
     }
     
     @objc func redeemButtonTapped () {
-        
+        self.performSegue(withIdentifier: "showPrizewheel", sender: self)
     }
     
     // MARK: - Init Methods

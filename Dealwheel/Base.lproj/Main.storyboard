@@ -99,7 +99,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You won" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWo-Px-V66">
-                                <rect key="frame" x="110" y="191" width="100" height="21"/>
+                                <rect key="frame" x="110" y="191" width="100" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="LeC-fc-roc"/>
                                 </constraints>
@@ -108,19 +108,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7zh-e3-NF7">
-                                <rect key="frame" x="40" y="240" width="240" height="136"/>
+                                <rect key="frame" x="40" y="239" width="240" height="136"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="7zh-e3-NF7" secondAttribute="height" multiplier="30:17" id="wLc-e3-xWg"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is an awesome deal I just won on this app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Hu-tG-gii">
-                                <rect key="frame" x="40" y="386" width="240" height="42"/>
+                                <rect key="frame" x="40" y="385" width="240" height="39.5"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFk-pD-KEL">
-                                <rect key="frame" x="112" y="485" width="96" height="33"/>
+                                <rect key="frame" x="112" y="486" width="96" height="32"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="18"/>
                                 <state key="normal" title="Re-spin">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -130,7 +130,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YB4-0H-6h2">
-                                <rect key="frame" x="60" y="444" width="200" height="33"/>
+                                <rect key="frame" x="60" y="446" width="200" height="32"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="18"/>
                                 <state key="normal" title="Buy now for 50 points">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -186,13 +186,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsi-qa-UlL">
-                                <rect key="frame" x="24" y="523.5" width="46.5" height="24.5"/>
+                                <rect key="frame" x="24" y="524.5" width="47.5" height="23.5"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nb-uZ-nqP">
-                                <rect key="frame" x="224.5" y="521.5" width="38.5" height="27"/>
+                                <rect key="frame" x="229.5" y="523" width="33.5" height="25.5"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -209,7 +209,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star@x.png" translatesAutoresizingMaskIntoConstraints="NO" id="oAu-5W-eHU">
-                                <rect key="frame" x="274" y="523" width="20" height="21.5"/>
+                                <rect key="frame" x="274" y="524.5" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="dTq-hv-3aI"/>
                                 </constraints>
@@ -268,11 +268,12 @@
                         <outlet property="usernameLabel" destination="Lsi-qa-UlL" id="DDC-Th-2NQ"/>
                         <segue destination="evK-1W-l5e" kind="presentation" identifier="showLogin" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Yag-I2-Y12"/>
                         <segue destination="9fM-Cq-fdk" kind="presentation" identifier="showDeal" modalTransitionStyle="crossDissolve" id="Rsg-Mp-Qlm"/>
+                        <segue destination="wI8-Is-dOO" kind="presentation" identifier="showPrizewheel" modalTransitionStyle="flipHorizontal" id="Icb-Lr-31y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zWF-sz-m3S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1685.625" y="130.98591549295776"/>
+            <point key="canvasLocation" x="1686" y="131"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="TsQ-BI-Whp">
@@ -442,7 +443,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You won" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YwO-H1-VLQ">
-                                <rect key="frame" x="110" y="235" width="100" height="21"/>
+                                <rect key="frame" x="110" y="235" width="100" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="tu6-LH-Pi0"/>
                                 </constraints>
@@ -451,13 +452,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is an awesome deal I just won on this app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPU-V0-F3D">
-                                <rect key="frame" x="40" y="300" width="240" height="42"/>
+                                <rect key="frame" x="40" y="299" width="240" height="39.5"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEc-cs-I14">
-                                <rect key="frame" x="112" y="453" width="96" height="33"/>
+                                <rect key="frame" x="112" y="454" width="96" height="32"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="18"/>
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -468,7 +469,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We'll email you the details!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIp-jW-K3m">
-                                <rect key="frame" x="40" y="356.5" width="240" height="39.5"/>
+                                <rect key="frame" x="40" y="353" width="240" height="39.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39.5" id="PkX-dS-Xcq"/>
                                 </constraints>
@@ -499,11 +500,112 @@
                     <connections>
                         <outlet property="dealTitleLabel" destination="PPU-V0-F3D" id="q2l-6y-O7G"/>
                         <outlet property="wedgeImageView" destination="sbT-P3-pee" id="IKk-kQ-f60"/>
+                        <segue destination="wI8-Is-dOO" kind="presentation" identifier="showPrizewheel" modalTransitionStyle="crossDissolve" id="SH1-ps-cV5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D6W-xw-DUe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2887.5" y="-631.69014084507046"/>
+        </scene>
+        <!--Prizewheel View Controller-->
+        <scene sceneID="tES-pu-QxG">
+            <objects>
+                <viewController id="wI8-Is-dOO" customClass="PrizewheelViewController" customModule="Dealwheel" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kKT-dc-43Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="lsI-uO-RkG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Yu6-gp-i4g">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JiG-Vu-YnE">
+                                <rect key="frame" x="24" y="524.5" width="47.5" height="23.5"/>
+                                <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onO-cp-j1z">
+                                <rect key="frame" x="229.5" y="523" width="33.5" height="25.5"/>
+                                <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="templogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Cv8-Uc-AtM">
+                                <rect key="frame" x="47" y="43" width="226" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="Fl7-zO-aEf"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b9X-ih-ygM" customClass="SpinWheelControl" customModule="SpinWheelControl">
+                                <rect key="frame" x="38" y="230" width="244" height="244"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star@x.png" translatesAutoresizingMaskIntoConstraints="NO" id="es3-FE-e29">
+                                <rect key="frame" x="274" y="524.5" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="eDy-FQ-uvO"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrowGold.png" translatesAutoresizingMaskIntoConstraints="NO" id="yU3-e6-Ycm">
+                                <rect key="frame" x="144" y="219" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouP-GJ-4SR">
+                                <rect key="frame" x="102" y="126" width="118" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="118" id="O6w-Zh-QQb"/>
+                                    <constraint firstAttribute="height" constant="33" id="e09-Qs-Ynw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="22"/>
+                                <state key="normal" title="Go back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBackButtonTapped:" destination="wI8-Is-dOO" eventType="touchUpInside" id="Xbx-2A-FbL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Prizewheel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxf-fz-zGL">
+                                <rect key="frame" x="47" y="159" width="235" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="31"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lsI-uO-RkG" firstAttribute="top" secondItem="JiG-Vu-YnE" secondAttribute="bottom" constant="20" id="2n8-yk-nnx"/>
+                            <constraint firstItem="Cv8-Uc-AtM" firstAttribute="top" secondItem="kKT-dc-43Z" secondAttribute="bottom" constant="23" id="4Rs-XQ-ZL3"/>
+                            <constraint firstItem="ouP-GJ-4SR" firstAttribute="top" secondItem="Cv8-Uc-AtM" secondAttribute="bottom" constant="11" id="6sn-dP-4td"/>
+                            <constraint firstItem="JiG-Vu-YnE" firstAttribute="baseline" secondItem="onO-cp-j1z" secondAttribute="firstBaseline" id="EDc-vi-f72"/>
+                            <constraint firstItem="Cv8-Uc-AtM" firstAttribute="centerX" secondItem="Yu6-gp-i4g" secondAttribute="centerX" id="Eiw-0j-gks"/>
+                            <constraint firstItem="lsI-uO-RkG" firstAttribute="top" secondItem="es3-FE-e29" secondAttribute="bottom" constant="23.5" id="EnY-UB-4A1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="es3-FE-e29" secondAttribute="trailing" constant="10" id="Plk-kR-dQX"/>
+                            <constraint firstItem="es3-FE-e29" firstAttribute="leading" secondItem="onO-cp-j1z" secondAttribute="trailing" constant="11" id="TSw-Pl-Pp0"/>
+                            <constraint firstItem="onO-cp-j1z" firstAttribute="centerY" secondItem="es3-FE-e29" secondAttribute="centerY" constant="1.25" id="Xld-KM-Nqj"/>
+                            <constraint firstItem="JiG-Vu-YnE" firstAttribute="baseline" secondItem="onO-cp-j1z" secondAttribute="baseline" id="YDP-ge-8w3"/>
+                            <constraint firstItem="Cv8-Uc-AtM" firstAttribute="leading" secondItem="Yu6-gp-i4g" secondAttribute="leadingMargin" constant="31" id="efj-QY-6SE"/>
+                            <constraint firstItem="ouP-GJ-4SR" firstAttribute="leading" secondItem="Yu6-gp-i4g" secondAttribute="leading" constant="102" id="pc4-OZ-bdn"/>
+                            <constraint firstItem="JiG-Vu-YnE" firstAttribute="leading" secondItem="Yu6-gp-i4g" secondAttribute="leadingMargin" constant="8" id="u30-Lc-QPt"/>
+                            <constraint firstAttribute="trailing" secondItem="ouP-GJ-4SR" secondAttribute="trailing" constant="100" id="w7J-0J-iPL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cdO-uQ-Ut6"/>
+                    <connections>
+                        <outlet property="arrow" destination="yU3-e6-Ycm" id="dxd-3v-N0x"/>
+                        <outlet property="goBackButton" destination="ouP-GJ-4SR" id="pif-kX-Iif"/>
+                        <outlet property="spinWheelControl" destination="b9X-ih-ygM" id="yie-1a-eY2"/>
+                        <outlet property="userPointsLabel" destination="onO-cp-j1z" id="4GN-9D-8mm"/>
+                        <outlet property="usernameLabel" destination="JiG-Vu-YnE" id="0EL-Wh-zs5"/>
+                        <segue destination="UbD-iJ-3AO" kind="presentation" identifier="showPrizeVC" modalTransitionStyle="crossDissolve" id="0Le-Dq-xHt"/>
+                        <segue destination="GKc-d8-bNr" kind="presentation" identifier="showDealwheel" modalTransitionStyle="flipHorizontal" id="PL8-uV-hhi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D5B-0Y-IEG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2887.5" y="130.98591549295776"/>
         </scene>
     </scenes>
     <resources>
@@ -516,6 +618,7 @@
         <image name="wedge.png" width="150" height="150"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hEa-qF-j0m"/>
+        <segue reference="PL8-uV-hhi"/>
+        <segue reference="Icb-Lr-31y"/>
     </inferredMetricsTieBreakers>
 </document>

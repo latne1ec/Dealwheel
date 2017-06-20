@@ -40,6 +40,7 @@
 		20AB17B71EF052740007310A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB17B61EF052740007310A /* DataManager.swift */; };
 		20B6F8641EF4852200DFC854 /* SignupRewardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B6F8631EF4852200DFC854 /* SignupRewardView.swift */; };
 		20B6F8661EF4879200DFC854 /* SignupRewardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20B6F8651EF4879200DFC854 /* SignupRewardView.xib */; };
+		20DED38C1EF96850001A5784 /* PrizewheelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DED38B1EF96850001A5784 /* PrizewheelViewController.swift */; };
 		20DFB9521EE72097009462CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DFB9511EE72097009462CA /* AppDelegate.swift */; };
 		20DFB9571EE72097009462CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20DFB9551EE72097009462CA /* Main.storyboard */; };
 		20DFB9591EE72097009462CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20DFB9581EE72097009462CA /* Assets.xcassets */; };
@@ -90,6 +91,7 @@
 		20AB17B61EF052740007310A /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		20B6F8631EF4852200DFC854 /* SignupRewardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRewardView.swift; sourceTree = "<group>"; };
 		20B6F8651EF4879200DFC854 /* SignupRewardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupRewardView.xib; sourceTree = "<group>"; };
+		20DED38B1EF96850001A5784 /* PrizewheelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizewheelViewController.swift; sourceTree = "<group>"; };
 		20DFB94E1EE72097009462CA /* Dealwheel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dealwheel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20DFB9511EE72097009462CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20DFB9561EE72097009462CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				20DFB9751EE7433F009462CA /* LoginViewController.swift */,
 				20DFB9651EE72132009462CA /* SpinwheelViewController.swift */,
 				20AB17B21EF0471F0007310A /* DealViewController.swift */,
+				20DED38B1EF96850001A5784 /* PrizewheelViewController.swift */,
 				20289A261EF81AA500DF6A0E /* PrizeViewController.swift */,
 				20DFB9551EE72097009462CA /* Main.storyboard */,
 				20DFB9581EE72097009462CA /* Assets.xcassets */,
@@ -415,6 +418,7 @@
 				20B6F8641EF4852200DFC854 /* SignupRewardView.swift in Sources */,
 				20AB17B71EF052740007310A /* DataManager.swift in Sources */,
 				20DFB9661EE72132009462CA /* SpinwheelViewController.swift in Sources */,
+				20DED38C1EF96850001A5784 /* PrizewheelViewController.swift in Sources */,
 				20AB17AB1EF027250007310A /* AudioManager.swift in Sources */,
 				20AB17B31EF0471F0007310A /* DealViewController.swift in Sources */,
 				206C1C411EEB0460000CFBCE /* DealView.swift in Sources */,
