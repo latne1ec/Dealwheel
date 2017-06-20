@@ -10,7 +10,6 @@ import UIKit
 import Parse
 import SpinWheelControl
 
-
 class PrizewheelViewController: UIViewController, SpinWheelControlDelegate, SpinWheelControlDataSource {
     
     @IBOutlet weak var goBackButton: UIButton!
@@ -24,6 +23,19 @@ class PrizewheelViewController: UIViewController, SpinWheelControlDelegate, Spin
         setBackgroundImage()
         setWheelAndArrowFrames()
         initSpinWheel()
+        setUserData()
+    }
+    
+    func setUserData () {
+        if(PFUser.current() == nil) {
+            // No user?? Simulator Testing
+        } else {
+            let firstNameString = PFUser.current()?.object(forKey: "fullName") as? String
+            let firstName = firstNameString?.components(separatedBy: " ").first
+            usernameLabel.text = firstName
+            let numberOfPoints = PFUser.current()?.object(forKey: "points") as? Int
+            userPointsLabel.text = String(format: "%d", numberOfPoints!)
+        }
     }
     
     func setWheelAndArrowFrames () {
@@ -79,7 +91,11 @@ class PrizewheelViewController: UIViewController, SpinWheelControlDelegate, Spin
     @objc func spinWheelDidChangeValue(sender: AnyObject) {
         AudioManager.Instance.playSoundForWedgeAtIndex(index: self.spinWheelControl.selectedIndex)
         DataManager.Instance.currentWedgeColor = self.spinWheelControl.selectedIndex
-        //showDealVC()
+        showPrizeVC()
+    }
+    
+    func showPrizeVC () {
+        self.performSegue(withIdentifier: "showPrizeVC", sender: self)
     }
     
     func wedgeForSliceAtIndex(index: UInt) -> SpinWheelWedge {

@@ -56,6 +56,9 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
             AudioManager.Instance.playMainScreenMusic()
             AudioManager.Instance.initTickNoisePlayer()
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         // Adjust Dropdown Title to center of Device
         dropDown.title.frame = CGRect(x: 0, y: 0, width: dropDown.frame.width, height: dropDown.frame.height)
         dropDown.alpha = 1.0

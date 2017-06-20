@@ -17,69 +17,6 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="MqD-R9-3lf">
-            <objects>
-                <viewController id="t2I-bG-JW4" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2M9-HP-z3E"/>
-                        <viewControllerLayoutGuide type="bottom" id="LjM-oH-Mow"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zla-Pu-qQJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RvH-SN-4qd">
-                                <rect key="frame" x="11" y="20" width="298" height="147"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="147" id="fBC-hN-CTh"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SOX-4c-biT">
-                                <rect key="frame" x="11" y="175" width="298" height="266"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kuq-98-Mur" customClass="SpinWheelControl" customModule="SpinWheelControl">
-                                        <rect key="frame" x="29" y="13" width="240" height="240"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="kuq-98-Mur" firstAttribute="leading" secondItem="SOX-4c-biT" secondAttribute="leading" constant="29" id="PDV-EY-KUe"/>
-                                    <constraint firstItem="kuq-98-Mur" firstAttribute="top" secondItem="SOX-4c-biT" secondAttribute="top" constant="13" id="XJJ-Ae-GHW"/>
-                                    <constraint firstItem="kuq-98-Mur" firstAttribute="centerX" secondItem="SOX-4c-biT" secondAttribute="centerX" id="cba-Tk-oMq"/>
-                                    <constraint firstItem="kuq-98-Mur" firstAttribute="centerY" secondItem="SOX-4c-biT" secondAttribute="centerY" id="eqy-yE-CLx"/>
-                                    <constraint firstAttribute="height" constant="266" id="vmD-tu-K5u"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dau-CP-BlK">
-                                <rect key="frame" x="11" y="458" width="298" height="102"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="102" id="o3p-rI-UOf"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="dau-CP-BlK" firstAttribute="leading" secondItem="zla-Pu-qQJ" secondAttribute="leading" constant="11" id="JeJ-3M-WCt"/>
-                            <constraint firstItem="LjM-oH-Mow" firstAttribute="top" secondItem="dau-CP-BlK" secondAttribute="bottom" constant="8" id="Kq5-Rn-wAW"/>
-                            <constraint firstAttribute="trailing" secondItem="dau-CP-BlK" secondAttribute="trailing" constant="11" id="XJB-c0-Ygy"/>
-                            <constraint firstItem="SOX-4c-biT" firstAttribute="top" secondItem="RvH-SN-4qd" secondAttribute="bottom" constant="8" id="XWk-iu-mj5"/>
-                            <constraint firstAttribute="trailing" secondItem="SOX-4c-biT" secondAttribute="trailing" constant="11" id="YDH-Vk-opj"/>
-                            <constraint firstItem="RvH-SN-4qd" firstAttribute="leading" secondItem="zla-Pu-qQJ" secondAttribute="leading" constant="11" id="Z1A-Qz-VRE"/>
-                            <constraint firstAttribute="trailing" secondItem="RvH-SN-4qd" secondAttribute="trailing" constant="11" id="fVn-w2-uCH"/>
-                            <constraint firstItem="RvH-SN-4qd" firstAttribute="top" secondItem="2M9-HP-z3E" secondAttribute="bottom" id="lTg-Tb-xBc"/>
-                            <constraint firstItem="dau-CP-BlK" firstAttribute="top" secondItem="SOX-4c-biT" secondAttribute="bottom" constant="17" id="m6J-V1-ac5"/>
-                            <constraint firstItem="SOX-4c-biT" firstAttribute="leading" secondItem="zla-Pu-qQJ" secondAttribute="leading" constant="11" id="tYf-0u-dJL"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zbW-ez-sb4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="384" y="-733"/>
-        </scene>
         <!--Deal View Controller-->
         <scene sceneID="irW-nR-F7G">
             <objects>
@@ -99,7 +36,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You won" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWo-Px-V66">
-                                <rect key="frame" x="110" y="191" width="100" height="20"/>
+                                <rect key="frame" x="110" y="191" width="100" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="LeC-fc-roc"/>
                                 </constraints>
@@ -108,19 +45,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7zh-e3-NF7">
-                                <rect key="frame" x="40" y="239" width="240" height="136"/>
+                                <rect key="frame" x="40" y="240" width="240" height="136"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="7zh-e3-NF7" secondAttribute="height" multiplier="30:17" id="wLc-e3-xWg"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is an awesome deal I just won on this app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Hu-tG-gii">
-                                <rect key="frame" x="40" y="385" width="240" height="39.5"/>
+                                <rect key="frame" x="40" y="386" width="240" height="42"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFk-pD-KEL">
-                                <rect key="frame" x="112" y="486" width="96" height="32"/>
+                                <rect key="frame" x="112" y="485" width="96" height="33"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="18"/>
                                 <state key="normal" title="Re-spin">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -130,7 +67,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YB4-0H-6h2">
-                                <rect key="frame" x="60" y="446" width="200" height="32"/>
+                                <rect key="frame" x="60" y="444" width="200" height="33"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="18"/>
                                 <state key="normal" title="Buy now for 50 points">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -186,13 +123,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsi-qa-UlL">
-                                <rect key="frame" x="24" y="524.5" width="47.5" height="23.5"/>
+                                <rect key="frame" x="24" y="523.5" width="46.5" height="24.5"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nb-uZ-nqP">
-                                <rect key="frame" x="229.5" y="523" width="33.5" height="25.5"/>
+                                <rect key="frame" x="224.5" y="521.5" width="38.5" height="27"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -209,7 +146,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star@x.png" translatesAutoresizingMaskIntoConstraints="NO" id="oAu-5W-eHU">
-                                <rect key="frame" x="274" y="524.5" width="20" height="20"/>
+                                <rect key="frame" x="274" y="523" width="20" height="21.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="dTq-hv-3aI"/>
                                 </constraints>
@@ -336,94 +273,6 @@
             </objects>
             <point key="canvasLocation" x="778" y="131"/>
         </scene>
-        <!--Spinwheel View Controller-->
-        <scene sceneID="Aax-9g-BH3">
-            <objects>
-                <viewController id="fQ4-yT-9TL" customClass="SpinwheelViewController" customModule="Dealwheel" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2nE-Al-p5i"/>
-                        <viewControllerLayoutGuide type="bottom" id="KXM-iW-mol"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="MnT-gG-st4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tempwheel.png" translatesAutoresizingMaskIntoConstraints="NO" id="WCf-rf-QQo">
-                                <rect key="frame" x="40" y="215" width="242" height="213"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="213" id="42y-5H-vnu"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQY-C2-HuW">
-                                <rect key="frame" x="77" y="446" width="167" height="47"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="47" id="Zvg-IC-tje"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                <state key="normal" title="spin">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cody Martin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WnV-ZB-1HX">
-                                <rect key="frame" x="25.5" y="534" width="94" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500 points" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Qr-Cr-zJs">
-                                <rect key="frame" x="221.5" y="534" width="82.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="templogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="0jf-yE-Jep">
-                                <rect key="frame" x="47" y="40" width="226" height="72"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="226" id="6QF-tv-hC3"/>
-                                    <constraint firstAttribute="height" constant="72" id="aqg-gY-RtB"/>
-                                </constraints>
-                            </imageView>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CfR-fZ-Rdt">
-                                <rect key="frame" x="31" y="125" width="260" height="77"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="77" id="9Qs-pd-ffE"/>
-                                </constraints>
-                            </pickerView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="WCf-rf-QQo" firstAttribute="top" secondItem="CfR-fZ-Rdt" secondAttribute="bottom" constant="13" id="1Hx-lU-g50"/>
-                            <constraint firstItem="wQY-C2-HuW" firstAttribute="leading" secondItem="MnT-gG-st4" secondAttribute="leadingMargin" constant="61" id="5A7-yL-jOv"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="2Qr-Cr-zJs" secondAttribute="trailing" id="ENh-OL-b2P"/>
-                            <constraint firstItem="0jf-yE-Jep" firstAttribute="top" secondItem="2nE-Al-p5i" secondAttribute="bottom" constant="20" id="L6q-rV-bgP"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="wQY-C2-HuW" secondAttribute="trailing" constant="60" id="M8z-Nf-aRW"/>
-                            <constraint firstItem="WnV-ZB-1HX" firstAttribute="top" secondItem="wQY-C2-HuW" secondAttribute="bottom" constant="41" id="Q4e-t1-kH5"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="CfR-fZ-Rdt" secondAttribute="trailing" constant="13" id="RqK-Qo-h5s"/>
-                            <constraint firstItem="2Qr-Cr-zJs" firstAttribute="top" secondItem="wQY-C2-HuW" secondAttribute="bottom" constant="41" id="T1Y-HK-kqb"/>
-                            <constraint firstItem="KXM-iW-mol" firstAttribute="top" secondItem="wQY-C2-HuW" secondAttribute="bottom" constant="75" id="Ugf-oc-bew"/>
-                            <constraint firstItem="WnV-ZB-1HX" firstAttribute="leading" secondItem="MnT-gG-st4" secondAttribute="leadingMargin" constant="9.5" id="W15-wb-9ru"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="WCf-rf-QQo" secondAttribute="trailing" constant="22" id="X03-yJ-FGd"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="0jf-yE-Jep" secondAttribute="trailing" constant="31" id="YQP-53-g55"/>
-                            <constraint firstItem="WCf-rf-QQo" firstAttribute="leading" secondItem="MnT-gG-st4" secondAttribute="leadingMargin" constant="24" id="bWp-48-v8x"/>
-                            <constraint firstItem="wQY-C2-HuW" firstAttribute="top" secondItem="WCf-rf-QQo" secondAttribute="bottom" constant="18" id="gLK-te-stO"/>
-                            <constraint firstItem="WCf-rf-QQo" firstAttribute="top" secondItem="CfR-fZ-Rdt" secondAttribute="bottom" constant="13" id="hMm-dk-V0j"/>
-                            <constraint firstItem="0jf-yE-Jep" firstAttribute="leading" secondItem="MnT-gG-st4" secondAttribute="leadingMargin" constant="31" id="hNr-8a-GPe"/>
-                            <constraint firstItem="wQY-C2-HuW" firstAttribute="top" secondItem="WCf-rf-QQo" secondAttribute="bottom" constant="18" id="oaO-Ho-vTR"/>
-                            <constraint firstItem="CfR-fZ-Rdt" firstAttribute="leading" secondItem="MnT-gG-st4" secondAttribute="leadingMargin" constant="15" id="ph3-66-ZgM"/>
-                            <constraint firstItem="2Qr-Cr-zJs" firstAttribute="leading" secondItem="WnV-ZB-1HX" secondAttribute="trailing" constant="102" id="vCh-29-h1a"/>
-                            <constraint firstItem="CfR-fZ-Rdt" firstAttribute="top" secondItem="0jf-yE-Jep" secondAttribute="bottom" constant="13" id="xKh-9s-Ahv"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="dFe-jd-dwx"/>
-                    <connections>
-                        <outlet property="pickerView" destination="CfR-fZ-Rdt" id="Dhe-Qb-2Ll"/>
-                        <outlet property="spinButton" destination="wQY-C2-HuW" id="IKm-To-QFv"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gQT-Np-uk6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="448" y="925"/>
-        </scene>
         <!--Prize View Controller-->
         <scene sceneID="yuG-HS-h0m">
             <objects>
@@ -443,7 +292,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You won" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YwO-H1-VLQ">
-                                <rect key="frame" x="110" y="235" width="100" height="20"/>
+                                <rect key="frame" x="110" y="235" width="100" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="tu6-LH-Pi0"/>
                                 </constraints>
@@ -452,24 +301,23 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is an awesome deal I just won on this app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPU-V0-F3D">
-                                <rect key="frame" x="40" y="299" width="240" height="39.5"/>
+                                <rect key="frame" x="40" y="300" width="240" height="42"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEc-cs-I14">
-                                <rect key="frame" x="112" y="454" width="96" height="32"/>
+                                <rect key="frame" x="112" y="453" width="96" height="33"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="18"/>
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="continueButtonTapped:" destination="UbD-iJ-3AO" eventType="touchUpInside" id="oaY-Qy-fj5"/>
-                                    <action selector="respinButtonTapped:" destination="UbD-iJ-3AO" eventType="touchUpInside" id="afn-qe-AgJ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We'll email you the details!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIp-jW-K3m">
-                                <rect key="frame" x="40" y="353" width="240" height="39.5"/>
+                                <rect key="frame" x="40" y="356.5" width="240" height="39.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39.5" id="PkX-dS-Xcq"/>
                                 </constraints>
@@ -500,12 +348,12 @@
                     <connections>
                         <outlet property="dealTitleLabel" destination="PPU-V0-F3D" id="q2l-6y-O7G"/>
                         <outlet property="wedgeImageView" destination="sbT-P3-pee" id="IKk-kQ-f60"/>
-                        <segue destination="wI8-Is-dOO" kind="presentation" identifier="showPrizewheel" modalTransitionStyle="crossDissolve" id="SH1-ps-cV5"/>
+                        <segue destination="wI8-Is-dOO" kind="presentation" identifier="backToPrizewheel" modalTransitionStyle="crossDissolve" id="SH1-ps-cV5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D6W-xw-DUe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2887.5" y="-631.69014084507046"/>
+            <point key="canvasLocation" x="2621" y="-631"/>
         </scene>
         <!--Prizewheel View Controller-->
         <scene sceneID="tES-pu-QxG">
@@ -520,13 +368,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JiG-Vu-YnE">
-                                <rect key="frame" x="24" y="524.5" width="47.5" height="23.5"/>
+                                <rect key="frame" x="24" y="523.5" width="46.5" height="24.5"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onO-cp-j1z">
-                                <rect key="frame" x="229.5" y="523" width="33.5" height="25.5"/>
+                                <rect key="frame" x="224.5" y="521.5" width="38.5" height="27"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -538,18 +386,18 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b9X-ih-ygM" customClass="SpinWheelControl" customModule="SpinWheelControl">
-                                <rect key="frame" x="38" y="230" width="244" height="244"/>
+                                <rect key="frame" x="38" y="232" width="244" height="244"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star@x.png" translatesAutoresizingMaskIntoConstraints="NO" id="es3-FE-e29">
-                                <rect key="frame" x="274" y="524.5" width="20" height="20"/>
+                                <rect key="frame" x="274" y="523" width="20" height="21.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="eDy-FQ-uvO"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrowGold.png" translatesAutoresizingMaskIntoConstraints="NO" id="yU3-e6-Ycm">
-                                <rect key="frame" x="144" y="219" width="32" height="32"/>
+                                <rect key="frame" x="144" y="221" width="32" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouP-GJ-4SR">
@@ -566,10 +414,9 @@
                                     <action selector="goBackButtonTapped:" destination="wI8-Is-dOO" eventType="touchUpInside" id="Xbx-2A-FbL"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Prizewheel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxf-fz-zGL">
-                                <rect key="frame" x="47" y="159" width="235" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prizewheel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxf-fz-zGL">
+                                <rect key="frame" x="43" y="165" width="235" height="43.5"/>
+                                <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="37"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -579,6 +426,7 @@
                             <constraint firstItem="lsI-uO-RkG" firstAttribute="top" secondItem="JiG-Vu-YnE" secondAttribute="bottom" constant="20" id="2n8-yk-nnx"/>
                             <constraint firstItem="Cv8-Uc-AtM" firstAttribute="top" secondItem="kKT-dc-43Z" secondAttribute="bottom" constant="23" id="4Rs-XQ-ZL3"/>
                             <constraint firstItem="ouP-GJ-4SR" firstAttribute="top" secondItem="Cv8-Uc-AtM" secondAttribute="bottom" constant="11" id="6sn-dP-4td"/>
+                            <constraint firstItem="fxf-fz-zGL" firstAttribute="leading" secondItem="Yu6-gp-i4g" secondAttribute="leading" constant="43" id="CqA-bG-Nf2"/>
                             <constraint firstItem="JiG-Vu-YnE" firstAttribute="baseline" secondItem="onO-cp-j1z" secondAttribute="firstBaseline" id="EDc-vi-f72"/>
                             <constraint firstItem="Cv8-Uc-AtM" firstAttribute="centerX" secondItem="Yu6-gp-i4g" secondAttribute="centerX" id="Eiw-0j-gks"/>
                             <constraint firstItem="lsI-uO-RkG" firstAttribute="top" secondItem="es3-FE-e29" secondAttribute="bottom" constant="23.5" id="EnY-UB-4A1"/>
@@ -586,7 +434,9 @@
                             <constraint firstItem="es3-FE-e29" firstAttribute="leading" secondItem="onO-cp-j1z" secondAttribute="trailing" constant="11" id="TSw-Pl-Pp0"/>
                             <constraint firstItem="onO-cp-j1z" firstAttribute="centerY" secondItem="es3-FE-e29" secondAttribute="centerY" constant="1.25" id="Xld-KM-Nqj"/>
                             <constraint firstItem="JiG-Vu-YnE" firstAttribute="baseline" secondItem="onO-cp-j1z" secondAttribute="baseline" id="YDP-ge-8w3"/>
+                            <constraint firstItem="fxf-fz-zGL" firstAttribute="top" secondItem="ouP-GJ-4SR" secondAttribute="bottom" constant="6" id="cwd-Dj-6ie"/>
                             <constraint firstItem="Cv8-Uc-AtM" firstAttribute="leading" secondItem="Yu6-gp-i4g" secondAttribute="leadingMargin" constant="31" id="efj-QY-6SE"/>
+                            <constraint firstAttribute="trailing" secondItem="fxf-fz-zGL" secondAttribute="trailing" constant="42" id="pDs-3v-cU1"/>
                             <constraint firstItem="ouP-GJ-4SR" firstAttribute="leading" secondItem="Yu6-gp-i4g" secondAttribute="leading" constant="102" id="pc4-OZ-bdn"/>
                             <constraint firstItem="JiG-Vu-YnE" firstAttribute="leading" secondItem="Yu6-gp-i4g" secondAttribute="leadingMargin" constant="8" id="u30-Lc-QPt"/>
                             <constraint firstAttribute="trailing" secondItem="ouP-GJ-4SR" secondAttribute="trailing" constant="100" id="w7J-0J-iPL"/>
@@ -605,7 +455,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D5B-0Y-IEG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2887.5" y="130.98591549295776"/>
+            <point key="canvasLocation" x="2621" y="132"/>
         </scene>
     </scenes>
     <resources>
@@ -619,6 +469,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="PL8-uV-hhi"/>
-        <segue reference="Icb-Lr-31y"/>
+        <segue reference="SH1-ps-cV5"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -160,6 +160,32 @@
 			path = ProgressView;
 			sourceTree = "<group>";
 		};
+		20DED38D1EF98541001A5784 /* Dealwheel */ = {
+			isa = PBXGroup;
+			children = (
+				20DFB9651EE72132009462CA /* SpinwheelViewController.swift */,
+				20AB17B21EF0471F0007310A /* DealViewController.swift */,
+			);
+			path = Dealwheel;
+			sourceTree = "<group>";
+		};
+		20DED38E1EF98549001A5784 /* Prizewheel */ = {
+			isa = PBXGroup;
+			children = (
+				20DED38B1EF96850001A5784 /* PrizewheelViewController.swift */,
+				20289A261EF81AA500DF6A0E /* PrizeViewController.swift */,
+			);
+			path = Prizewheel;
+			sourceTree = "<group>";
+		};
+		20DED38F1EF9855C001A5784 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				20DFB9751EE7433F009462CA /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		20DFB9451EE72097009462CA = {
 			isa = PBXGroup;
 			children = (
@@ -181,15 +207,13 @@
 		20DFB9501EE72097009462CA /* Dealwheel */ = {
 			isa = PBXGroup;
 			children = (
-				200C4D071EF05C5C00A43CEF /* Views */,
-				200C4D061EF0584A00A43CEF /* Model */,
 				204B0A271EE86FD9000C6D3D /* Dealwheel.entitlements */,
 				20DFB9511EE72097009462CA /* AppDelegate.swift */,
-				20DFB9751EE7433F009462CA /* LoginViewController.swift */,
-				20DFB9651EE72132009462CA /* SpinwheelViewController.swift */,
-				20AB17B21EF0471F0007310A /* DealViewController.swift */,
-				20DED38B1EF96850001A5784 /* PrizewheelViewController.swift */,
-				20289A261EF81AA500DF6A0E /* PrizeViewController.swift */,
+				20DED38F1EF9855C001A5784 /* Login */,
+				20DED38D1EF98541001A5784 /* Dealwheel */,
+				20DED38E1EF98549001A5784 /* Prizewheel */,
+				200C4D071EF05C5C00A43CEF /* Views */,
+				200C4D061EF0584A00A43CEF /* Model */,
 				20DFB9551EE72097009462CA /* Main.storyboard */,
 				20DFB9581EE72097009462CA /* Assets.xcassets */,
 				20F97F211EE9E5D70008D13E /* Audio */,
