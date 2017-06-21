@@ -19,6 +19,7 @@ class PrizeViewController: UIViewController {
         setBackgroundImage()
         setWedgeColor()
         saveWinnerToDatabase()
+        setDealTitle()
     }
     
     func setBackgroundImage () {
@@ -30,7 +31,7 @@ class PrizeViewController: UIViewController {
     }
     
     func setDealTitle () {
-        dealTitleLabel.text = DataManager.Instance.dealTitle
+        dealTitleLabel.text = DataManager.Instance.getRandomPrize()
     }
     
     func setWedgeColor () {

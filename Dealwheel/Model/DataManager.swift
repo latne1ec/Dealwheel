@@ -24,6 +24,7 @@ public class DataManager {
     public var dealTitle: String?
     public var dealUrlString: String?
     public var dealImageUrlString: String?
+    public var prizes = ["$10 Amazon Gift Card", "Idk", "Free Starbucks", "$5 Cash", "iPhone Case"]
     
     public func getDeal (url: URL) {
         
@@ -65,5 +66,10 @@ public class DataManager {
                 print(json)
             }
         }).resume()
+    }
+    
+    func getRandomPrize () -> String {
+        let randomIndex = Int(arc4random_uniform(UInt32(prizes.count)))
+        return prizes[randomIndex]
     }
 }

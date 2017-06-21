@@ -44,6 +44,12 @@ public class AudioManager {
     
     public func playMainScreenMusic () {
         
+        if self.mainScreenPlayer != nil {
+            if (self.mainScreenPlayer?.isPlaying)! {
+                return
+            }
+        }
+        
         do {
             self.mainScreenPlayer = try AVAudioPlayer(contentsOf: mainMusicUrl!)
             self.mainScreenPlayer?.prepareToPlay()

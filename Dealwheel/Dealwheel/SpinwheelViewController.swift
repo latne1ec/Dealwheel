@@ -241,7 +241,7 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
         if lastRadian! < zero {
             lastRadian = degrees
         }
-        if lastRadian! > degrees + 0.2 || lastRadian! < degrees - 0.2 {
+        if lastRadian! > degrees + 0.1 || lastRadian! < degrees - 0.1 {
             AudioManager.Instance.playSpinSound()
             lastRadian = degrees
         }
@@ -261,14 +261,14 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
     
     func retrieveDeal () {
         
-        let urlString = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", userLat!, userLon!, getCurrentCategory(), (PFUser.current()?.objectId)!)
-        let url = URL(string: urlString)
+//        let urlString = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", userLat!, userLon!, getCurrentCategory(), (PFUser.current()?.objectId)!)
+//        let url = URL(string: urlString)
         
-//        let urlString2 = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", 37.776072, -122.417696, getCurrentCategory(), "12345")
-//
-//        let dasUrl = URL(string: urlString2)
+        let urlString2 = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", 37.776072, -122.417696, getCurrentCategory(), "12345")
         
-        DataManager.Instance.getDeal(url: url!)
+        let dasUrl = URL(string: urlString2)
+        
+        DataManager.Instance.getDeal(url: dasUrl!)
     }
     
     func getCurrentCategory () -> String {
