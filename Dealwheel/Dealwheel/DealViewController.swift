@@ -56,6 +56,7 @@ class DealViewController: UIViewController, SFSafariViewControllerDelegate {
 
     @IBAction func buyButtonTapped(_ sender: Any) {
         if let url = URL(string: DataManager.Instance.dealUrlString!) {
+            print(url.absoluteString)
             let vc = SFSafariViewController(url: url, entersReaderIfAvailable: true)
             vc.delegate = self
             self.present(vc, animated: true, completion: nil)

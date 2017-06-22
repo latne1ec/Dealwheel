@@ -21,6 +21,7 @@ public class AudioManager {
     var soundEffectPlayer: AVAudioPlayer?
     var mainMusicUrl = Bundle.main.url(forResource: "main", withExtension: "wav")
     var tickNoise = Bundle.main.url(forResource: "tick", withExtension: "mp3")
+    var spinNoise = Bundle.main.url(forResource: "spin", withExtension: "wav")
     var m1and7 = Bundle.main.url(forResource: "1and7", withExtension: "wav")
     var m2and8 = Bundle.main.url(forResource: "2and8", withExtension: "wav")
     var m3and9 = Bundle.main.url(forResource: "3and9", withExtension: "wav")
@@ -30,7 +31,7 @@ public class AudioManager {
     
     public func initTickNoisePlayer () {
         do {
-            self.tickNoisePlayer = try AVAudioPlayer(contentsOf: tickNoise!)
+            self.tickNoisePlayer = try AVAudioPlayer(contentsOf: spinNoise!)
             self.tickNoisePlayer?.prepareToPlay()
             
         } catch { print("error") }

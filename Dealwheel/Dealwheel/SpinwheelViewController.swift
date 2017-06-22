@@ -32,13 +32,14 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
     var userLat: CLLocationDegrees?
     var userLon: CLLocationDegrees?
     var locationManager = CLLocationManager()
-    var lastRadian: CGFloat?
+    var lastDegree: CGFloat?
     var spinning: Bool?
     var dealMode: Bool?
-    var categories = ["Automotive", "Auto And Home Improvement", "baby-kids-and-toys", "Beauty and Spas", "Collectibles", "Cruise Travel", "Electronics", "Entertainment and Media", "Flights and Transportation", "Food and Drink", "For the Home", "Groceries Household and Pets", "Health and Beauty", "Health and Fitness", "Home Improvement", "Hotels and Accommodations", "Jewelry and Watches", "Mens Clothing Shoes and Accessories", "Personal Services", "Sports and Outdoors", "Retail", "Things to do", "Tour Travel", "Womens Clothing Shoes and Accessories"]
+    var categories = ["Automotive", "Auto And Home Improvement", "Baby Kids and Toys", "Beauty and Spas", "Collectibles", "Cruise Travel", "Electronics", "Entertainment and Media", "Flights and Transportation", "Food and Drink", "For the Home", "Groceries Household and Pets", "Health and Beauty", "Health and Fitness", "Home Improvement", "Hotels and Accommodations", "Jewelry and Watches", "Mens Clothing Shoes and Accessories", "Personal Services", "Sports and Outdoors", "Retail", "Things to do", "Tour Travel", "Womens Clothing Shoes and Accessories"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        spinning = false
         setWheelAndArrowFrames()
         setBackgroundImage ()
         checkIfPreviousUser()
@@ -55,7 +56,13 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
             initLocationManager()
             AudioManager.Instance.playMainScreenMusic()
             AudioManager.Instance.initTickNoisePlayer()
+            DataManager.Instance.detectIfUserMadePurchase()
         }
+        //Timer.scheduledTimer(timeInterval: 0.025, target: self, selector: #selector(playNoise), userInfo: nil, repeats: true)
+    }
+    
+    @objc func playNoise () {
+        AudioManager.Instance.playSpinSound()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -64,7 +71,24 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
         dropDown.alpha = 1.0
     }
     
+    func checkIfPreviousUser() {
+        if(PFUser.current() == nil) {
+            // No User, show Login screen
+            self.performSegue(withIdentifier: "showLogin", sender: self)
+        } else {
+            // We have a User
+            let firstNameString = PFUser.current()?.object(forKey: "fullName") as? String
+            let firstName = firstNameString?.components(separatedBy: " ").first
+            usernameLabel.text = firstName
+            let numberOfPoints = PFUser.current()?.object(forKey: "points") as? Int
+            pointsLabel.text = String(format: "%d", numberOfPoints!)
+        }
+    }
+    
     @objc func redeemButtonTapped () {
+        if spinning! {
+            return
+        }
         self.performSegue(withIdentifier: "showPrizewheel", sender: self)
     }
     
@@ -181,20 +205,6 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
         self.view.backgroundColor = UIColor(patternImage: image)
     }
     
-    func checkIfPreviousUser() {
-        if(PFUser.current() == nil) {
-            // No User, show Login screen
-            //self.performSegue(withIdentifier: "showLogin", sender: self)
-        } else {
-            // We have a User
-            let firstNameString = PFUser.current()?.object(forKey: "fullName") as? String
-            let firstName = firstNameString?.components(separatedBy: " ").first
-            usernameLabel.text = firstName
-            let numberOfPoints = PFUser.current()?.object(forKey: "points") as? Int
-            pointsLabel.text = String(format: "%d", numberOfPoints!)
-        }
-    }
-    
     // MARK: - Location Callbacks
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
@@ -222,7 +232,7 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
         return 12
     }
     @objc func spinWheelDidChangeValue(sender: AnyObject) {
-        lastRadian = 100
+        lastDegree = 100
         AudioManager.Instance.playSoundForWedgeAtIndex(index: self.spinWheelControl.selectedIndex)
         DataManager.Instance.currentWedgeColor = self.spinWheelControl.selectedIndex
         showDealVC()
@@ -230,21 +240,15 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
     
     func spinWheelDidEndDecelerating(spinWheel: SpinWheelControl) {
         spinWheelControl.isUserInteractionEnabled = true
+        spinning = false
     }
+
     func spinWheelDidRotateByRadians(radians: Radians) {
         
-        let degrees:CGFloat = radians * (CGFloat(180) / CGFloat(Double.pi) )
-        let zero: CGFloat = 0.0
-        if lastRadian == nil {
-            lastRadian = degrees
-        }
-        if lastRadian! < zero {
-            lastRadian = degrees
-        }
-        if lastRadian! > degrees + 0.1 || lastRadian! < degrees - 0.1 {
+        if !spinning! {
             AudioManager.Instance.playSpinSound()
-            lastRadian = degrees
         }
+        spinning = true
     }
     
     func showDealVC () {
@@ -261,14 +265,14 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
     
     func retrieveDeal () {
         
-//        let urlString = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", userLat!, userLon!, getCurrentCategory(), (PFUser.current()?.objectId)!)
-//        let url = URL(string: urlString)
+        let urlString = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_207463_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", userLat!, userLon!, getCurrentCategory(), (PFUser.current()?.objectId)!)
+        let url = URL(string: urlString)
         
-        let urlString2 = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_201236_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", 37.776072, -122.417696, getCurrentCategory(), "12345")
+//        let urlString2 = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_207463_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", 37.776072, -122.417696, getCurrentCategory(), "12345")
+//
+//        let dasUrl = URL(string: urlString2)
         
-        let dasUrl = URL(string: urlString2)
-        
-        DataManager.Instance.getDeal(url: dasUrl!)
+        DataManager.Instance.getDeal(url: url!)
     }
     
     func getCurrentCategory () -> String {

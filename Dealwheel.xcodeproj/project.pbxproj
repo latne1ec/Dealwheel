@@ -52,6 +52,7 @@
 		20DFB9701EE721D1009462CA /* tempwheel.png in Resources */ = {isa = PBXBuildFile; fileRef = 20DFB96D1EE721D0009462CA /* tempwheel.png */; };
 		20DFB9721EE72245009462CA /* fblogin.png in Resources */ = {isa = PBXBuildFile; fileRef = 20DFB9711EE72245009462CA /* fblogin.png */; };
 		20DFB9761EE7433F009462CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DFB9751EE7433F009462CA /* LoginViewController.swift */; };
+		20F4D2E81EFC509E00415971 /* spin.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20F4D2E71EFC509D00415971 /* spin.wav */; };
 		20F97F161EE9DAC20008D13E /* budmo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20F97F151EE9DAC20008D13E /* budmo.ttf */; };
 		F4602C16C2DF9E9BB9D80296 /* Pods_Dealwheel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7A2FB03049FD56B44D388C /* Pods_Dealwheel.framework */; };
 /* End PBXBuildFile section */
@@ -105,6 +106,7 @@
 		20DFB96D1EE721D0009462CA /* tempwheel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tempwheel.png; sourceTree = "<group>"; };
 		20DFB9711EE72245009462CA /* fblogin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fblogin.png; sourceTree = "<group>"; };
 		20DFB9751EE7433F009462CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		20F4D2E71EFC509D00415971 /* spin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = spin.wav; path = ../../../../../../../Downloads/spin.wav; sourceTree = "<group>"; };
 		20F97F151EE9DAC20008D13E /* budmo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = budmo.ttf; path = ../../../../../../../Downloads/budmo/budmo.ttf; sourceTree = "<group>"; };
 		5B7A2FB03049FD56B44D388C /* Pods_Dealwheel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dealwheel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8035FC775068B25F04C875E /* Pods-Dealwheel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dealwheel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dealwheel/Pods-Dealwheel.debug.xcconfig"; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 		20F97F211EE9E5D70008D13E /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				20F4D2E71EFC509D00415971 /* spin.wav */,
 				20AB17B41EF049F70007310A /* main.wav */,
 				206309FF1EF18927001A2A77 /* 1and7.wav */,
 				20630A031EF18927001A2A77 /* 2and8.wav */,
@@ -350,6 +353,7 @@
 				20289A3E1EF82E7200DF6A0E /* wedge9.png in Resources */,
 				20289A391EF82E7200DF6A0E /* wedge6.png in Resources */,
 				20DFB9701EE721D1009462CA /* tempwheel.png in Resources */,
+				20F4D2E81EFC509E00415971 /* spin.wav in Resources */,
 				20DFB96F1EE721D1009462CA /* bkg.jpg in Resources */,
 				20289A371EF82E7200DF6A0E /* wedge7.png in Resources */,
 				20630A061EF18927001A2A77 /* 3and9.wav in Resources */,

@@ -18,12 +18,36 @@ class PrizewheelViewController: UIViewController, SpinWheelControlDelegate, Spin
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var userPointsLabel: UILabel!
     
+    var spinning: Bool?
+    
+    var lastDegree: CGFloat?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        spinning = false
         setBackgroundImage()
         setWheelAndArrowFrames()
         initSpinWheel()
         setUserData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        detectIfUserCanSpinPrizewheel()
+    }
+    
+    func detectIfUserCanSpinPrizewheel () {
+        if(PFUser.current() == nil) {
+        } else {
+            let numberOfPoints = PFUser.current()?.object(forKey: "points") as? Int
+            if numberOfPoints! < 500 {
+                spinWheelControl.isUserInteractionEnabled = false
+                let alert = UIAlertController(title: "Not enough Points", message: "You do not have enough points to spin the Prizewheel! At least 500 points needed to spin.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default) { action in
+                    self.performSegue(withIdentifier: "showDealwheel", sender: self)
+                })
+                self.present(alert, animated: true)
+            }
+        }
     }
     
     func setUserData () {
@@ -89,9 +113,20 @@ class PrizewheelViewController: UIViewController, SpinWheelControlDelegate, Spin
     }
     
     @objc func spinWheelDidChangeValue(sender: AnyObject) {
+        spinning = false
         AudioManager.Instance.playSoundForWedgeAtIndex(index: self.spinWheelControl.selectedIndex)
+        DataManager.Instance.deductPointsForPrizeWheelSpin()
         DataManager.Instance.currentWedgeColor = self.spinWheelControl.selectedIndex
         showPrizeVC()
+    }
+    
+    func spinWheelDidRotateByRadians(radians: Radians) {
+        
+        if !spinning! {
+            AudioManager.Instance.playSpinSound()
+        }
+        
+        spinning = true
     }
     
     func showPrizeVC () {

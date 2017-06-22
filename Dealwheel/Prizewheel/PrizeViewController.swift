@@ -14,6 +14,7 @@ class PrizeViewController: UIViewController {
     @IBOutlet weak var wedgeImageView: UIImageView!
     @IBOutlet weak var dealTitleLabel: UILabel!
     
+    @IBOutlet weak var detailsLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         setBackgroundImage()
@@ -31,6 +32,10 @@ class PrizeViewController: UIViewController {
     }
     
     func setDealTitle () {
+        if UIScreen.main.bounds.size.height > 667 {
+         dealTitleLabel.font = UIFont(name: "BudmoJiggler-Regular", size: 26)
+            detailsLabel.font = UIFont(name: "BudmoJiggler-Regular", size: 24)
+        }
         dealTitleLabel.text = DataManager.Instance.getRandomPrize()
     }
     
@@ -51,7 +56,7 @@ class PrizeViewController: UIViewController {
             if PFUser.current()?.object(forKey: "email") != nil {
                 winner["winnerEmail"] = PFUser.current()?.object(forKey: "email")
             }
-            winner["prize"] = "10 Amazon Gift Card"
+            winner["prize"] = dealTitleLabel.text
             winner.saveInBackground(block: { (success, error) in
                 if (success) {
                     // The winner has been saved.
