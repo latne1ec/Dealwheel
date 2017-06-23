@@ -121,12 +121,11 @@ class PrizewheelViewController: UIViewController, SpinWheelControlDelegate, Spin
     }
     
     func spinWheelDidRotateByRadians(radians: Radians) {
-        
-        if !spinning! {
-            AudioManager.Instance.playSpinSound()
-        }
-        
         spinning = true
+    }
+    
+    func userEndedTouchInteraction (spinWheel: SpinWheelControl) {
+        AudioManager.Instance.playSpinSound()
     }
     
     func showPrizeVC () {
@@ -142,6 +141,9 @@ class PrizewheelViewController: UIViewController, SpinWheelControlDelegate, Spin
     }
 
     @IBAction func goBackButtonTapped(_ sender: Any) {
+        if spinning! {
+            return
+        }
         self.performSegue(withIdentifier: "showDealwheel", sender: self)
     }
 }

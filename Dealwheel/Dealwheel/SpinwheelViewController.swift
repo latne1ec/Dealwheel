@@ -244,12 +244,15 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
     }
 
     func spinWheelDidRotateByRadians(radians: Radians) {
-        
-        if !spinning! {
-            AudioManager.Instance.playSpinSound()
-        }
         spinning = true
     }
+    
+    func userEndedTouchInteraction (spinWheel: SpinWheelControl) {
+        
+        AudioManager.Instance.playSpinSound()
+        
+    }
+    
     
     func showDealVC () {
         if DataManager.Instance.dealTitle != nil {

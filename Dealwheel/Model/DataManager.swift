@@ -54,7 +54,7 @@ public class DataManager {
     
     func detectIfUserMadePurchase () {
         
-        let urlString = String(format:"https://partner-api.groupon.com/reporting/v2/order.json?clientId=%@&group=TopCategory&date=[2017-01-01&date=2017-12-31]&campaign.currency=USD&Sid=%@", DataManager.GROUPON_CLIENT_ID,  (PFUser.current()?.objectId)!)
+        let urlString = String(format:"https://partner-api.groupon.com/reporting/v2/order.json?clientId=%@&group=TopCategory&date=[2017-01-01&date=2017-12-31]&campaign.currency=USD&order.sid=%@", DataManager.GROUPON_CLIENT_ID,  (PFUser.current()?.objectId)!)
         let url = URL(string: urlString)
         //print(urlString)
         URLSession.shared.dataTask(with: url!, completionHandler: {
@@ -62,20 +62,59 @@ public class DataManager {
             if(error != nil){
                 print("error")
             } else {
+                 // Check if there is a sale with SID same as User Id
                 let json = JSON(data: data!)
-                print(json)
-                // Check if there is a sale with SID same as User Id
-                // If so, check if it's already in database, if not, add it and give the user some points
+                //print(json)
+                // Check number of purchases and see if greater than current number in DB
+                if let totalNumberOfPurchases = json["total"].int {
+                    let numberOfPurchasesInDB = PFUser.current()?.object(forKey: "numberOfPurchases") as? Int
+                    if totalNumberOfPurchases > numberOfPurchasesInDB! {
+                        // User made another purchase! Give them 50 Points and Increment number of Purchases
+                        self.incrementNumberOfPurchases()
+                        self.addUserPoints()
+                    }
+                }
+                // Increment number of purchases, compare against total number of purchases and
                 
                 // addUserPoints()
             }
         }).resume()
     }
     
+    // MARK - User Points Related
+    
+    func addUserPoints () {
+        if PFUser.current() != nil {
+            var numberOfPoints = PFUser.current()?.object(forKey: "points") as? Int
+            numberOfPoints = numberOfPoints! + 50
+            PFUser.current()?.setObject(NSNumber(value:numberOfPoints!), forKey: "points")
+            PFUser.current()?.saveInBackground()
+        }
+    }
+    
+    func incrementNumberOfPurchases () {
+        if PFUser.current() != nil {
+            var numberOfPurchases = PFUser.current()?.object(forKey: "numberOfPurchases") as? Int
+            numberOfPurchases = numberOfPurchases! + 1
+            PFUser.current()?.setObject(NSNumber(value:numberOfPurchases!), forKey: "numberOfPurchases")
+            PFUser.current()?.saveInBackground()
+        }
+    }
+    
+    func deductPointsForPrizeWheelSpin () {
+        if PFUser.current() != nil {
+            var numberOfPoints = PFUser.current()?.object(forKey: "points") as? Int
+            numberOfPoints = numberOfPoints! - 500
+            PFUser.current()?.setObject(NSNumber(value:numberOfPoints!), forKey: "points")
+            PFUser.current()?.saveInBackground()
+        }
+    }
+    
+    // MARK - Get a Random Prize
+    
     func getRandomPrize () -> String {
         
         let randomIndex = Int(arc4random_uniform(UInt32(10)))
-        
         switch randomIndex {
         case 0:
             return prizes[0]
@@ -99,26 +138,6 @@ public class DataManager {
             return prizes[5]
         default:
             return ""
-        }
-    }
-    
-    // MARK - User Points Related
-    
-    func addUserPoints () {
-        if PFUser.current() != nil {
-            var numberOfPoints = PFUser.current()?.object(forKey: "points") as? Int
-            numberOfPoints = numberOfPoints! + 50
-            PFUser.current()?.setObject(NSNumber(value:numberOfPoints!), forKey: "points")
-            PFUser.current()?.saveInBackground()
-        }
-    }
-    
-    func deductPointsForPrizeWheelSpin () {
-        if PFUser.current() != nil {
-            var numberOfPoints = PFUser.current()?.object(forKey: "points") as? Int
-            numberOfPoints = numberOfPoints! - 500
-            PFUser.current()?.setObject(NSNumber(value:numberOfPoints!), forKey: "points")
-            PFUser.current()?.saveInBackground()
         }
     }
 }
