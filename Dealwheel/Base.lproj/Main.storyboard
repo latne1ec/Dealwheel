@@ -224,9 +224,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tempwheel.png" translatesAutoresizingMaskIntoConstraints="NO" id="EJk-S5-T0w">
-                                <rect key="frame" x="50" y="106" width="220" height="220"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21e-7a-6TK">
                                 <rect key="frame" x="22" y="379" width="276" height="107"/>
                                 <constraints>
@@ -235,25 +232,32 @@
                                 </constraints>
                                 <state key="normal" image="fblogin.png"/>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hcb-yQ-8bL">
+                                <rect key="frame" x="30" y="50" width="260" height="260"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Hcb-yQ-8bL" secondAttribute="height" multiplier="1:1" id="Vr9-Oo-mfc"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="EJk-S5-T0w" firstAttribute="leading" secondItem="pUJ-AE-GvE" secondAttribute="leadingMargin" constant="34" id="Kkt-0I-zUW"/>
                             <constraint firstItem="I0j-gt-zKH" firstAttribute="top" secondItem="21e-7a-6TK" secondAttribute="bottom" constant="82" id="T83-sH-M7Y"/>
-                            <constraint firstItem="EJk-S5-T0w" firstAttribute="top" secondItem="XvL-Gq-2Nd" secondAttribute="bottom" constant="86" id="USG-b8-tim"/>
-                            <constraint firstItem="21e-7a-6TK" firstAttribute="top" secondItem="EJk-S5-T0w" secondAttribute="bottom" constant="53" id="bFb-CA-CVN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="EJk-S5-T0w" secondAttribute="trailing" constant="34" id="wPb-QD-oez"/>
+                            <constraint firstAttribute="trailing" secondItem="Hcb-yQ-8bL" secondAttribute="trailing" constant="30" id="Wio-ds-psj"/>
+                            <constraint firstItem="21e-7a-6TK" firstAttribute="top" secondItem="Hcb-yQ-8bL" secondAttribute="bottom" constant="69" id="g4R-Dv-67I"/>
+                            <constraint firstItem="Hcb-yQ-8bL" firstAttribute="leading" secondItem="pUJ-AE-GvE" secondAttribute="leading" constant="30" id="xxt-iH-7s3"/>
                             <constraint firstItem="21e-7a-6TK" firstAttribute="centerX" secondItem="pUJ-AE-GvE" secondAttribute="centerX" id="yVS-av-e5i"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="loginButton" destination="21e-7a-6TK" id="yDN-4p-nhb"/>
+                        <outlet property="videoView" destination="Hcb-yQ-8bL" id="Snq-Ba-bSt"/>
                         <segue destination="GKc-d8-bNr" kind="presentation" identifier="showMainScreen" modalTransitionStyle="crossDissolve" id="f8r-GJ-4JX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xiE-wc-PD0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1686" y="926"/>
+            <point key="canvasLocation" x="1685.625" y="925.35211267605632"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UxX-eM-kYT">
@@ -465,11 +469,10 @@
         <image name="redeemButton.png" width="175" height="50"/>
         <image name="star@x.png" width="256" height="256"/>
         <image name="templogo.png" width="338" height="209"/>
-        <image name="tempwheel.png" width="689" height="689"/>
         <image name="wedge.png" width="150" height="150"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="PL8-uV-hhi"/>
+        <segue reference="f8r-GJ-4JX"/>
         <segue reference="SH1-ps-cV5"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -40,9 +40,9 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
     override func viewDidLoad() {
         super.viewDidLoad()
         spinning = false
+        checkIfPreviousUser()
         setWheelAndArrowFrames()
         setBackgroundImage ()
-        checkIfPreviousUser()
         initSpinWheel()
         initDropDown()
         initRewardView()
@@ -58,11 +58,6 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
             AudioManager.Instance.initTickNoisePlayer()
             DataManager.Instance.detectIfUserMadePurchase()
         }
-        //Timer.scheduledTimer(timeInterval: 0.025, target: self, selector: #selector(playNoise), userInfo: nil, repeats: true)
-    }
-    
-    @objc func playNoise () {
-        AudioManager.Instance.playSpinSound()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -161,16 +156,18 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
     }
     
     func initRewardView () {
-        let value = UserDefaults.standard.bool(forKey: "hasShown50PointSignupReward")
-        if value == false {
-            UserDefaults.standard.set( true, forKey: "hasShown50PointSignupReward")
-            let signupRewardView = SignupRewardView.instanceFromNib()
-            signupRewardView.frame = self.view.frame
-            signupRewardView.alpha = 0.0
-            self.view.addSubview(signupRewardView)
-            UIView.animate(withDuration: 0.25, animations: {
-                signupRewardView.alpha = 1.0
-            }) { (success) in
+        if PFUser.current() != nil {
+            let value = UserDefaults.standard.bool(forKey: "hasShown50PointSignupReward")
+            if value == false {
+                UserDefaults.standard.set( true, forKey: "hasShown50PointSignupReward")
+                let signupRewardView = SignupRewardView.instanceFromNib()
+                signupRewardView.frame = self.view.frame
+                signupRewardView.alpha = 0.0
+                self.view.addSubview(signupRewardView)
+                UIView.animate(withDuration: 0.25, animations: {
+                    signupRewardView.alpha = 1.0
+                }) { (success) in
+                }
             }
         }
     }
@@ -268,12 +265,15 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
     
     func retrieveDeal () {
         
+        if PFUser.current() == nil {
+            let urlString2 = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_207463_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", 37.776072, -122.417696, getCurrentCategory(), "12345")
+            let dasUrl = URL(string: urlString2)
+            DataManager.Instance.getDeal(url: dasUrl!)
+            return
+        }
+        
         let urlString = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_207463_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", userLat!, userLon!, getCurrentCategory(), (PFUser.current()?.objectId)!)
         let url = URL(string: urlString)
-        
-//        let urlString2 = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_207463_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", 37.776072, -122.417696, getCurrentCategory(), "12345")
-//
-//        let dasUrl = URL(string: urlString2)
         
         DataManager.Instance.getDeal(url: url!)
     }

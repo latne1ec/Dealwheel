@@ -10,16 +10,51 @@ import UIKit
 import Parse
 import ParseFacebookUtilsV4
 import ProgressHUD
+import AVFoundation
 
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var videoView: UIView!
+    
     var progressView: ProgressView!
+    var videoPlayer: AVPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setBackgroundImage ()
         setLoginButtonDefaults()        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        initVideoPlayer()
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient, with: .duckOthers)
+        } catch {
+            print("AVAudioSession cannot be set: \(error)")
+        }
+    }
+    
+    func initVideoPlayer () {
+        
+        videoView.layer.cornerRadius = 6
+        let videoURL = Bundle.main.url(forResource: "intronew", withExtension: "mp4")
+        videoPlayer = AVPlayer(url: videoURL! as URL)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(LoginViewController.playerItemDidReachEnd(notification:)),
+                                               name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
+                                               object: self.videoPlayer?.currentItem)
+        try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, with: [])
+        let playerLayer = AVPlayerLayer(player: videoPlayer)
+        playerLayer.videoGravity = .resizeAspectFill
+        playerLayer.frame = CGRect(x: 0, y: 0, width: self.videoView.bounds.width, height: self.videoView.bounds.height)
+        self.videoView.layer.addSublayer(playerLayer)
+        videoPlayer?.play()
+    }
+    
+    @objc func playerItemDidReachEnd(notification: NSNotification) {
+        self.videoPlayer?.seek(to: kCMTimeZero)
+        self.videoPlayer?.play()
     }
     
     func setLoginButtonDefaults () {
@@ -38,8 +73,10 @@ class LoginViewController: UIViewController {
     // MARK: - User tapped login button
     
     @objc func loginButtonTapped () {
-        //ProgressHUD.show("", interaction: false)
+        
+        videoPlayer?.pause()
         progressView = ProgressView()
+        progressView.isHidden = false
         progressView.frame = self.view.frame
         self.view.addSubview(progressView)
         
@@ -48,13 +85,17 @@ class LoginViewController: UIViewController {
                 if user.isNew {
                     // User signed up!
                     self.getDataFromFacebookUserAccount(user: user)
+                    self.videoPlayer?.pause()
                     
                 } else {
                     // User logged in!
                     self.getDataFromFacebookUserAccount(user: user)
+                    self.videoPlayer?.pause()
                 }
             } else {
                 // User canceled fb login
+                self.videoPlayer?.play()
+                self.progressView.isHidden = true
             }
         }
     }
@@ -80,6 +121,7 @@ class LoginViewController: UIViewController {
                 user.saveInBackground(block: { (success, error) in
                     if success {
                         // Saved Successfully
+                        self.videoPlayer?.pause()
                         self.performSegue(withIdentifier: "showMainScreen", sender: self)
                     } else {
                         // An error occured trying to save user fb info
