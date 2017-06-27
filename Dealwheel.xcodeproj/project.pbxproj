@@ -35,6 +35,7 @@
 		206C1C3F1EEB0240000CFBCE /* DealView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 206C1C3E1EEB0240000CFBCE /* DealView.xib */; };
 		206C1C411EEB0460000CFBCE /* DealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206C1C401EEB0460000CFBCE /* DealView.swift */; };
 		206C1C431EEB1394000CFBCE /* wedge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 206C1C421EEB1394000CFBCE /* wedge@2x.png */; };
+		20909CE91F01D33400FF0914 /* topLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20909CE81F01D33300FF0914 /* topLogo@2x.png */; };
 		20912F071EE8E480009AE0B1 /* tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 20912F061EE8E480009AE0B1 /* tick.mp3 */; };
 		20AB17AB1EF027250007310A /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB17AA1EF027250007310A /* AudioManager.swift */; };
 		20AB17B31EF0471F0007310A /* DealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB17B21EF0471F0007310A /* DealViewController.swift */; };
@@ -89,6 +90,7 @@
 		206C1C3E1EEB0240000CFBCE /* DealView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DealView.xib; sourceTree = "<group>"; };
 		206C1C401EEB0460000CFBCE /* DealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealView.swift; sourceTree = "<group>"; };
 		206C1C421EEB1394000CFBCE /* wedge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wedge@2x.png"; path = "../../../Design/wedge@2x.png"; sourceTree = "<group>"; };
+		20909CE81F01D33300FF0914 /* topLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "topLogo@2x.png"; path = "../../../Design/topLogo@2x.png"; sourceTree = "<group>"; };
 		20912F061EE8E480009AE0B1 /* tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tick.mp3; sourceTree = "<group>"; };
 		20AB17AA1EF027250007310A /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		20AB17B21EF0471F0007310A /* DealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealViewController.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 		20DFB9731EE742E3009462CA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				20909CE81F01D33300FF0914 /* topLogo@2x.png */,
 				20289A2F1EF82E7100DF6A0E /* wedge0.png */,
 				20289A331EF82E7200DF6A0E /* wedge1.png */,
 				20289A2A1EF82E7100DF6A0E /* wedge2.png */,
@@ -367,6 +370,7 @@
 				20630A061EF18927001A2A77 /* 3and9.wav in Resources */,
 				20630A0A1EF18927001A2A77 /* 7and12.wav in Resources */,
 				20289A401EF82E7200DF6A0E /* wedge11.png in Resources */,
+				20909CE91F01D33400FF0914 /* topLogo@2x.png in Resources */,
 				20DFB9681EE72155009462CA /* DealwheelMisc in Resources */,
 				20289A3B1EF82E7200DF6A0E /* wedge0.png in Resources */,
 				20289A291EF822C000DF6A0E /* redeemButton@2x.png in Resources */,
@@ -593,14 +597,14 @@
 			baseConfigurationReference = C8035FC775068B25F04C875E /* Pods-Dealwheel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = HL4WWQQF9X;
+				DEVELOPMENT_TEAM = 4XR9PV42EQ;
 				INFOPLIST_FILE = Dealwheel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dealwheel.Dealwheel;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dealwheelapp.Dealwheel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -609,14 +613,14 @@
 			baseConfigurationReference = FA917210A3F72F23804A55DF /* Pods-Dealwheel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = HL4WWQQF9X;
+				DEVELOPMENT_TEAM = 4XR9PV42EQ;
 				INFOPLIST_FILE = Dealwheel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dealwheel.Dealwheel;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dealwheelapp.Dealwheel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

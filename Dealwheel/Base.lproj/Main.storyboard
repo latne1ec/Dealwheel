@@ -134,7 +134,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="templogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="IST-dJ-o6N">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="IST-dJ-o6N">
                                 <rect key="frame" x="47" y="43" width="226" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="tXH-yM-Uoo"/>
@@ -384,7 +384,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="templogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Cv8-Uc-AtM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Cv8-Uc-AtM">
                                 <rect key="frame" x="47" y="43" width="226" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="Fl7-zO-aEf"/>
@@ -468,11 +468,11 @@
         <image name="fblogin.png" width="800" height="300"/>
         <image name="redeemButton.png" width="175" height="50"/>
         <image name="star@x.png" width="256" height="256"/>
-        <image name="templogo.png" width="338" height="209"/>
+        <image name="topLogo.png" width="300" height="71"/>
         <image name="wedge.png" width="150" height="150"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="f8r-GJ-4JX"/>
-        <segue reference="SH1-ps-cV5"/>
+        <segue reference="PL8-uV-hhi"/>
+        <segue reference="Icb-Lr-31y"/>
     </inferredMetricsTieBreakers>
 </document>
