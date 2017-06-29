@@ -130,7 +130,7 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
         dropDown.setNeedsLayout()
         dropDown.layoutIfNeeded()
         dropDown.cornerRadius = 8
-        dropDown.animationType = .Classic
+        dropDown.animationType = .classic
         dropDown.rowBackgroundColor = UIColor.white
         dropDown.backgroundColor = UIColor(patternImage: image!) //UIColor.clear
         dropDown.textColor = UIColor.white
@@ -228,28 +228,28 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
     func numberOfWedgesInSpinWheel(spinWheel: SpinWheelControl) -> UInt {
         return 12
     }
-    @objc func spinWheelDidChangeValue(sender: AnyObject) {
+    @objc func spinWheelDidChangeValue(_ sender: AnyObject) {
         lastDegree = 100
-        AudioManager.Instance.playSoundForWedgeAtIndex(index: self.spinWheelControl.selectedIndex)
+        AudioManager.Instance.playSoundForWedgeAtIndex(self.spinWheelControl.selectedIndex)
         DataManager.Instance.currentWedgeColor = self.spinWheelControl.selectedIndex
         showDealVC()
+
     }
     
     func spinWheelDidEndDecelerating(spinWheel: SpinWheelControl) {
+        AudioManager.Instance.stopSpinSound()
         spinWheelControl.isUserInteractionEnabled = true
         spinning = false
     }
-
-    func spinWheelDidRotateByRadians(radians: Radians) {
+    
+    func spinWheelDidRotateByRadians(radians: CGFloat) {
         spinning = true
     }
     
-    func userEndedTouchInteraction (spinWheel: SpinWheelControl) {
-        
+    func userEndedTouchInteraction(spinWheel: SpinWheelControl) {
         AudioManager.Instance.playSpinSound()
-        
+
     }
-    
     
     func showDealVC () {
         if DataManager.Instance.dealTitle != nil {
@@ -268,26 +268,26 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
         if PFUser.current() == nil {
             let urlString2 = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_207463_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", 37.776072, -122.417696, getCurrentCategory(), "12345")
             let dasUrl = URL(string: urlString2)
-            DataManager.Instance.getDeal(url: dasUrl!)
+            DataManager.Instance.getDeal(dasUrl!)
             return
         }
         
         let urlString = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_207463_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", userLat!, userLon!, getCurrentCategory(), (PFUser.current()?.objectId)!)
         let url = URL(string: urlString)
         
-        DataManager.Instance.getDeal(url: url!)
+        DataManager.Instance.getDeal(url!)
     }
     
     func getCurrentCategory () -> String {
         if dropDown.selectedIndex == nil {
             let randomIndex = Int(arc4random_uniform(UInt32(categories.count)))
-            return getCategoryParsed(category: categories[randomIndex])
+            return getCategoryParsed(categories[randomIndex])
         } else {
-            return getCategoryParsed(category: categories[dropDown.selectedIndex!])
+            return getCategoryParsed(categories[dropDown.selectedIndex!])
         }
     }
     
-    func getCategoryParsed (category: String) -> String {
+    func getCategoryParsed (_ category: String) -> String {
         let lowercasedCategory = category.lowercased()
         let newString = lowercasedCategory.replacingOccurrences(of: " ", with: "-")
         return newString

@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6hk-jg-H5v">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6hk-jg-H5v">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -36,7 +37,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You won" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWo-Px-V66">
-                                <rect key="frame" x="110" y="191" width="100" height="21"/>
+                                <rect key="frame" x="110" y="191" width="100" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="LeC-fc-roc"/>
                                 </constraints>
@@ -45,19 +46,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7zh-e3-NF7">
-                                <rect key="frame" x="40" y="240" width="240" height="136"/>
+                                <rect key="frame" x="40" y="239" width="240" height="136"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="7zh-e3-NF7" secondAttribute="height" multiplier="30:17" id="wLc-e3-xWg"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is an awesome deal I just won on this app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Hu-tG-gii">
-                                <rect key="frame" x="40" y="386" width="240" height="42"/>
+                                <rect key="frame" x="40" y="385" width="240" height="39.5"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFk-pD-KEL">
-                                <rect key="frame" x="112" y="485" width="96" height="33"/>
+                                <rect key="frame" x="112" y="486" width="96" height="32"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="18"/>
                                 <state key="normal" title="Re-spin">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -67,7 +68,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YB4-0H-6h2">
-                                <rect key="frame" x="60" y="444" width="200" height="33"/>
+                                <rect key="frame" x="60" y="446" width="200" height="32"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="18"/>
                                 <state key="normal" title="Buy now for 50 points">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -100,6 +101,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buyNowButton" destination="YB4-0H-6h2" id="rDN-q2-Jm6"/>
                         <outlet property="dealImageView" destination="7zh-e3-NF7" id="tJn-jL-dc1"/>
                         <outlet property="dealTitleLabel" destination="7Hu-tG-gii" id="hpQ-Hf-MiU"/>
                         <outlet property="wedgeImageView" destination="Y5b-yC-biB" id="ZXw-dC-1y4"/>
@@ -123,13 +125,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsi-qa-UlL">
-                                <rect key="frame" x="24" y="523.5" width="46.5" height="24.5"/>
+                                <rect key="frame" x="24" y="524.5" width="47.5" height="23.5"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nb-uZ-nqP">
-                                <rect key="frame" x="224.5" y="521.5" width="38.5" height="27"/>
+                                <rect key="frame" x="229.5" y="523" width="33.5" height="25.5"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -146,7 +148,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star@x.png" translatesAutoresizingMaskIntoConstraints="NO" id="oAu-5W-eHU">
-                                <rect key="frame" x="274" y="523" width="20" height="21.5"/>
+                                <rect key="frame" x="274" y="524.5" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="dTq-hv-3aI"/>
                                 </constraints>
@@ -239,11 +241,24 @@
                                     <constraint firstAttribute="width" secondItem="Hcb-yQ-8bL" secondAttribute="height" multiplier="1:1" id="Vr9-Oo-mfc"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kjc-kv-y5l">
+                                <rect key="frame" x="59" y="497" width="203" height="30"/>
+                                <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="16"/>
+                                <state key="normal" title="Privacy Policy">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="privacyButtonTapped:" destination="evK-1W-l5e" eventType="touchUpInside" id="JrX-Nh-cYo"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Kjc-kv-y5l" firstAttribute="leading" secondItem="pUJ-AE-GvE" secondAttribute="leadingMargin" constant="43" id="Eih-oh-89o"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Kjc-kv-y5l" secondAttribute="trailing" constant="42" id="P2B-dC-y7h"/>
                             <constraint firstItem="I0j-gt-zKH" firstAttribute="top" secondItem="21e-7a-6TK" secondAttribute="bottom" constant="82" id="T83-sH-M7Y"/>
                             <constraint firstAttribute="trailing" secondItem="Hcb-yQ-8bL" secondAttribute="trailing" constant="30" id="Wio-ds-psj"/>
+                            <constraint firstItem="Kjc-kv-y5l" firstAttribute="top" secondItem="21e-7a-6TK" secondAttribute="bottom" constant="11" id="eUi-Y4-CuL"/>
                             <constraint firstItem="21e-7a-6TK" firstAttribute="top" secondItem="Hcb-yQ-8bL" secondAttribute="bottom" constant="69" id="g4R-Dv-67I"/>
                             <constraint firstItem="Hcb-yQ-8bL" firstAttribute="leading" secondItem="pUJ-AE-GvE" secondAttribute="leading" constant="30" id="xxt-iH-7s3"/>
                             <constraint firstItem="21e-7a-6TK" firstAttribute="centerX" secondItem="pUJ-AE-GvE" secondAttribute="centerX" id="yVS-av-e5i"/>
@@ -296,7 +311,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You won" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YwO-H1-VLQ">
-                                <rect key="frame" x="110" y="230" width="100" height="26"/>
+                                <rect key="frame" x="110" y="230" width="100" height="24.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="tu6-LH-Pi0"/>
                                 </constraints>
@@ -305,13 +320,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is an awesome deal I just won on this app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPU-V0-F3D">
-                                <rect key="frame" x="28" y="305" width="264" height="47"/>
+                                <rect key="frame" x="28" y="303.5" width="264" height="44"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEc-cs-I14">
-                                <rect key="frame" x="101" y="448" width="117" height="38"/>
+                                <rect key="frame" x="101" y="449" width="117" height="37"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="22"/>
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -321,7 +336,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We'll email you the details!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIp-jW-K3m">
-                                <rect key="frame" x="32" y="367" width="255" height="40"/>
+                                <rect key="frame" x="32" y="362.5" width="255" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="HEy-Ci-4kt"/>
                                 </constraints>
@@ -373,13 +388,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JiG-Vu-YnE">
-                                <rect key="frame" x="24" y="523.5" width="46.5" height="24.5"/>
+                                <rect key="frame" x="24" y="524.5" width="47.5" height="23.5"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onO-cp-j1z">
-                                <rect key="frame" x="224.5" y="521.5" width="38.5" height="27"/>
+                                <rect key="frame" x="229.5" y="523" width="33.5" height="25.5"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -396,7 +411,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star@x.png" translatesAutoresizingMaskIntoConstraints="NO" id="es3-FE-e29">
-                                <rect key="frame" x="274" y="523" width="20" height="21.5"/>
+                                <rect key="frame" x="274" y="524.5" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="eDy-FQ-uvO"/>
                                 </constraints>
@@ -420,7 +435,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prizewheel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxf-fz-zGL">
-                                <rect key="frame" x="43" y="165" width="235" height="43.5"/>
+                                <rect key="frame" x="43" y="165" width="235" height="41"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="37"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -472,7 +487,7 @@
         <image name="wedge.png" width="150" height="150"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="PL8-uV-hhi"/>
         <segue reference="Icb-Lr-31y"/>
+        <segue reference="hEa-qF-j0m"/>
     </inferredMetricsTieBreakers>
 </document>

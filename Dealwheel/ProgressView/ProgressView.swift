@@ -35,7 +35,7 @@ class ProgressView: UIView {
         activityIndicator.center = self.center
     }
     
-    public func dismiss () {
+    open func dismiss () {
         self.alpha = 0.0
         activityIndicator.stopAnimating()
         activityIndicator.isHidden = true

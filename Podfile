@@ -11,7 +11,7 @@ target 'Dealwheel' do
   pod 'ParseFacebookUtilsV4'
   pod 'SpinWheelControl'
   pod 'ProgressHUD'
-  pod 'SwiftyJSON'
   pod 'UIDropDown'
+  pod 'SwiftyJSON'
 
 end

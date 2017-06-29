@@ -19,9 +19,7 @@ class PrizewheelViewController: UIViewController, SpinWheelControlDelegate, Spin
     @IBOutlet weak var userPointsLabel: UILabel!
     
     var spinning: Bool?
-    
-    var lastDegree: CGFloat?
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         spinning = false
@@ -39,9 +37,9 @@ class PrizewheelViewController: UIViewController, SpinWheelControlDelegate, Spin
         if(PFUser.current() == nil) {
         } else {
             let numberOfPoints = PFUser.current()?.object(forKey: "points") as? Int
-            if numberOfPoints! < 500 {
+            if numberOfPoints! < DataManager.minPointsToSpinPrizewheel {
                 spinWheelControl.isUserInteractionEnabled = false
-                let alert = UIAlertController(title: "Not enough Points", message: "You do not have enough points to spin the Prizewheel! At least 500 points needed to spin.", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Not enough Points", message: "You do not have enough points to spin the Prizewheel! At least 10 points needed to spin.", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: .default) { action in
                     self.performSegue(withIdentifier: "showDealwheel", sender: self)
                 })
@@ -112,20 +110,27 @@ class PrizewheelViewController: UIViewController, SpinWheelControlDelegate, Spin
         self.view.backgroundColor = UIColor(patternImage: image)
     }
     
-    @objc func spinWheelDidChangeValue(sender: AnyObject) {
+    @objc func spinWheelDidChangeValue(_ sender: AnyObject) {
         spinning = false
-        AudioManager.Instance.playSoundForWedgeAtIndex(index: self.spinWheelControl.selectedIndex)
+        AudioManager.Instance.playSoundForWedgeAtIndex(self.spinWheelControl.selectedIndex)
         DataManager.Instance.deductPointsForPrizeWheelSpin()
         DataManager.Instance.currentWedgeColor = self.spinWheelControl.selectedIndex
         showPrizeVC()
     }
     
-    func spinWheelDidRotateByRadians(radians: Radians) {
+    func spinWheelDidEndDecelerating(spinWheel: SpinWheelControl) {
+        AudioManager.Instance.stopSpinSound()
+        spinWheelControl.isUserInteractionEnabled = true
+        spinning = false
+    }
+    
+    func spinWheelDidRotateByRadians(radians: CGFloat) {
         spinning = true
     }
     
-    func userEndedTouchInteraction (spinWheel: SpinWheelControl) {
+    func userEndedTouchInteraction(spinWheel: SpinWheelControl) {
         AudioManager.Instance.playSpinSound()
+        
     }
     
     func showPrizeVC () {

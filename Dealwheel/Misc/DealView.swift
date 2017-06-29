@@ -17,7 +17,7 @@ class DealView: UIView, SFSafariViewControllerDelegate {
         return UINib(nibName: "DealView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
     }
     
-    public func setDefaults () {
+    open func setDefaults () {
         self.layer.cornerRadius = 4
         self.alpha = 0.0
         setBackgroundImage()
@@ -34,7 +34,7 @@ class DealView: UIView, SFSafariViewControllerDelegate {
     @IBAction func respinButtonTapped(_ sender: Any) {
         hideView()
     }
-    public func hideView () {
+    open func hideView () {
         UIView.animate(withDuration: 0.25, animations: {
             self.alpha = 0.0
         }) { (success) in
@@ -42,7 +42,7 @@ class DealView: UIView, SFSafariViewControllerDelegate {
         }
     }
     
-    public func setWedgeColor (index: Int) {
+    open func setWedgeColor (_ index: Int) {
         switch index {
         case 0:
             print("yellow")
@@ -73,7 +73,7 @@ class DealView: UIView, SFSafariViewControllerDelegate {
         }
     }
     
-    public func setDealValues (dic: Dictionary <String, Any>) {
+    open func setDealValues (_ dic: Dictionary <String, Any>) {
         print(dic)
     }
     

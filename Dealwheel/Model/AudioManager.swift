@@ -9,9 +9,9 @@
 import Foundation
 import AVFoundation
 
-public class AudioManager {
+open class AudioManager {
     
-    private static let _instance = AudioManager()
+    fileprivate static let _instance = AudioManager()
     static var Instance: AudioManager {
         return _instance
     }
@@ -29,7 +29,7 @@ public class AudioManager {
     var m6and11 = Bundle.main.url(forResource: "6and11", withExtension: "wav")
     var m7and12 = Bundle.main.url(forResource: "7and12", withExtension: "wav")
     
-    public func initTickNoisePlayer () {
+    open func initTickNoisePlayer () {
         do {
             self.tickNoisePlayer = try AVAudioPlayer(contentsOf: spinNoise!)
             self.tickNoisePlayer?.prepareToPlay()
@@ -37,13 +37,21 @@ public class AudioManager {
         } catch { print("error") }
     }
     
-    public func playSpinSound () {
+    open func playSpinSound () {
         if self.tickNoisePlayer != nil {
             self.tickNoisePlayer?.play()
         }
     }
     
-    public func playMainScreenMusic () {
+    open func stopSpinSound () {
+        if self.tickNoisePlayer != nil {
+            if (self.tickNoisePlayer?.isPlaying)! {
+                self.tickNoisePlayer?.pause()
+            }
+        }
+    }
+    
+    open func playMainScreenMusic () {
         
         if self.mainScreenPlayer != nil {
             if (self.mainScreenPlayer?.isPlaying)! {
@@ -61,7 +69,7 @@ public class AudioManager {
         }
     }
     
-    public func pauseMainScreenMusic () {
+    open func pauseMainScreenMusic () {
         if self.mainScreenPlayer != nil {
             if (self.mainScreenPlayer?.isPlaying)! {
                 self.mainScreenPlayer?.pause()
@@ -69,7 +77,7 @@ public class AudioManager {
         }
     }
     
-    public func playSoundForWedgeAtIndex(index: Int) {
+    open func playSoundForWedgeAtIndex(_ index: Int) {
         
         pauseMainScreenMusic()
         switch index {

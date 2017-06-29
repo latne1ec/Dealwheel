@@ -14,6 +14,7 @@ class DealViewController: UIViewController, SFSafariViewControllerDelegate {
     @IBOutlet weak var wedgeImageView: UIImageView!
     @IBOutlet weak var dealImageView: UIImageView!
     @IBOutlet weak var dealTitleLabel: UILabel!
+    @IBOutlet weak var buyNowButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,7 @@ class DealViewController: UIViewController, SFSafariViewControllerDelegate {
         setDealImage()
         setDealTitle()
         setWedgeColor()
+        setBuyNowButtonTitle()
     }
     
     func setBackgroundImage () {
@@ -51,6 +53,21 @@ class DealViewController: UIViewController, SFSafariViewControllerDelegate {
          if DataManager.Instance.currentWedgeColor != nil {
             let imageNameString = String(format: "wedge%d", DataManager.Instance.currentWedgeColor!)
             wedgeImageView.image = UIImage(named: imageNameString)
+        }
+    }
+    
+    func setBuyNowButtonTitle () {
+        if DataManager.Instance.dealPointValue != nil {
+            print(DataManager.Instance.dealPointValue!)
+            if DataManager.Instance.dealPointValue == 1 {
+                let titleLabelString = String(format: "Buy now for %d point", DataManager.Instance.dealPointValue!)
+                self.buyNowButton.setTitle(titleLabelString, for: .normal)
+            } else {
+                let titleLabelString = String(format: "Buy now for %d points", DataManager.Instance.dealPointValue!)
+                self.buyNowButton.setTitle(titleLabelString, for: .normal)
+            }
+        } else {
+            self.buyNowButton.setTitle("Buy now for 5 points", for: .normal)
         }
     }
 

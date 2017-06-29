@@ -55,6 +55,7 @@
 		20DFB9701EE721D1009462CA /* tempwheel.png in Resources */ = {isa = PBXBuildFile; fileRef = 20DFB96D1EE721D0009462CA /* tempwheel.png */; };
 		20DFB9721EE72245009462CA /* fblogin.png in Resources */ = {isa = PBXBuildFile; fileRef = 20DFB9711EE72245009462CA /* fblogin.png */; };
 		20DFB9761EE7433F009462CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DFB9751EE7433F009462CA /* LoginViewController.swift */; };
+		20F423671F02DF6800E8DBBE /* Default-568h@2x.png.png in Resources */ = {isa = PBXBuildFile; fileRef = 20F423661F02DF6800E8DBBE /* Default-568h@2x.png.png */; };
 		20F4D2E81EFC509E00415971 /* spin.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20F4D2E71EFC509D00415971 /* spin.wav */; };
 		20F97F161EE9DAC20008D13E /* budmo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20F97F151EE9DAC20008D13E /* budmo.ttf */; };
 		F4602C16C2DF9E9BB9D80296 /* Pods_Dealwheel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7A2FB03049FD56B44D388C /* Pods_Dealwheel.framework */; };
@@ -112,6 +113,7 @@
 		20DFB96D1EE721D0009462CA /* tempwheel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tempwheel.png; sourceTree = "<group>"; };
 		20DFB9711EE72245009462CA /* fblogin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fblogin.png; sourceTree = "<group>"; };
 		20DFB9751EE7433F009462CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		20F423661F02DF6800E8DBBE /* Default-568h@2x.png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png.png"; sourceTree = "<group>"; };
 		20F4D2E71EFC509D00415971 /* spin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = spin.wav; path = ../../../../../../../Downloads/spin.wav; sourceTree = "<group>"; };
 		20F97F151EE9DAC20008D13E /* budmo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = budmo.ttf; path = ../../../../../../../Downloads/budmo/budmo.ttf; sourceTree = "<group>"; };
 		5B7A2FB03049FD56B44D388C /* Pods_Dealwheel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dealwheel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,6 +199,7 @@
 		20DFB9451EE72097009462CA = {
 			isa = PBXGroup;
 			children = (
+				20F423661F02DF6800E8DBBE /* Default-568h@2x.png.png */,
 				20DFB9501EE72097009462CA /* Dealwheel */,
 				20DFB94F1EE72097009462CA /* Products */,
 				025C7A291D6400C418ED3603 /* Pods */,
@@ -325,6 +328,8 @@
 				TargetAttributes = {
 					20DFB94D1EE72097009462CA = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
 								enabled = 0;
@@ -384,6 +389,7 @@
 				20B6F8661EF4879200DFC854 /* SignupRewardView.xib in Resources */,
 				20AB17B51EF049F70007310A /* main.wav in Resources */,
 				20630A051EF18927001A2A77 /* 1and7.wav in Resources */,
+				20F423671F02DF6800E8DBBE /* Default-568h@2x.png.png in Resources */,
 				206C1C351EEAE642000CFBCE /* star@x.png in Resources */,
 				206C1C3F1EEB0240000CFBCE /* DealView.xib in Resources */,
 				20912F071EE8E480009AE0B1 /* tick.mp3 in Resources */,
@@ -597,13 +603,17 @@
 			baseConfigurationReference = C8035FC775068B25F04C875E /* Pods-Dealwheel.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4XR9PV42EQ;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = HL4WWQQF9X;
 				INFOPLIST_FILE = Dealwheel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dealwheelapp.Dealwheel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -613,13 +623,17 @@
 			baseConfigurationReference = FA917210A3F72F23804A55DF /* Pods-Dealwheel.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4XR9PV42EQ;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = HL4WWQQF9X;
 				INFOPLIST_FILE = Dealwheel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dealwheelapp.Dealwheel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

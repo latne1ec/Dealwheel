@@ -46,7 +46,8 @@ class LoginViewController: UIViewController {
                                                object: self.videoPlayer?.currentItem)
         try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, with: [])
         let playerLayer = AVPlayerLayer(player: videoPlayer)
-        playerLayer.videoGravity = .resizeAspectFill
+        //playerLayer.videoGravity = .as
+        playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
         playerLayer.frame = CGRect(x: 0, y: 0, width: self.videoView.bounds.width, height: self.videoView.bounds.height)
         self.videoView.layer.addSublayer(playerLayer)
         videoPlayer?.play()
@@ -116,8 +117,9 @@ class LoginViewController: UIViewController {
                 }
                 // Save user info to Backend
                 user.setObject(fullname, forKey: "fullName")
-                user.setObject(50, forKey: "points")
+                user.setObject(3, forKey: "points")
                 user.setObject(0, forKey: "numberOfPurchases")
+                user.setObject(0, forKey: "grossSales")
                 user.saveInBackground(block: { (success, error) in
                     if success {
                         // Saved Successfully
@@ -134,4 +136,10 @@ class LoginViewController: UIViewController {
             }
         })
     }
+    
+    @IBAction func privacyButtonTapped(_ sender: Any) {
+        let url = URL(string: "http://dealwheelapp.com/privacy-policy");
+        UIApplication.shared.open(url!, options: [:])
+    }
+    
 }
