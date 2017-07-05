@@ -175,14 +175,26 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGr-lj-N2r">
+                                <rect key="frame" x="109" y="520" width="101" height="29"/>
+                                <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="15"/>
+                                <state key="normal" title="instructions">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="instructionsButtonTapped:" destination="GKc-d8-bNr" eventType="touchUpInside" id="tsG-dT-lj1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="kcY-rV-sLq" secondAttribute="trailing" constant="100" id="6Gs-Mi-L9X"/>
                             <constraint firstItem="kcY-rV-sLq" firstAttribute="top" secondItem="IST-dJ-o6N" secondAttribute="bottom" constant="11" id="A0f-yC-Lwf"/>
+                            <constraint firstItem="4nb-uZ-nqP" firstAttribute="leading" secondItem="kGr-lj-N2r" secondAttribute="trailing" constant="19.5" id="ABh-QL-Y58"/>
                             <constraint firstItem="Lsi-qa-UlL" firstAttribute="baseline" secondItem="4nb-uZ-nqP" secondAttribute="baseline" id="BwM-F6-yZY"/>
                             <constraint firstItem="kcY-rV-sLq" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leading" constant="102" id="EPb-yW-AL5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oAu-5W-eHU" secondAttribute="trailing" constant="10" id="F4G-Mx-HM0"/>
+                            <constraint firstItem="Otc-s5-teY" firstAttribute="top" secondItem="kGr-lj-N2r" secondAttribute="bottom" constant="19" id="MCH-K8-06x"/>
                             <constraint firstAttribute="trailing" secondItem="TL3-kV-ujm" secondAttribute="trailing" constant="26" id="N4N-zR-oXb"/>
                             <constraint firstItem="Lsi-qa-UlL" firstAttribute="baseline" secondItem="4nb-uZ-nqP" secondAttribute="firstBaseline" id="N8x-oi-CdA"/>
                             <constraint firstItem="IST-dJ-o6N" firstAttribute="centerX" secondItem="381-Je-2LX" secondAttribute="centerX" id="R33-0j-vn0"/>
@@ -190,11 +202,13 @@
                             <constraint firstItem="oAu-5W-eHU" firstAttribute="leading" secondItem="4nb-uZ-nqP" secondAttribute="trailing" constant="11" id="Reg-6M-aRE"/>
                             <constraint firstItem="TL3-kV-ujm" firstAttribute="top" secondItem="kcY-rV-sLq" secondAttribute="bottom" constant="9" id="ToD-7H-aA1"/>
                             <constraint firstItem="TL3-kV-ujm" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leading" constant="27" id="i0G-H4-Yz6"/>
+                            <constraint firstItem="kGr-lj-N2r" firstAttribute="centerX" secondItem="381-Je-2LX" secondAttribute="centerX" id="iVp-13-LD5"/>
                             <constraint firstItem="Lsi-qa-UlL" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leadingMargin" constant="8" id="iod-pp-pFB"/>
                             <constraint firstItem="Otc-s5-teY" firstAttribute="top" secondItem="oAu-5W-eHU" secondAttribute="bottom" constant="23.5" id="m9V-6M-4gZ"/>
                             <constraint firstItem="IST-dJ-o6N" firstAttribute="top" secondItem="Gce-no-STX" secondAttribute="bottom" constant="23" id="nNw-vv-KZe"/>
                             <constraint firstItem="IST-dJ-o6N" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leadingMargin" constant="31" id="pzb-De-BMQ"/>
                             <constraint firstItem="Otc-s5-teY" firstAttribute="top" secondItem="Lsi-qa-UlL" secondAttribute="bottom" constant="20" id="r8o-Rw-Ic0"/>
+                            <constraint firstItem="kGr-lj-N2r" firstAttribute="leading" secondItem="Lsi-qa-UlL" secondAttribute="trailing" constant="37.5" id="rNx-7d-dqa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VYL-ro-7gH"/>
@@ -212,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zWF-sz-m3S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1686" y="131"/>
+            <point key="canvasLocation" x="1685.625" y="130.98591549295776"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="TsQ-BI-Whp">
@@ -273,6 +287,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xiE-wc-PD0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1685.625" y="925.35211267605632"/>
+        </scene>
+        <!--Tutorial View Controller-->
+        <scene sceneID="wEH-GV-4CM">
+            <objects>
+                <viewController storyboardIdentifier="Instructions" id="kmj-lj-wTW" customClass="TutorialViewController" customModule="Dealwheel" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uaX-J1-eg6"/>
+                        <viewControllerLayoutGuide type="bottom" id="j85-50-sQZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hTy-Bs-urT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial.png" translatesAutoresizingMaskIntoConstraints="NO" id="gWt-lP-wbc">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I93-UQ-gk0">
+                                <rect key="frame" x="92" y="471" width="137" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Dismiss">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissButtonTapped:" destination="kmj-lj-wTW" eventType="touchUpInside" id="CwX-UQ-hGM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gWt-lP-wbc" firstAttribute="bottom" secondItem="j85-50-sQZ" secondAttribute="top" id="7aU-7g-Abg"/>
+                            <constraint firstAttribute="trailing" secondItem="gWt-lP-wbc" secondAttribute="trailing" id="OMY-e9-JtD"/>
+                            <constraint firstItem="j85-50-sQZ" firstAttribute="top" secondItem="I93-UQ-gk0" secondAttribute="bottom" constant="61" id="dKX-p8-9B7"/>
+                            <constraint firstItem="gWt-lP-wbc" firstAttribute="top" secondItem="hTy-Bs-urT" secondAttribute="top" id="oUO-GT-wNB"/>
+                            <constraint firstItem="gWt-lP-wbc" firstAttribute="leading" secondItem="hTy-Bs-urT" secondAttribute="leading" id="pDz-TB-M0W"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="I93-UQ-gk0" secondAttribute="trailing" constant="75" id="tao-Zg-BFs"/>
+                            <constraint firstItem="I93-UQ-gk0" firstAttribute="leading" secondItem="hTy-Bs-urT" secondAttribute="leadingMargin" constant="76" id="w2u-72-Xrk"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dwq-tF-05O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2664.375" y="925.35211267605632"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UxX-eM-kYT">
@@ -484,6 +540,7 @@
         <image name="redeemButton.png" width="175" height="50"/>
         <image name="star@x.png" width="256" height="256"/>
         <image name="topLogo.png" width="300" height="71"/>
+        <image name="tutorial.png" width="750" height="1336"/>
         <image name="wedge.png" width="150" height="150"/>
     </resources>
     <inferredMetricsTieBreakers>

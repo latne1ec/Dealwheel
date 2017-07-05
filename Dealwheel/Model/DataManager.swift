@@ -82,23 +82,20 @@ open class DataManager {
             if(error != nil){
                 print("error")
             } else {
-                 // Check if there is a sale with SID same as User Id
+                
+                // Get JSON
                 let json = JSON(data: data!)
-                //print(json["records"])
                 
-                //PFUser.current()?.setObject(0, forKey: "grossSales")
-                //PFUser.current()?.saveInBackground()
                 
-                // Check Gross Sales and see if it's greater than current gross sales in DB
+                // Check User Gross Sales and see if it's greater than current gross sales in DB
                 if let grouponGrossSales = json["records"][0]["measures"]["SaleGrossAmount"].double {
-                    let userGrossSales = PFUser.current()?.object(forKey: "grossSales") as? Double
-                    print("Groupon Gross: \(grouponGrossSales)")
-                    print("User Gross: \(userGrossSales!)")
-                    if userGrossSales != nil {
-                        if grouponGrossSales > userGrossSales! {
+                    if let userGrossSales = PFUser.current()?.object(forKey: "grossSales") as? Double {
+                        //print("Groupon Gross: \(grouponGrossSales)")
+                        //print("User Gross: \(userGrossSales)")
+                        if grouponGrossSales > userGrossSales {
                             
                             // Get the last purchase sale amount
-                            let lastPurchaseSalePrice = grouponGrossSales - userGrossSales!
+                            let lastPurchaseSalePrice = grouponGrossSales - userGrossSales
                             
                             // Increment user points by rounded difference
                             var currentSalePointValue = lastPurchaseSalePrice.rounded() / 10
@@ -110,6 +107,7 @@ open class DataManager {
                             self.incrementUserGrossSales (amount: lastPurchaseSalePrice)
                             
                         }
+                        
                     }
                 }
                 

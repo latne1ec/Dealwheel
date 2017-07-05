@@ -58,12 +58,11 @@ class DealViewController: UIViewController, SFSafariViewControllerDelegate {
     
     func setBuyNowButtonTitle () {
         if DataManager.Instance.dealPointValue != nil {
-            print(DataManager.Instance.dealPointValue!)
             if DataManager.Instance.dealPointValue == 1 {
-                let titleLabelString = String(format: "Buy now for %d point", DataManager.Instance.dealPointValue!)
+                let titleLabelString = String(format: "Buy and earn %d point", DataManager.Instance.dealPointValue!)
                 self.buyNowButton.setTitle(titleLabelString, for: .normal)
             } else {
-                let titleLabelString = String(format: "Buy now for %d points", DataManager.Instance.dealPointValue!)
+                let titleLabelString = String(format: "Buy and earn %d points", DataManager.Instance.dealPointValue!)
                 self.buyNowButton.setTitle(titleLabelString, for: .normal)
             }
         } else {

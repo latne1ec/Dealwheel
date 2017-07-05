@@ -58,6 +58,9 @@
 		20F423671F02DF6800E8DBBE /* Default-568h@2x.png.png in Resources */ = {isa = PBXBuildFile; fileRef = 20F423661F02DF6800E8DBBE /* Default-568h@2x.png.png */; };
 		20F4D2E81EFC509E00415971 /* spin.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20F4D2E71EFC509D00415971 /* spin.wav */; };
 		20F97F161EE9DAC20008D13E /* budmo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20F97F151EE9DAC20008D13E /* budmo.ttf */; };
+		20F980521F0BFFA300E15DD5 /* InstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F980511F0BFFA300E15DD5 /* InstructionsView.swift */; };
+		20F980551F0C187000E15DD5 /* tutorial.png in Resources */ = {isa = PBXBuildFile; fileRef = 20F980541F0C187000E15DD5 /* tutorial.png */; };
+		20F980571F0C189900E15DD5 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F980561F0C189900E15DD5 /* TutorialViewController.swift */; };
 		F4602C16C2DF9E9BB9D80296 /* Pods_Dealwheel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7A2FB03049FD56B44D388C /* Pods_Dealwheel.framework */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +119,9 @@
 		20F423661F02DF6800E8DBBE /* Default-568h@2x.png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png.png"; sourceTree = "<group>"; };
 		20F4D2E71EFC509D00415971 /* spin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = spin.wav; path = ../../../../../../../Downloads/spin.wav; sourceTree = "<group>"; };
 		20F97F151EE9DAC20008D13E /* budmo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = budmo.ttf; path = ../../../../../../../Downloads/budmo/budmo.ttf; sourceTree = "<group>"; };
+		20F980511F0BFFA300E15DD5 /* InstructionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsView.swift; sourceTree = "<group>"; };
+		20F980541F0C187000E15DD5 /* tutorial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial.png; sourceTree = "<group>"; };
+		20F980561F0C189900E15DD5 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		5B7A2FB03049FD56B44D388C /* Pods_Dealwheel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dealwheel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8035FC775068B25F04C875E /* Pods-Dealwheel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dealwheel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dealwheel/Pods-Dealwheel.debug.xcconfig"; sourceTree = "<group>"; };
 		FA917210A3F72F23804A55DF /* Pods-Dealwheel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dealwheel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dealwheel/Pods-Dealwheel.release.xcconfig"; sourceTree = "<group>"; };
@@ -164,10 +170,19 @@
 			children = (
 				200E234C1EEEF48D00DAA97F /* ProgressView.swift */,
 				20B6F8631EF4852200DFC854 /* SignupRewardView.swift */,
+				20F980511F0BFFA300E15DD5 /* InstructionsView.swift */,
 				20B6F8651EF4879200DFC854 /* SignupRewardView.xib */,
 			);
 			name = Views;
 			path = ProgressView;
+			sourceTree = "<group>";
+		};
+		20B39FEB1F0C244E0005A085 /* Instructions */ = {
+			isa = PBXGroup;
+			children = (
+				20F980561F0C189900E15DD5 /* TutorialViewController.swift */,
+			);
+			name = Instructions;
 			sourceTree = "<group>";
 		};
 		20DED38D1EF98541001A5784 /* Dealwheel */ = {
@@ -223,12 +238,12 @@
 				20DED38F1EF9855C001A5784 /* Login */,
 				20DED38D1EF98541001A5784 /* Dealwheel */,
 				20DED38E1EF98549001A5784 /* Prizewheel */,
+				20B39FEB1F0C244E0005A085 /* Instructions */,
 				200C4D071EF05C5C00A43CEF /* Views */,
 				200C4D061EF0584A00A43CEF /* Model */,
 				20DFB9551EE72097009462CA /* Main.storyboard */,
 				20DFB9581EE72097009462CA /* Assets.xcassets */,
-				2000D0181EFF026E0057DB9E /* intronew.mp4 */,
-				2000D0161EFF017C0057DB9E /* intro.mp4 */,
+				20F980531F0C000000E15DD5 /* Video */,
 				20F97F211EE9E5D70008D13E /* Audio */,
 				20DFB9741EE742E9009462CA /* Misc */,
 				20DFB9731EE742E3009462CA /* Images */,
@@ -241,6 +256,7 @@
 		20DFB9731EE742E3009462CA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				20F980541F0C187000E15DD5 /* tutorial.png */,
 				20909CE81F01D33300FF0914 /* topLogo@2x.png */,
 				20289A2F1EF82E7100DF6A0E /* wedge0.png */,
 				20289A331EF82E7200DF6A0E /* wedge1.png */,
@@ -291,6 +307,15 @@
 				20912F061EE8E480009AE0B1 /* tick.mp3 */,
 			);
 			path = Audio;
+			sourceTree = "<group>";
+		};
+		20F980531F0C000000E15DD5 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				2000D0181EFF026E0057DB9E /* intronew.mp4 */,
+				2000D0161EFF017C0057DB9E /* intro.mp4 */,
+			);
+			name = Video;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,6 +404,7 @@
 				20DFB9681EE72155009462CA /* DealwheelMisc in Resources */,
 				20289A3B1EF82E7200DF6A0E /* wedge0.png in Resources */,
 				20289A291EF822C000DF6A0E /* redeemButton@2x.png in Resources */,
+				20F980551F0C187000E15DD5 /* tutorial.png in Resources */,
 				20630A081EF18927001A2A77 /* 4and10.wav in Resources */,
 				20DFB95C1EE72097009462CA /* LaunchScreen.storyboard in Resources */,
 				206C1C431EEB1394000CFBCE /* wedge@2x.png in Resources */,
@@ -460,10 +486,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				20DFB9521EE72097009462CA /* AppDelegate.swift in Sources */,
+				20F980521F0BFFA300E15DD5 /* InstructionsView.swift in Sources */,
 				20289A271EF81AA500DF6A0E /* PrizeViewController.swift in Sources */,
 				20B6F8641EF4852200DFC854 /* SignupRewardView.swift in Sources */,
 				20AB17B71EF052740007310A /* DataManager.swift in Sources */,
 				20DFB9661EE72132009462CA /* SpinwheelViewController.swift in Sources */,
+				20F980571F0C189900E15DD5 /* TutorialViewController.swift in Sources */,
 				20DED38C1EF96850001A5784 /* PrizewheelViewController.swift in Sources */,
 				20AB17AB1EF027250007310A /* AudioManager.swift in Sources */,
 				20AB17B31EF0471F0007310A /* DealViewController.swift in Sources */,

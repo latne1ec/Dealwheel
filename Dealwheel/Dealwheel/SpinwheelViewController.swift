@@ -25,6 +25,7 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
     @IBOutlet weak var spinButton: UIButton!
     @IBOutlet weak var centerView: UIView!
     @IBOutlet weak var arrow: UIImageView!
+   
     
     // Vars
     var currentCategory: String = ""
@@ -77,6 +78,7 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
             usernameLabel.text = firstName
             let numberOfPoints = PFUser.current()?.object(forKey: "points") as? Int
             pointsLabel.text = String(format: "%d", numberOfPoints!)
+            pointsLabel.adjustsFontSizeToFitWidth = true
         }
     }
     
@@ -200,6 +202,11 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
         let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         self.view.backgroundColor = UIColor(patternImage: image)
+    }
+    
+    @IBAction func instructionsButtonTapped(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "Instructions") as! TutorialViewController
+        self.present(vc, animated: true, completion: nil)
     }
     
     // MARK: - Location Callbacks
