@@ -23,6 +23,7 @@ class DealViewController: UIViewController, SFSafariViewControllerDelegate {
         setDealTitle()
         setWedgeColor()
         setBuyNowButtonTitle()
+        addTapRecognizerToImage()
     }
     
     func setBackgroundImage () {
@@ -31,6 +32,21 @@ class DealViewController: UIViewController, SFSafariViewControllerDelegate {
         let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         self.view.backgroundColor = UIColor(patternImage: image)
+    }
+    
+    func addTapRecognizerToImage () {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tappedImage))
+        self.dealImageView.isUserInteractionEnabled = true
+        self.dealImageView.addGestureRecognizer(tap)
+    }
+    
+    func tappedImage () {
+        if let url = URL(string: DataManager.Instance.dealUrlString!) {
+            //print(url.absoluteString)
+            let vc = SFSafariViewController(url: url, entersReaderIfAvailable: true)
+            vc.delegate = self
+            self.present(vc, animated: true, completion: nil)
+        }
     }
     
     func setDealTitle () {

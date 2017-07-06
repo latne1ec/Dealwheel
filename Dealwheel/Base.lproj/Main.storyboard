@@ -176,7 +176,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGr-lj-N2r">
-                                <rect key="frame" x="109" y="520" width="101" height="29"/>
+                                <rect key="frame" x="110" y="489" width="101" height="29"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="15"/>
                                 <state key="normal" title="instructions">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -190,11 +190,11 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="kcY-rV-sLq" secondAttribute="trailing" constant="100" id="6Gs-Mi-L9X"/>
                             <constraint firstItem="kcY-rV-sLq" firstAttribute="top" secondItem="IST-dJ-o6N" secondAttribute="bottom" constant="11" id="A0f-yC-Lwf"/>
-                            <constraint firstItem="4nb-uZ-nqP" firstAttribute="leading" secondItem="kGr-lj-N2r" secondAttribute="trailing" constant="19.5" id="ABh-QL-Y58"/>
+                            <constraint firstItem="4nb-uZ-nqP" firstAttribute="leading" secondItem="kGr-lj-N2r" secondAttribute="trailing" constant="18.5" id="ABh-QL-Y58"/>
                             <constraint firstItem="Lsi-qa-UlL" firstAttribute="baseline" secondItem="4nb-uZ-nqP" secondAttribute="baseline" id="BwM-F6-yZY"/>
                             <constraint firstItem="kcY-rV-sLq" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leading" constant="102" id="EPb-yW-AL5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oAu-5W-eHU" secondAttribute="trailing" constant="10" id="F4G-Mx-HM0"/>
-                            <constraint firstItem="Otc-s5-teY" firstAttribute="top" secondItem="kGr-lj-N2r" secondAttribute="bottom" constant="19" id="MCH-K8-06x"/>
+                            <constraint firstItem="Otc-s5-teY" firstAttribute="top" secondItem="kGr-lj-N2r" secondAttribute="bottom" constant="50" id="MCH-K8-06x"/>
                             <constraint firstAttribute="trailing" secondItem="TL3-kV-ujm" secondAttribute="trailing" constant="26" id="N4N-zR-oXb"/>
                             <constraint firstItem="Lsi-qa-UlL" firstAttribute="baseline" secondItem="4nb-uZ-nqP" secondAttribute="firstBaseline" id="N8x-oi-CdA"/>
                             <constraint firstItem="IST-dJ-o6N" firstAttribute="centerX" secondItem="381-Je-2LX" secondAttribute="centerX" id="R33-0j-vn0"/>
@@ -208,7 +208,6 @@
                             <constraint firstItem="IST-dJ-o6N" firstAttribute="top" secondItem="Gce-no-STX" secondAttribute="bottom" constant="23" id="nNw-vv-KZe"/>
                             <constraint firstItem="IST-dJ-o6N" firstAttribute="leading" secondItem="381-Je-2LX" secondAttribute="leadingMargin" constant="31" id="pzb-De-BMQ"/>
                             <constraint firstItem="Otc-s5-teY" firstAttribute="top" secondItem="Lsi-qa-UlL" secondAttribute="bottom" constant="20" id="r8o-Rw-Ic0"/>
-                            <constraint firstItem="kGr-lj-N2r" firstAttribute="leading" secondItem="Lsi-qa-UlL" secondAttribute="trailing" constant="37.5" id="rNx-7d-dqa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VYL-ro-7gH"/>
@@ -544,7 +543,7 @@
         <image name="wedge.png" width="150" height="150"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Icb-Lr-31y"/>
         <segue reference="hEa-qF-j0m"/>
+        <segue reference="SH1-ps-cV5"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -27,7 +27,7 @@ open class DataManager {
     open var dealTitle: String?
     open var dealUrlString: String?
     open var dealImageUrlString: String?
-    open var prizes = ["$5 Cash", "$10 Cash", "$15 Cash"]
+    open var prizes = ["$5 Amazon Giftcard", "$10 Amazon Giftcard", "$15 Amazon Giftcard"]
     
     open func getDeal (_ url: URL) {
         
