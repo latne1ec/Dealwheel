@@ -31,6 +31,8 @@ class PrizewheelViewController: UIViewController, SpinWheelControlDelegate, Spin
     
     override func viewDidAppear(_ animated: Bool) {
         detectIfUserCanSpinPrizewheel()
+        AudioManager.Instance.pauseMainScreenMusic()
+        AudioManager.Instance.playPrizeWheelMusic()
     }
     
     func detectIfUserCanSpinPrizewheel () {

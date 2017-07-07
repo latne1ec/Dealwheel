@@ -19,6 +19,8 @@ open class AudioManager {
     var mainScreenPlayer: AVAudioPlayer?
     var tickNoisePlayer: AVAudioPlayer?
     var soundEffectPlayer: AVAudioPlayer?
+    var prizeWheelPlayer: AVAudioPlayer?
+    var prizeWheelMusic = Bundle.main.url(forResource: "kanye", withExtension: "wav")
     var mainMusicUrl = Bundle.main.url(forResource: "main", withExtension: "wav")
     var tickNoise = Bundle.main.url(forResource: "tick", withExtension: "mp3")
     var spinNoise = Bundle.main.url(forResource: "spin", withExtension: "wav")
@@ -53,6 +55,8 @@ open class AudioManager {
     
     open func playMainScreenMusic () {
         
+        pausePrizewheelMusic()
+        
         if self.mainScreenPlayer != nil {
             if (self.mainScreenPlayer?.isPlaying)! {
                 return
@@ -77,9 +81,36 @@ open class AudioManager {
         }
     }
     
+    open func playPrizeWheelMusic () {
+        
+        if self.prizeWheelPlayer != nil {
+            if (self.prizeWheelPlayer?.isPlaying)! {
+                return
+            }
+        }
+        
+        do {
+            self.prizeWheelPlayer = try AVAudioPlayer(contentsOf: prizeWheelMusic!)
+            self.prizeWheelPlayer?.prepareToPlay()
+            self.prizeWheelPlayer?.play()
+            
+        } catch {
+            print("error")
+        }
+    }
+    
+    open func pausePrizewheelMusic () {
+        if self.prizeWheelPlayer != nil {
+            if (self.prizeWheelPlayer?.isPlaying)! {
+                self.prizeWheelPlayer?.pause()
+            }
+        }
+    }
+    
     open func playSoundForWedgeAtIndex(_ index: Int) {
         
         pauseMainScreenMusic()
+        pausePrizewheelMusic()
         switch index {
         case 0:
             do {

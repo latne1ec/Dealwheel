@@ -170,7 +170,8 @@ open class DataManager {
             var numberOfPoints = PFUser.current()?.object(forKey: "points") as? Int
             numberOfPoints = numberOfPoints! - DataManager.minPointsToSpinPrizewheel
             PFUser.current()?.setObject(NSNumber(value:numberOfPoints!), forKey: "points")
-            PFUser.current()?.saveInBackground()
+            PFUser.current()?.saveInBackground(block: { (success, error) in
+            })
         }
     }
     

@@ -374,14 +374,14 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is an awesome deal I just won on this app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPU-V0-F3D">
-                                <rect key="frame" x="28" y="303.5" width="264" height="44"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$15 Amazon Gift Card" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPU-V0-F3D">
+                                <rect key="frame" x="28" y="283.5" width="264" height="22"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEc-cs-I14">
-                                <rect key="frame" x="101" y="449" width="117" height="37"/>
+                                <rect key="frame" x="101" y="465" width="117" height="37"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="22"/>
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -390,38 +390,45 @@
                                     <action selector="continueButtonTapped:" destination="UbD-iJ-3AO" eventType="touchUpInside" id="oaY-Qy-fj5"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We'll email you the details!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIp-jW-K3m">
-                                <rect key="frame" x="32" y="362.5" width="255" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="HEy-Ci-4kt"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="18"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xtr-Go-etJ">
+                                <rect key="frame" x="39" y="400" width="243" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Enter Email to Receive Your Giftcard" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7EH-C6-7QY">
+                                <rect key="frame" x="39" y="335" width="244" height="42"/>
+                                <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
-                            <constraint firstItem="PIp-jW-K3m" firstAttribute="leading" secondItem="X63-Yd-6uV" secondAttribute="leading" constant="32" id="0EO-Vn-TX7"/>
                             <constraint firstItem="sbT-P3-pee" firstAttribute="top" secondItem="oRT-3S-5Rg" secondAttribute="bottom" constant="44" id="2e7-qG-9CL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sbT-P3-pee" secondAttribute="trailing" constant="45" id="86E-kD-iDa"/>
                             <constraint firstItem="sbT-P3-pee" firstAttribute="leading" secondItem="X63-Yd-6uV" secondAttribute="leadingMargin" constant="45" id="BFC-dV-HwP"/>
+                            <constraint firstItem="7EH-C6-7QY" firstAttribute="top" secondItem="PPU-V0-F3D" secondAttribute="bottom" constant="29.5" id="NKF-9U-qOX"/>
                             <constraint firstAttribute="trailing" secondItem="PPU-V0-F3D" secondAttribute="trailing" constant="28" id="O6P-nW-ysZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7EH-C6-7QY" secondAttribute="trailing" constant="21" id="P8n-kh-ScM"/>
+                            <constraint firstItem="xtr-Go-etJ" firstAttribute="leading" secondItem="X63-Yd-6uV" secondAttribute="leadingMargin" constant="23" id="Qvl-01-JzV"/>
                             <constraint firstItem="PPU-V0-F3D" firstAttribute="leading" secondItem="X63-Yd-6uV" secondAttribute="leading" constant="28" id="Srm-na-619"/>
-                            <constraint firstItem="dqM-Jc-AvT" firstAttribute="top" secondItem="EEc-cs-I14" secondAttribute="bottom" constant="82" id="Wyj-Pw-ZCh"/>
+                            <constraint firstItem="7EH-C6-7QY" firstAttribute="leading" secondItem="X63-Yd-6uV" secondAttribute="leadingMargin" constant="23" id="Ucd-ez-8KT"/>
+                            <constraint firstItem="dqM-Jc-AvT" firstAttribute="top" secondItem="EEc-cs-I14" secondAttribute="bottom" constant="66" id="Wyj-Pw-ZCh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YwO-H1-VLQ" secondAttribute="trailing" constant="94" id="XIf-Ff-bbQ"/>
-                            <constraint firstAttribute="trailing" secondItem="PIp-jW-K3m" secondAttribute="trailing" constant="33" id="XWd-cl-lkN"/>
-                            <constraint firstItem="PIp-jW-K3m" firstAttribute="top" secondItem="PPU-V0-F3D" secondAttribute="bottom" constant="15" id="Yxh-9Z-O3c"/>
+                            <constraint firstItem="xtr-Go-etJ" firstAttribute="top" secondItem="7EH-C6-7QY" secondAttribute="bottom" constant="23" id="gaD-fE-ezx"/>
                             <constraint firstItem="YwO-H1-VLQ" firstAttribute="top" secondItem="sbT-P3-pee" secondAttribute="bottom" constant="18" id="gy2-AB-QwH"/>
                             <constraint firstItem="YwO-H1-VLQ" firstAttribute="leading" secondItem="X63-Yd-6uV" secondAttribute="leadingMargin" constant="94" id="hfe-p8-tON"/>
                             <constraint firstItem="EEc-cs-I14" firstAttribute="leading" secondItem="X63-Yd-6uV" secondAttribute="leadingMargin" constant="85" id="iV6-Fh-NU0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="EEc-cs-I14" secondAttribute="trailing" constant="86" id="ktd-QN-mjT"/>
-                            <constraint firstItem="PPU-V0-F3D" firstAttribute="top" secondItem="YwO-H1-VLQ" secondAttribute="bottom" constant="49" id="pGV-L3-vw1"/>
+                            <constraint firstItem="PPU-V0-F3D" firstAttribute="top" secondItem="YwO-H1-VLQ" secondAttribute="bottom" constant="29" id="pGV-L3-vw1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xtr-Go-etJ" secondAttribute="trailing" constant="22" id="y0i-S6-atw"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="dealTitleLabel" destination="PPU-V0-F3D" id="q2l-6y-O7G"/>
-                        <outlet property="detailsLabel" destination="PIp-jW-K3m" id="gfb-dk-dQK"/>
+                        <outlet property="detailsLabel" destination="7EH-C6-7QY" id="oRd-I9-s0I"/>
+                        <outlet property="emailTextfield" destination="xtr-Go-etJ" id="b66-P4-PkM"/>
                         <outlet property="wedgeImageView" destination="sbT-P3-pee" id="IKk-kQ-f60"/>
                         <segue destination="wI8-Is-dOO" kind="presentation" identifier="backToPrizewheel" modalTransitionStyle="crossDissolve" id="SH1-ps-cV5"/>
                     </connections>
