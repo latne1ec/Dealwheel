@@ -8,10 +8,10 @@
 
 import UIKit
 
-class TermsSheet: UIView {
+class SignupRewardView: UIView {
     
     class func instanceFromNib() -> UIView {
-        return UINib(nibName: "TermsSheet", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
+        return UINib(nibName: "SignupRewardView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
     }
     
     @IBAction func dismissButtonTapped(_ sender: Any) {

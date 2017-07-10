@@ -24,6 +24,8 @@
 		20289A3F1EF82E7200DF6A0E /* wedge1.png in Resources */ = {isa = PBXBuildFile; fileRef = 20289A331EF82E7200DF6A0E /* wedge1.png */; };
 		20289A401EF82E7200DF6A0E /* wedge11.png in Resources */ = {isa = PBXBuildFile; fileRef = 20289A341EF82E7200DF6A0E /* wedge11.png */; };
 		20289A411EF82E7200DF6A0E /* wedge8.png in Resources */ = {isa = PBXBuildFile; fileRef = 20289A351EF82E7200DF6A0E /* wedge8.png */; };
+		2051EFA81F13C95900BDD06F /* TermsSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2051EFA71F13C95900BDD06F /* TermsSheet.xib */; };
+		2051EFAA1F13C96900BDD06F /* TermsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2051EFA91F13C96900BDD06F /* TermsSheet.swift */; };
 		20630A051EF18927001A2A77 /* 1and7.wav in Resources */ = {isa = PBXBuildFile; fileRef = 206309FF1EF18927001A2A77 /* 1and7.wav */; };
 		20630A061EF18927001A2A77 /* 3and9.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20630A001EF18927001A2A77 /* 3and9.wav */; };
 		20630A071EF18927001A2A77 /* 6and11.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20630A011EF18927001A2A77 /* 6and11.wav */; };
@@ -84,6 +86,8 @@
 		20289A341EF82E7200DF6A0E /* wedge11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wedge11.png; path = ../../../../../../../Downloads/All12files/wedge11.png; sourceTree = "<group>"; };
 		20289A351EF82E7200DF6A0E /* wedge8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wedge8.png; path = ../../../../../../../Downloads/All12files/wedge8.png; sourceTree = "<group>"; };
 		204B0A271EE86FD9000C6D3D /* Dealwheel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Dealwheel.entitlements; sourceTree = "<group>"; };
+		2051EFA71F13C95900BDD06F /* TermsSheet.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TermsSheet.xib; sourceTree = "<group>"; };
+		2051EFA91F13C96900BDD06F /* TermsSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsSheet.swift; sourceTree = "<group>"; };
 		206309FF1EF18927001A2A77 /* 1and7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 1and7.wav; path = ../../../../../../../Downloads/1and7.wav; sourceTree = "<group>"; };
 		20630A001EF18927001A2A77 /* 3and9.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 3and9.wav; path = ../../../../../../../Downloads/3and9.wav; sourceTree = "<group>"; };
 		20630A011EF18927001A2A77 /* 6and11.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 6and11.wav; path = ../../../../../../../Downloads/6and11.wav; sourceTree = "<group>"; };
@@ -171,9 +175,11 @@
 			isa = PBXGroup;
 			children = (
 				200E234C1EEEF48D00DAA97F /* ProgressView.swift */,
-				20B6F8631EF4852200DFC854 /* SignupRewardView.swift */,
 				20F980511F0BFFA300E15DD5 /* InstructionsView.swift */,
+				20B6F8631EF4852200DFC854 /* SignupRewardView.swift */,
+				2051EFA91F13C96900BDD06F /* TermsSheet.swift */,
 				20B6F8651EF4879200DFC854 /* SignupRewardView.xib */,
+				2051EFA71F13C95900BDD06F /* TermsSheet.xib */,
 			);
 			name = Views;
 			path = ProgressView;
@@ -357,7 +363,7 @@
 					20DFB94D1EE72097009462CA = {
 						CreatedOnToolsVersion = 9.0;
 						LastSwiftMigration = 0830;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.Keychain = {
 								enabled = 0;
@@ -419,6 +425,7 @@
 				20AB17B51EF049F70007310A /* main.wav in Resources */,
 				20630A051EF18927001A2A77 /* 1and7.wav in Resources */,
 				20F423671F02DF6800E8DBBE /* Default-568h@2x.png.png in Resources */,
+				2051EFA81F13C95900BDD06F /* TermsSheet.xib in Resources */,
 				206C1C351EEAE642000CFBCE /* star@x.png in Resources */,
 				20D086A31F0E9107005DF5FC /* kanye.wav in Resources */,
 				206C1C3F1EEB0240000CFBCE /* DealView.xib in Resources */,
@@ -490,6 +497,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20DFB9521EE72097009462CA /* AppDelegate.swift in Sources */,
+				2051EFAA1F13C96900BDD06F /* TermsSheet.swift in Sources */,
 				20F980521F0BFFA300E15DD5 /* InstructionsView.swift in Sources */,
 				20289A271EF81AA500DF6A0E /* PrizeViewController.swift in Sources */,
 				20B6F8641EF4852200DFC854 /* SignupRewardView.swift in Sources */,
@@ -636,15 +644,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = HL4WWQQF9X;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 4XR9PV42EQ;
 				INFOPLIST_FILE = Dealwheel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dealwheelapp.Dealwheel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "801c817a-55bc-4961-9e1a-2f3c5a47dcdc";
+				PROVISIONING_PROFILE_SPECIFIER = "Dealwheel App Store Profile 3";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -656,15 +664,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = HL4WWQQF9X;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 4XR9PV42EQ;
 				INFOPLIST_FILE = Dealwheel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dealwheelapp.Dealwheel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "801c817a-55bc-4961-9e1a-2f3c5a47dcdc";
+				PROVISIONING_PROFILE_SPECIFIER = "Dealwheel App Store Profile 3";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -46,7 +46,7 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
         setBackgroundImage ()
         initSpinWheel()
         initDropDown()
-        initRewardView()
+        initRewardViewAndTermsSheet()
         currentCategory = categories[0]
         redeemButton.imageView?.contentMode = .scaleAspectFit
         redeemButton.addTarget(self, action: #selector(redeemButtonTapped), for: .touchUpInside)
@@ -157,7 +157,8 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
         spinWheelControl.addTarget(self, action: #selector(spinWheelDidChangeValue), for: UIControlEvents.valueChanged)
     }
     
-    func initRewardView () {
+    func initRewardViewAndTermsSheet () {
+        
         if PFUser.current() != nil {
             let value = UserDefaults.standard.bool(forKey: "hasShown50PointSignupReward")
             if value == false {
@@ -171,6 +172,20 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
                 }) { (success) in
                 }
             }
+            
+            let value2 = UserDefaults.standard.bool(forKey: "hasShowTermsSheet")
+            if value2 == false {
+                UserDefaults.standard.set( true, forKey: "hasShowTermsSheet")
+                let termsSheet = TermsSheet.instanceFromNib()
+                termsSheet.frame = self.view.frame
+                termsSheet.alpha = 0.0
+                self.view.addSubview(termsSheet)
+                UIView.animate(withDuration: 0.25, animations: {
+                    termsSheet.alpha = 1.0
+                }) { (success) in
+                }
+            }
+
         }
     }
     

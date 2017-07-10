@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Unused
 class InstructionsView: UIView {
     
     var instructionsImageView: UIImageView?

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="budmo.ttf">
+            <string>BudmoJiggler-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SignupRewardView" customModule="Dealwheel" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Urr-Tj-ja1">
+                    <rect key="frame" x="96" y="438" width="128" height="32"/>
+                    <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="18"/>
+                    <state key="normal" title="Dismiss">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="dismissButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="m72-Fx-FWI"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms: No purchase necessary. Mail a self-addressed envelope with (1) PayPal address and (2) Haiku about DealWheelApp." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sa8-A4-ohR">
+                    <rect key="frame" x="23" y="219" width="273" height="130"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="130" id="d9k-rg-QBX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Urr-Tj-ja1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="96" id="8l3-Ua-NPB"/>
+                <constraint firstItem="Sa8-A4-ohR" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="MlY-O5-GDH"/>
+                <constraint firstItem="Sa8-A4-ohR" firstAttribute="centerX" secondItem="Urr-Tj-ja1" secondAttribute="centerX" id="hk4-9D-cjA"/>
+                <constraint firstAttribute="bottom" secondItem="Urr-Tj-ja1" secondAttribute="bottom" constant="98" id="mqY-L6-tBV"/>
+                <constraint firstAttribute="trailing" secondItem="Urr-Tj-ja1" secondAttribute="trailing" constant="96" id="pPh-GB-lfg"/>
+                <constraint firstItem="Sa8-A4-ohR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="23" id="xoa-RL-HMD"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="33" y="53"/>
+        </view>
+    </objects>
+</document>

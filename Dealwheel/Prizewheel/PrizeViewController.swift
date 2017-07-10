@@ -21,6 +21,7 @@ class PrizeViewController: UIViewController {
         setBackgroundImage()
         setWedgeColor()
         setDealTitle()
+        self.emailTextfield.layer.cornerRadius = 5
         NotificationCenter.default.addObserver(self, selector: #selector(PrizeViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(PrizeViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
