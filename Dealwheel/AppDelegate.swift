@@ -37,6 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
+        UserDefaults.standard.set( nil, forKey: "lastSearchCategory")
+        UserDefaults.standard.synchronize()
     }
     
     func applicationDidEnterBackground(_ application: UIApplication) {

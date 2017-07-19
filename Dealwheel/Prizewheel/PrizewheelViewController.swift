@@ -101,7 +101,13 @@ class PrizewheelViewController: UIViewController, SpinWheelControlDelegate, Spin
         spinWheelControl.delegate = self
         spinWheelControl.dataSource = self
         spinWheelControl.reloadData()
+        spinWheelControl.manualSpinValue = randomBetweenNumbers(firstNum: -3.2, secondNum: -8.1)
         spinWheelControl.addTarget(self, action: #selector(spinWheelDidChangeValue), for: UIControlEvents.valueChanged)
+    }
+    
+    // Add some randomness to the spin wheel
+    func randomBetweenNumbers(firstNum: CGFloat, secondNum: CGFloat) -> CGFloat{
+        return CGFloat(arc4random()) / CGFloat(UINT32_MAX) * abs(firstNum - secondNum) + min(firstNum, secondNum)
     }
     
     func setBackgroundImage () {

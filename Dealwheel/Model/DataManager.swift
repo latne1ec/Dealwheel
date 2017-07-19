@@ -37,21 +37,37 @@ open class DataManager {
                 print("error")
             } else {
                 
-                let json = JSON(data: data!)
+                print(url)
                 
-                if let dealPrice = json["deals"][0]["options"][0]["price"]["formattedAmount"].string {
+                let json = JSON(data: data!)
+                //print(json["deals"])
+                let dealCount = json["deals"].count
+                var randomOffset = Int(arc4random_uniform(UInt32(dealCount)))
+                //print(json["deals"][randomOffset])
+                //print(randomOffset)
+                
+                if dealCount == 1 {
+                    randomOffset = 0
+                }
+                
+                
+                if let dealPrice = json["deals"][randomOffset]["options"][0]["price"]["formattedAmount"].string {
                     self.dealPrice = self.getPrice(priceString: dealPrice)
                 }
-                if let merchantName = json["deals"][0]["merchant"]["name"].string {
+                if let merchantName = json["deals"][randomOffset]["merchant"]["name"].string {
                     self.merchantName = merchantName
                 }
-                if let dealTitle = json["deals"][0]["options"][0]["title"].string {
+                if let dealTitle = json["deals"][randomOffset]["options"][0]["title"].string {
                     self.dealTitle = dealTitle
                 }
-                if let dealUrlString = json["deals"][0]["dealUrl"].string {
+                if let announcementTitle = json["deals"][randomOffset]["announcementTitle"].string {
+                    self.dealTitle = announcementTitle
+                }
+
+                if let dealUrlString = json["deals"][randomOffset]["dealUrl"].string {
                     self.dealUrlString = dealUrlString
                 }
-                if let dealImageUrlString = json["deals"][0]["largeImageUrl"].string {
+                if let dealImageUrlString = json["deals"][randomOffset]["largeImageUrl"].string {
                     self.dealImageUrlString = dealImageUrlString
                 }
             }
@@ -65,12 +81,22 @@ open class DataManager {
             thePricestring = thePricestring.replacingOccurrences(of: "$", with: "")
         }
         
-        if let price = Int(thePricestring) {
-            self.dealPointValue = price / 10
+        if var price = Double(thePricestring) {
+            price = price.rounded(.up)
+            let this = roundToTens(x: price)
+            self.dealPointValue = this / 10
+            //self.dealPointValue = Int(price.rounded()) / 10
+            if self.dealPointValue! <= 0 {
+                self.dealPointValue = 1
+            }
         }
         
         return thePricestring
         
+    }
+    
+    func roundToTens(x : Double) -> Int {
+        return 10 * Int(round(x / 10.0))
     }
     
     func detectIfUserMadePurchase () {
@@ -100,7 +126,6 @@ open class DataManager {
                             // Increment user points by rounded difference
                             var currentSalePointValue = lastPurchaseSalePrice.rounded() / 10
                             currentSalePointValue = currentSalePointValue.rounded(.up)
-                            print(currentSalePointValue)
                             self.incrementUserPoints(amount: Int(currentSalePointValue))
                             
                             // Update user Sales Gross

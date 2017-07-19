@@ -50,6 +50,7 @@ class DealViewController: UIViewController, SFSafariViewControllerDelegate {
     }
     
     func setDealTitle () {
+        dealTitleLabel.adjustsFontSizeToFitWidth = true
         dealTitleLabel.text = DataManager.Instance.dealTitle
     }
     
@@ -73,6 +74,7 @@ class DealViewController: UIViewController, SFSafariViewControllerDelegate {
     }
     
     func setBuyNowButtonTitle () {
+        self.buyNowButton.titleLabel?.adjustsFontSizeToFitWidth = true
         if DataManager.Instance.dealPointValue != nil {
             if DataManager.Instance.dealPointValue == 1 {
                 let titleLabelString = String(format: "Buy and earn %d point", DataManager.Instance.dealPointValue!)

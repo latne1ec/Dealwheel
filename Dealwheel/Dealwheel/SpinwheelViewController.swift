@@ -36,11 +36,13 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
     var lastDegree: CGFloat?
     var spinning: Bool?
     var dealMode: Bool?
+    var hasRetrievedDealAfterLocationupdate: Bool?
     var categories = ["Automotive", "Auto And Home Improvement", "Baby Kids and Toys", "Beauty and Spas", "Collectibles", "Cruise Travel", "Electronics", "Entertainment and Media", "Flights and Transportation", "Food and Drink", "For the Home", "Groceries Household and Pets", "Health and Beauty", "Health and Fitness", "Home Improvement", "Hotels and Accommodations", "Jewelry and Watches", "Mens Clothing Shoes and Accessories", "Personal Services", "Sports and Outdoors", "Retail", "Things to do", "Tour Travel", "Womens Clothing Shoes and Accessories"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         spinning = false
+        hasRetrievedDealAfterLocationupdate = false
         checkIfPreviousUser()
         setWheelAndArrowFrames()
         setBackgroundImage ()
@@ -142,10 +144,18 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
         dropDown.fontSize = 22
         dropDown.tableHeight = 250
         dropDown.hideOptionsWhenSelect = true
-        dropDown.placeholder = "Select category"
+        //dropDown.placeholder = "Select category"
+        let value = UserDefaults.standard.string(forKey: "lastSearchCategory")
+        if value == nil {
+            dropDown.placeholder = "Select category"
+        } else {
+            dropDown.placeholder = getCategoryStripped(value!)
+        }
         dropDown.options = categories
         dropDown.alpha = 0.0
         dropDown.didSelect { (option, index) in
+            UserDefaults.standard.set( self.categories[index], forKey: "lastSearchCategory")
+            UserDefaults.standard.synchronize()
             self.retrieveDeal()
         }
     }
@@ -154,8 +164,15 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
         spinWheelControl.delegate = self
         spinWheelControl.dataSource = self
         spinWheelControl.reloadData()
+        spinWheelControl.manualSpinValue = randomBetweenNumbers(firstNum: -3.2, secondNum: -8.1)
         spinWheelControl.addTarget(self, action: #selector(spinWheelDidChangeValue), for: UIControlEvents.valueChanged)
     }
+    
+    // Add some randomness to the spin wheel
+    func randomBetweenNumbers(firstNum: CGFloat, secondNum: CGFloat) -> CGFloat{
+        return CGFloat(arc4random()) / CGFloat(UINT32_MAX) * abs(firstNum - secondNum) + min(firstNum, secondNum)
+    }
+
     
     func initRewardViewAndTermsSheet () {
         
@@ -185,7 +202,6 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
                 }) { (success) in
                 }
             }
-
         }
     }
     
@@ -238,7 +254,10 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
         userLat = coord.latitude
         userLon = coord.longitude
         locationManager.stopUpdatingLocation()
-        retrieveDeal()
+        if hasRetrievedDealAfterLocationupdate == false {
+            hasRetrievedDealAfterLocationupdate = true
+            retrieveDeal()
+        }
     }
     
     // MARK: - Spin Wheel Control
@@ -287,21 +306,33 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
     
     func retrieveDeal () {
         
-        if PFUser.current() == nil {
-            let urlString2 = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_207463_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", 37.776072, -122.417696, getCurrentCategory(), "12345")
-            let dasUrl = URL(string: urlString2)
-            DataManager.Instance.getDeal(dasUrl!)
-            return
-        }
-        
-        let urlString = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_207463_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=1&sid=%@", userLat!, userLon!, getCurrentCategory(), (PFUser.current()?.objectId)!)
+        ////// SIMULATOR
+//        if PFUser.current() == nil {
+//            let urlString2 = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_207463_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=50&sid=%@", 32.975880, -96.741849, getCurrentCategory(), "12345")
+//            let dasUrl = URL(string: urlString2)
+//            DataManager.Instance.getDeal(dasUrl!)
+//            return
+//        }
+        ////// DEVICE
+        let urlString = String(format:"https://partner-api.groupon.com/deals.json?tsToken=US_AFF_0_207463_212556_0&lat=%f&lng=%f&filters=category:%@&offset=0&limit=50&sid=%@", userLat!, userLon!, getCurrentCategory(), (PFUser.current()?.objectId)!)
         let url = URL(string: urlString)
         
         DataManager.Instance.getDeal(url!)
     }
     
     func getCurrentCategory () -> String {
+        
+        let value = UserDefaults.standard.string(forKey: "lastSearchCategory")
+
+        if value == nil {
+            
+        } else {
+            print(value)
+            return getCategoryParsed(value!)
+        }
+        
         if dropDown.selectedIndex == nil {
+            print("randommm")
             let randomIndex = Int(arc4random_uniform(UInt32(categories.count)))
             return getCategoryParsed(categories[randomIndex])
         } else {
@@ -312,6 +343,12 @@ class SpinwheelViewController: UIViewController, CLLocationManagerDelegate, Spin
     func getCategoryParsed (_ category: String) -> String {
         let lowercasedCategory = category.lowercased()
         let newString = lowercasedCategory.replacingOccurrences(of: " ", with: "-")
+        return newString
+    }
+    
+    func getCategoryStripped (_ category: String) -> String {
+        let lowercasedCategory = category.lowercased()
+        let newString = lowercasedCategory.replacingOccurrences(of: "-", with: " ")
         return newString
     }
 }
