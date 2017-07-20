@@ -39,11 +39,11 @@
 		20912F071EE8E480009AE0B1 /* tick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 20912F061EE8E480009AE0B1 /* tick.mp3 */; };
 		20AB17AB1EF027250007310A /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB17AA1EF027250007310A /* AudioManager.swift */; };
 		20AB17B31EF0471F0007310A /* DealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB17B21EF0471F0007310A /* DealViewController.swift */; };
-		20AB17B51EF049F70007310A /* main.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20AB17B41EF049F70007310A /* main.wav */; };
 		20AB17B71EF052740007310A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB17B61EF052740007310A /* DataManager.swift */; };
+		20B3D31C1F2123FA00155A22 /* kayneShort.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 20B3D31B1F2123FA00155A22 /* kayneShort.m4a */; };
+		20B3D31E1F21265500155A22 /* mainTrimmed.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 20B3D31D1F21265500155A22 /* mainTrimmed.m4a */; };
 		20B6F8641EF4852200DFC854 /* SignupRewardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B6F8631EF4852200DFC854 /* SignupRewardView.swift */; };
 		20B6F8661EF4879200DFC854 /* SignupRewardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20B6F8651EF4879200DFC854 /* SignupRewardView.xib */; };
-		20D086A31F0E9107005DF5FC /* kanye.wav in Resources */ = {isa = PBXBuildFile; fileRef = 20D086A21F0E9107005DF5FC /* kanye.wav */; };
 		20DED38C1EF96850001A5784 /* PrizewheelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DED38B1EF96850001A5784 /* PrizewheelViewController.swift */; };
 		20DFB9521EE72097009462CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DFB9511EE72097009462CA /* AppDelegate.swift */; };
 		20DFB9571EE72097009462CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20DFB9551EE72097009462CA /* Main.storyboard */; };
@@ -99,11 +99,11 @@
 		20912F061EE8E480009AE0B1 /* tick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tick.mp3; sourceTree = "<group>"; };
 		20AB17AA1EF027250007310A /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		20AB17B21EF0471F0007310A /* DealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealViewController.swift; sourceTree = "<group>"; };
-		20AB17B41EF049F70007310A /* main.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = main.wav; path = ../../../../../../../Downloads/main.wav; sourceTree = "<group>"; };
 		20AB17B61EF052740007310A /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		20B3D31B1F2123FA00155A22 /* kayneShort.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = kayneShort.m4a; sourceTree = "<group>"; };
+		20B3D31D1F21265500155A22 /* mainTrimmed.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = mainTrimmed.m4a; sourceTree = "<group>"; };
 		20B6F8631EF4852200DFC854 /* SignupRewardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRewardView.swift; sourceTree = "<group>"; };
 		20B6F8651EF4879200DFC854 /* SignupRewardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignupRewardView.xib; sourceTree = "<group>"; };
-		20D086A21F0E9107005DF5FC /* kanye.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = kanye.wav; sourceTree = "<group>"; };
 		20DED38B1EF96850001A5784 /* PrizewheelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizewheelViewController.swift; sourceTree = "<group>"; };
 		20DFB94E1EE72097009462CA /* Dealwheel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dealwheel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20DFB9511EE72097009462CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -300,9 +300,9 @@
 		20F97F211EE9E5D70008D13E /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				20D086A21F0E9107005DF5FC /* kanye.wav */,
+				20B3D31D1F21265500155A22 /* mainTrimmed.m4a */,
+				20B3D31B1F2123FA00155A22 /* kayneShort.m4a */,
 				20F4D2E71EFC509D00415971 /* spin.wav */,
-				20AB17B41EF049F70007310A /* main.wav */,
 				206309FF1EF18927001A2A77 /* 1and7.wav */,
 				20630A031EF18927001A2A77 /* 2and8.wav */,
 				20630A001EF18927001A2A77 /* 3and9.wav */,
@@ -404,6 +404,7 @@
 				20909CE91F01D33400FF0914 /* topLogo@2x.png in Resources */,
 				20DFB9681EE72155009462CA /* DealwheelMisc in Resources */,
 				20289A3B1EF82E7200DF6A0E /* wedge0.png in Resources */,
+				20B3D31C1F2123FA00155A22 /* kayneShort.m4a in Resources */,
 				20289A291EF822C000DF6A0E /* redeemButton@2x.png in Resources */,
 				20F980551F0C187000E15DD5 /* tutorial.png in Resources */,
 				20630A081EF18927001A2A77 /* 4and10.wav in Resources */,
@@ -412,14 +413,13 @@
 				20630A091EF18927001A2A77 /* 2and8.wav in Resources */,
 				20289A411EF82E7200DF6A0E /* wedge8.png in Resources */,
 				20289A361EF82E7200DF6A0E /* wedge2.png in Resources */,
+				20B3D31E1F21265500155A22 /* mainTrimmed.m4a in Resources */,
 				20DFB9591EE72097009462CA /* Assets.xcassets in Resources */,
 				20B6F8661EF4879200DFC854 /* SignupRewardView.xib in Resources */,
-				20AB17B51EF049F70007310A /* main.wav in Resources */,
 				20630A051EF18927001A2A77 /* 1and7.wav in Resources */,
 				20F423671F02DF6800E8DBBE /* Default-568h@2x.png.png in Resources */,
 				2051EFA81F13C95900BDD06F /* TermsSheet.xib in Resources */,
 				206C1C351EEAE642000CFBCE /* star@x.png in Resources */,
-				20D086A31F0E9107005DF5FC /* kanye.wav in Resources */,
 				206C1C3F1EEB0240000CFBCE /* DealView.xib in Resources */,
 				20912F071EE8E480009AE0B1 /* tick.mp3 in Resources */,
 				20289A381EF82E7200DF6A0E /* wedge5.png in Resources */,

@@ -20,8 +20,8 @@ open class AudioManager {
     var tickNoisePlayer: AVAudioPlayer?
     var soundEffectPlayer: AVAudioPlayer?
     var prizeWheelPlayer: AVAudioPlayer?
-    var prizeWheelMusic = Bundle.main.url(forResource: "kanye", withExtension: "wav")
-    var mainMusicUrl = Bundle.main.url(forResource: "main", withExtension: "wav")
+    var prizeWheelMusic = Bundle.main.url(forResource: "kayneShort", withExtension: "m4a")
+    var mainMusicUrl = Bundle.main.url(forResource: "mainTrimmed", withExtension: "m4a")
     var tickNoise = Bundle.main.url(forResource: "tick", withExtension: "mp3")
     var spinNoise = Bundle.main.url(forResource: "spin", withExtension: "wav")
     var m1and7 = Bundle.main.url(forResource: "1and7", withExtension: "wav")
@@ -66,6 +66,7 @@ open class AudioManager {
         do {
             self.mainScreenPlayer = try AVAudioPlayer(contentsOf: mainMusicUrl!)
             self.mainScreenPlayer?.prepareToPlay()
+            self.mainScreenPlayer?.numberOfLoops = -1
             self.mainScreenPlayer?.play()
             
         } catch {
@@ -92,6 +93,7 @@ open class AudioManager {
         do {
             self.prizeWheelPlayer = try AVAudioPlayer(contentsOf: prizeWheelMusic!)
             self.prizeWheelPlayer?.prepareToPlay()
+            self.prizeWheelPlayer?.numberOfLoops = -1
             self.prizeWheelPlayer?.play()
             
         } catch {
