@@ -27,12 +27,12 @@ class LoginViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        initVideoPlayer()
-        do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient, with: .duckOthers)
-        } catch {
-            print("AVAudioSession cannot be set: \(error)")
-        }
+        //initVideoPlayer()
+//        do {
+//            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient, with: .duckOthers)
+//        } catch {
+//            print("AVAudioSession cannot be set: \(error)")
+//        }
     }
     
     func initVideoPlayer () {

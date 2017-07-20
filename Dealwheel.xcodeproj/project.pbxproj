@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2000D0171EFF017C0057DB9E /* intro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2000D0161EFF017C0057DB9E /* intro.mp4 */; };
-		2000D0191EFF026E0057DB9E /* intronew.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2000D0181EFF026E0057DB9E /* intronew.mp4 */; };
 		200E234D1EEEF48D00DAA97F /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200E234C1EEEF48D00DAA97F /* ProgressView.swift */; };
 		20289A271EF81AA500DF6A0E /* PrizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20289A261EF81AA500DF6A0E /* PrizeViewController.swift */; };
 		20289A291EF822C000DF6A0E /* redeemButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 20289A281EF822C000DF6A0E /* redeemButton@2x.png */; };
@@ -68,8 +66,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2000D0161EFF017C0057DB9E /* intro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = intro.mp4; path = ../../Misc/intro.mp4; sourceTree = "<group>"; };
-		2000D0181EFF026E0057DB9E /* intronew.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = intronew.mp4; path = ../../../Misc/intronew.mp4; sourceTree = "<group>"; };
 		200E234C1EEEF48D00DAA97F /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		20289A261EF81AA500DF6A0E /* PrizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizeViewController.swift; sourceTree = "<group>"; };
 		20289A281EF822C000DF6A0E /* redeemButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "redeemButton@2x.png"; path = "../../../Design/redeemButton@2x.png"; sourceTree = "<group>"; };
@@ -321,8 +317,6 @@
 		20F980531F0C000000E15DD5 /* Video */ = {
 			isa = PBXGroup;
 			children = (
-				2000D0181EFF026E0057DB9E /* intronew.mp4 */,
-				2000D0161EFF017C0057DB9E /* intro.mp4 */,
 			);
 			name = Video;
 			sourceTree = "<group>";
@@ -401,8 +395,6 @@
 				20289A3E1EF82E7200DF6A0E /* wedge9.png in Resources */,
 				20289A391EF82E7200DF6A0E /* wedge6.png in Resources */,
 				20DFB9701EE721D1009462CA /* tempwheel.png in Resources */,
-				2000D0171EFF017C0057DB9E /* intro.mp4 in Resources */,
-				2000D0191EFF026E0057DB9E /* intronew.mp4 in Resources */,
 				20F4D2E81EFC509E00415971 /* spin.wav in Resources */,
 				20DFB96F1EE721D1009462CA /* bkg.jpg in Resources */,
 				20289A371EF82E7200DF6A0E /* wedge7.png in Resources */,

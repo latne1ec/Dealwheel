@@ -241,20 +241,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21e-7a-6TK">
-                                <rect key="frame" x="22" y="379" width="276" height="107"/>
+                                <rect key="frame" x="30" y="379" width="260" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="276" id="CLN-2X-uDu"/>
-                                    <constraint firstAttribute="height" constant="107" id="P7V-QV-UMC"/>
+                                    <constraint firstAttribute="width" constant="260" id="CLN-2X-uDu"/>
+                                    <constraint firstAttribute="height" constant="100" id="P7V-QV-UMC"/>
                                 </constraints>
                                 <state key="normal" image="fblogin.png"/>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hcb-yQ-8bL">
-                                <rect key="frame" x="30" y="50" width="260" height="260"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Hcb-yQ-8bL" secondAttribute="height" multiplier="1:1" id="Vr9-Oo-mfc"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kjc-kv-y5l">
                                 <rect key="frame" x="59" y="497" width="203" height="30"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="16"/>
@@ -265,22 +258,27 @@
                                     <action selector="privacyButtonTapped:" destination="evK-1W-l5e" eventType="touchUpInside" id="JrX-Nh-cYo"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tempwheel.png" translatesAutoresizingMaskIntoConstraints="NO" id="B7x-Hh-4ui">
+                                <rect key="frame" x="38" y="78" width="245" height="245"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="B7x-Hh-4ui" secondAttribute="height" multiplier="1:1" id="2j5-7e-RkA"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="B7x-Hh-4ui" firstAttribute="leading" secondItem="pUJ-AE-GvE" secondAttribute="leadingMargin" constant="22" id="7cO-vt-fIR"/>
                             <constraint firstItem="Kjc-kv-y5l" firstAttribute="leading" secondItem="pUJ-AE-GvE" secondAttribute="leadingMargin" constant="43" id="Eih-oh-89o"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Kjc-kv-y5l" secondAttribute="trailing" constant="42" id="P2B-dC-y7h"/>
-                            <constraint firstItem="I0j-gt-zKH" firstAttribute="top" secondItem="21e-7a-6TK" secondAttribute="bottom" constant="82" id="T83-sH-M7Y"/>
-                            <constraint firstAttribute="trailing" secondItem="Hcb-yQ-8bL" secondAttribute="trailing" constant="30" id="Wio-ds-psj"/>
-                            <constraint firstItem="Kjc-kv-y5l" firstAttribute="top" secondItem="21e-7a-6TK" secondAttribute="bottom" constant="11" id="eUi-Y4-CuL"/>
-                            <constraint firstItem="21e-7a-6TK" firstAttribute="top" secondItem="Hcb-yQ-8bL" secondAttribute="bottom" constant="69" id="g4R-Dv-67I"/>
-                            <constraint firstItem="Hcb-yQ-8bL" firstAttribute="leading" secondItem="pUJ-AE-GvE" secondAttribute="leading" constant="30" id="xxt-iH-7s3"/>
+                            <constraint firstItem="21e-7a-6TK" firstAttribute="top" secondItem="B7x-Hh-4ui" secondAttribute="bottom" constant="56" id="RLW-L9-Iuz"/>
+                            <constraint firstItem="I0j-gt-zKH" firstAttribute="top" secondItem="21e-7a-6TK" secondAttribute="bottom" constant="89" id="T83-sH-M7Y"/>
+                            <constraint firstItem="Kjc-kv-y5l" firstAttribute="top" secondItem="21e-7a-6TK" secondAttribute="bottom" constant="18" id="eUi-Y4-CuL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="B7x-Hh-4ui" secondAttribute="trailing" constant="21" id="vvg-4M-Bj9"/>
                             <constraint firstItem="21e-7a-6TK" firstAttribute="centerX" secondItem="pUJ-AE-GvE" secondAttribute="centerX" id="yVS-av-e5i"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="loginButton" destination="21e-7a-6TK" id="yDN-4p-nhb"/>
-                        <outlet property="videoView" destination="Hcb-yQ-8bL" id="Snq-Ba-bSt"/>
                         <segue destination="GKc-d8-bNr" kind="presentation" identifier="showMainScreen" modalTransitionStyle="crossDissolve" id="f8r-GJ-4JX"/>
                     </connections>
                 </viewController>
@@ -550,6 +548,7 @@
         <image name="fblogin.png" width="800" height="300"/>
         <image name="redeemButton.png" width="175" height="50"/>
         <image name="star@x.png" width="256" height="256"/>
+        <image name="tempwheel.png" width="689" height="689"/>
         <image name="topLogo.png" width="300" height="71"/>
         <image name="tutorial.png" width="750" height="1336"/>
         <image name="wedge.png" width="150" height="150"/>
