@@ -22,8 +22,8 @@ class DealViewController: UIViewController, SFSafariViewControllerDelegate {
         setDealImage()
         setDealTitle()
         setWedgeColor()
-        setBuyNowButtonTitle()
         addTapRecognizerToImage()
+        setBuyNowButtonTitle()
     }
     
     func setBackgroundImage () {

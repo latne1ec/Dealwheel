@@ -23,7 +23,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setBackgroundImage ()
-        setLoginButtonDefaults()        
+        setLoginButtonDefaults()
+        AudioManager.Instance.playPrizeWheelMusic()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -74,7 +75,7 @@ class LoginViewController: UIViewController {
     // MARK: - User tapped login button
     
     @objc func loginButtonTapped () {
-        
+        AudioManager.Instance.pausePrizewheelMusic()
         videoPlayer?.pause()
         progressView = ProgressView()
         progressView.isHidden = false
@@ -97,6 +98,7 @@ class LoginViewController: UIViewController {
                 // User canceled fb login
                 self.videoPlayer?.play()
                 self.progressView.isHidden = true
+                AudioManager.Instance.playPrizeWheelMusic()
             }
         }
     }

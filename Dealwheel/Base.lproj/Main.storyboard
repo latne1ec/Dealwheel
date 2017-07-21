@@ -68,9 +68,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YB4-0H-6h2">
-                                <rect key="frame" x="60" y="446" width="200" height="32"/>
+                                <rect key="frame" x="38" y="446" width="244" height="32"/>
                                 <fontDescription key="fontDescription" name="BudmoJiggler-Regular" family="Budmo" pointSize="18"/>
-                                <state key="normal" title="Buy now for 50 points">
+                                <state key="normal" title="Buy now and earn">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -81,9 +81,9 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="Y5b-yC-biB" firstAttribute="top" secondItem="kWG-e5-ABa" secondAttribute="bottom" constant="32" id="0zc-Cx-xhF"/>
-                            <constraint firstItem="YB4-0H-6h2" firstAttribute="leading" secondItem="zPe-tn-85L" secondAttribute="leadingMargin" constant="44" id="2l9-Yn-GqO"/>
+                            <constraint firstItem="YB4-0H-6h2" firstAttribute="leading" secondItem="zPe-tn-85L" secondAttribute="leadingMargin" constant="22" id="2l9-Yn-GqO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kFk-pD-KEL" secondAttribute="trailing" constant="96" id="7CM-uw-pPO"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="YB4-0H-6h2" secondAttribute="trailing" constant="44" id="7ci-FI-zeZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YB4-0H-6h2" secondAttribute="trailing" constant="22" id="7ci-FI-zeZ"/>
                             <constraint firstItem="7zh-e3-NF7" firstAttribute="top" secondItem="TWo-Px-V66" secondAttribute="bottom" constant="28" id="8Au-TN-Hdg"/>
                             <constraint firstAttribute="trailing" secondItem="7Hu-tG-gii" secondAttribute="trailing" constant="40" id="Bdq-H8-L83"/>
                             <constraint firstItem="kFk-pD-KEL" firstAttribute="leading" secondItem="zPe-tn-85L" secondAttribute="leadingMargin" constant="96" id="GSn-N1-3vp"/>
@@ -554,7 +554,7 @@
         <image name="wedge.png" width="150" height="150"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="f8r-GJ-4JX"/>
         <segue reference="SH1-ps-cV5"/>
+        <segue reference="hEa-qF-j0m"/>
     </inferredMetricsTieBreakers>
 </document>

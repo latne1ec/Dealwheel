@@ -52,7 +52,9 @@ open class DataManager {
                 
                 
                 if let dealPrice = json["deals"][randomOffset]["options"][0]["price"]["formattedAmount"].string {
-                    self.dealPrice = self.getPrice(priceString: dealPrice)
+                    let updatedDealPrice = dealPrice.replacingOccurrences(of: ",", with: "")
+                    self.dealPrice = self.getPrice(priceString: updatedDealPrice)
+
                 }
                 if let merchantName = json["deals"][randomOffset]["merchant"]["name"].string {
                     self.merchantName = merchantName

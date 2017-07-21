@@ -247,7 +247,6 @@
 				200C4D061EF0584A00A43CEF /* Model */,
 				20DFB9551EE72097009462CA /* Main.storyboard */,
 				20DFB9581EE72097009462CA /* Assets.xcassets */,
-				20F980531F0C000000E15DD5 /* Video */,
 				20F97F211EE9E5D70008D13E /* Audio */,
 				20DFB9741EE742E9009462CA /* Misc */,
 				20DFB9731EE742E3009462CA /* Images */,
@@ -312,13 +311,6 @@
 				20912F061EE8E480009AE0B1 /* tick.mp3 */,
 			);
 			path = Audio;
-			sourceTree = "<group>";
-		};
-		20F980531F0C000000E15DD5 /* Video */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Video;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -638,13 +630,14 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 4XR9PV42EQ;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Dealwheel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dealwheelapp.Dealwheel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "801c817a-55bc-4961-9e1a-2f3c5a47dcdc";
-				PROVISIONING_PROFILE_SPECIFIER = "Dealwheel App Store Profile 3";
+				PROVISIONING_PROFILE = "ee289aab-9c6a-471d-a3f6-13f54ac838fd";
+				PROVISIONING_PROFILE_SPECIFIER = 5;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -658,13 +651,14 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 4XR9PV42EQ;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Dealwheel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dealwheelapp.Dealwheel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "801c817a-55bc-4961-9e1a-2f3c5a47dcdc";
-				PROVISIONING_PROFILE_SPECIFIER = "Dealwheel App Store Profile 3";
+				PROVISIONING_PROFILE = "ee289aab-9c6a-471d-a3f6-13f54ac838fd";
+				PROVISIONING_PROFILE_SPECIFIER = 5;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
