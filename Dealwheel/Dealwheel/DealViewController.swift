@@ -86,6 +86,11 @@ class DealViewController: UIViewController, SFSafariViewControllerDelegate {
         } else {
             self.buyNowButton.setTitle("Buy now for 5 points", for: .normal)
         }
+        
+        if UIDevice.current.model.range(of: "iPad") != nil {
+            self.dealTitleLabel.numberOfLines = 2;
+            self.dealTitleLabel.adjustsFontSizeToFitWidth = true
+        }
     }
 
     @IBAction func buyButtonTapped(_ sender: Any) {
